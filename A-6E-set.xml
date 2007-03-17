@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Grumman A-6E simulation config.
+
+2007-03-07 Alexis Bory xiii.at.g2ms.com (3D cockpit)
+************************************************************************
+-->
+
+<PropertyList>
+	<sim>
+
+		<startup>
+			<splash-texture>Aircraft/A-6E/A-6E-splash.rgb</splash-texture>
+		</startup>
+
+		<flight-model>yasim</flight-model>
+		<status>alpha</status>
+		<author>Alexis Bory</author>
+		<aero>A-6E-yasim</aero>
+		<fuel-fraction>1.0</fuel-fraction>
+		<description>Grumman A-6E (YASim FDM)</description>
+		<virtual-cockpit archive="y">false</virtual-cockpit>
+		<chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
+
+		<number-views type="int" archive="y">7</number-views>
+		<view n="0">
+			<name>Cockpit View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">-0.41</x-offset-m>
+				<y-offset-m archive="y">1.34</y-offset-m>
+				<z-offset-m archive="y">3.30</z-offset-m>
+				<pitch-offset-deg>-9</pitch-offset-deg>
+				<default-field-of-view-deg>55</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="6">
+			<name>Drop View</name>
+			<type>lookat</type>
+			<config>
+				<eye-lat-deg-path>sim/view[6]/latitude-deg</eye-lat-deg-path>
+				<eye-lon-deg-path>sim/view[6]/longitude-deg</eye-lon-deg-path>
+				<eye-alt-ft-path>sim/view[6]/altitude-ft</eye-alt-ft-path>
+				<eye-roll-deg-path>sim/view[6]/roll-deg</eye-roll-deg-path>
+				<eye-pitch-deg-path>sim/view[6]/pitch-deg</eye-pitch-deg-path>
+				<eye-heading-deg-path>sim/view[6]/heading-deg</eye-heading-deg-path>
+				<at-model type="bool">true</at-model>
+				<at-model-idx type="int">0</at-model-idx>
+				<ground-level-nearplane-m type="double">1.0f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">8.0</default-field-of-view-deg>
+				<x-offset-m type="double">0</x-offset-m>
+				<y-offset-m type="double">0</y-offset-m>
+				<z-offset-m type="double">0</z-offset-m>
+				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="1">
+			<config>
+				<!--<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>-->
+				<target-z-offset-m archive="y" type="double">4.0</target-z-offset-m>
+				<pitch-offset-deg>0</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="2">
+			<config>
+				<x-offset-m archive="y" type="double">6.0</x-offset-m>
+				<z-offset-m archive="y">-19.7</z-offset-m>
+				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="3">
+			<config>
+				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="5">
+			<config>
+				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
+			</config>
+		</view>
+
+
+
+		<sound>
+			<audible>false</audible>
+			<path></path>
+		</sound>
+
+		<model>
+			<path>Aircraft/A-6E/Models/A-6E-model.xml</path>
+			<A-6E>
+			    <controls>
+			        <gear>
+			            <gear-down type="bool">true</gear-down>
+			        </gear>
+			    </controls>
+			</A-6E>
+		</model>
+
+		<aoa-indexer>
+			<too-slow-deg>9</too-slow-deg>  <!-- target +1.5 deg -->
+			<slow-deg>8</slow-deg>          <!-- target +0.5 deg -->
+			<fast-deg>7</fast-deg>          <!-- target -0.5 deg -->
+			<too-fast-deg>6</too-fast-deg>  <!-- target -1.5 deg -->
+		</aoa-indexer>
+
+		<help>
+			<title>Fairchild A-6E</title>
+            <key>
+                <name>C</name>
+                <desc>catapult launch command</desc>
+            </key>
+            <key>
+                <name>L</name>
+                <desc>carrier launch-bar engage</desc>
+            </key>
+            <key>
+                <name>o/O</name>
+                <desc>hook up/down</desc>
+            </key>
+			<!--<key>
+				<name>C</name>
+				<desc>open/close canopy</desc>
+			</key>-->
+			<!--<line>Top Speed:      380 kt @ 15000 ft)</line>-->
+		</help>
+
+
+	</sim>
+
+	<input>
+        <keyboard include="../../Input/Keyboard/carrier-bindings.xml">
+
+		</keyboard>
+
+	</input>
+
+    <controls>
+    	<flight>
+    	    <elevator-trim type="double">0.0295</elevator-trim>
+    	</flight>
+        <gear>
+            <brake-parking type="bool">1</brake-parking>
+        </gear>
+    </controls>
+
+
+
+
+
+
+
+
+
+</PropertyList>
