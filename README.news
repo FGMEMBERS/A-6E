@@ -1,7 +1,32 @@
 TODOS:
 ------
+- The B/N (Bombardier/Navigator) should be a bit more friendly...
+- Sounds, fuel, flaps and trim indicators would be usefull too.
+- Internal lights.
+- A Sexy Splash Screen :)
 
-mpfffff...
+2007/03/29
+----------
+- Fuselage and wings design nearly finished. I have to model the antennas
+  and the lights. Wheels don't spin yet.
+- External textures almost finished too.
+- Cockpit: only the fives ones: Alti, Airspeed, Vario, Attitude, Gyro, and
+  a sixth, a Radar Altimeter. Useful as you can't set your Barometric
+  Altimeter yet.
+- FDM: begins to be sweet now, thanks to the inflight auto-moving C.G.
+- External fuel tanks (TY Andy).  
+
+
+2007/03/17
+----------
+- First commit in Flightgear CVS
+- External view:
+  - animations: rudder, elevator, flaps, tail hook.
+- FDM:
+  - launch bar, tail hook.
+  - CG at
+- AoA indexer
+
 
 
 2007/03/07
@@ -13,4 +38,4 @@ mpfffff...
 january 2007
 ------------
 
-- Begining of the re-modeling of the aircraft on the base of Vivian KA6-D
+- Begining of the re-modeling of the aircraft on the base of Vivian's KA6-D.

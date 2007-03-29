@@ -1,7 +1,12 @@
 <!--  A-6E yasim config.-->
 
 
-<airplane mass="27400">
+<airplane mass="22400">
+<!-- Real Dry Mass: 27400 lbs.
+We have also an in flight movable ballast weighting 5000 lbs, that's because
+it's really hard to get a CG suitable for high AoA and speeds below 130 Kts and
+having a smooth pitch beyond 250 Kts. So I added two "weights" at different positions
+and filled by a nasal script depending of the speed of the A/C. --> 
 
 <!-- Approach configuration -->
   <approach speed="120" aoa="8" fuel="0.2">
@@ -14,9 +19,9 @@
   </approach>
 
 <!-- Cruise configuration -->
-  <cruise speed="350" alt="30000" fuel="0.8">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
+  <cruise speed="480" alt="30000" fuel="0.8">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.7"/>
     <control-setting axis="/controls/flight/flaps" value="0.0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
     <solve-weight idx="0" weight="4000"/>
@@ -25,16 +30,16 @@
   <cockpit x="-3.25" y="0.0" z="1.2"/>
 
   <fuselage ax="0" ay="0" az="0" bx="-16.68" by="0" bz="0"
-            width="3" taper="0.8" midpoint="0.26"/>
+            width="3" taper="1" midpoint="0.5"/>
 
   <wing x="-6.1" y="0.88" z="0.26" taper="0.75" incidence="3.3"
         length="7.62" chord="4.77" sweep="18" dihedral="-4.0"
         camber="0.0">
     <stall aoa="20" width="3" peak="1.3"/>
-    <flap0 start="0" end="0.8" lift="1.5" drag="1.5"/>
+    <flap0 start="0" end="0.8" lift="1.5" drag="1.3"/>
     <slat start="0" end="0.8" aoa="30" drag="1.2"/>
     <flap1 start="0.54" end="0.86" lift="1.3" drag="1.3"/>
-    <spoiler start="0.54" end="0.86" lift="0.6" drag="10.0"/>
+    <spoiler start="0.54" end="0.86" lift="0.0" drag="10.0"/>
 
     <control-input axis="/controls/flight/flaps" control="FLAP0"/>
     <control-input axis="/controls/flight/flaps" control="SLAT"/>
@@ -63,17 +68,17 @@
     <control-speed control="FLAP0" transition-time="10"/>
     <control-speed control="SLAT" transition-time="10"/>
     <control-speed control="FLAP1" transition-time="0.5"/>
-    <control-speed control="SPOILER" transition-time="1.0"/>
+    <control-speed control="SPOILER" transition-time="0.5"/>
 
   </wing>
 
-  <hstab x="-14.10" y="0.32" z="0.14" taper="0.5" effectiveness="2"
+  <hstab x="-14.10" y="0.32" z="0.14" taper="0.5" effectiveness="4"
          length="3.17" chord="2.15" sweep="24" dihedral="0.0"
          camber="0">
     <stall aoa="25" width="5" peak="1.3"/>
     <flap0 start="0" end="1" lift="1.35" drag="1.3"/>
     <control-input axis="/controls/flight/elevator" control="FLAP0"
-                   square="true"/>
+                   square="false"/>
     <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
 
     <control-output control="FLAP0" side="left"
@@ -82,40 +87,43 @@
                     prop="surface-positions/right-elevator-pos-norm"/>
     <control-output control="FLAP0" prop="surface-positions/elevator-pos-norm"/>
 
-    <control-speed control="FLAP0" transition-time="0.5"/>
+    <control-speed control="FLAP0" transition-time="2"/>
   </hstab>
 
-  <vstab x="-14.88" y="0" z=".040" taper="0.5" effectiveness="2"
+  <vstab x="-14.88" y="0" z="-0.2" taper="0.5" effectiveness="1"
          length="2.77" chord="3.59" sweep="16">
     <stall aoa="25" width="10" peak="1.5"/>
-    <flap0 start="0" end="0.64" lift="1.8" drag="1.2"/>
+    <flap0 start="0" end="0.64" lift="1.6" drag="1.2"/>
     <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
     <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
     <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+    <control-speed control="FLAP0" transition-time="2"/>
   </vstab>
 
   
 
 <!-- 2 x J52 P8-A/B -->
-  <jet x="-5.30" y="-0.70" z="-0.33" mass="2118" thrust="8700" tsfc="0.371">
+  <jet x="-5.20" y="-0.70" z="-0.33" mass="2118" thrust="8660" tsfc="0.371">
     <actionpt x="-9.3" y="-1.03" z="-0.37"/>
     <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
   </jet>
 
-  <jet x="-5.30" y="0.70" z="-0.33" mass="2118" thrust="8700" tsfc="0.371">
+  <jet x="-5.20" y="0.70" z="-0.33" mass="2118" thrust="8660" tsfc="0.371">
     <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
     <actionpt x="-9.3" y="1.03" z="-0.37"/>
   </jet>
 
 <!-- Internal tanks -->
-  <tank x="-6.5" y="2.0" z="0.0" jet="true" capacity="2000"/>
-  <tank x="-6.5" y="-0.5" z="0.63" jet="true" capacity="3350"/>
-  <tank x="-6.5" y="0.5" z="0.63" jet="true" capacity="3350"/>
-  <tank x="-6.5" y="-2.0" z="0.0" jet="true" capacity="2000"/>
+    <tank x="-6.2" y="2.0" z="0.0" jet="true" capacity="4508"/>
+    <tank x="-6.2" y="-0.5" z="0.63" jet="true" capacity="3461"/>
+    <tank x="-6.2" y="0.5" z="0.63" jet="true" capacity="3461"/>
+    <tank x="-6.2" y="-2.0" z="0.0" jet="true" capacity="4508"/>
 <!-- Ferry Tanks -->
-  <tank x="-6.5" y="1.29" z="-0.86" jet="true" capacity="4032"/>
-  <tank x="-6.5" y="0" z="-0.86" jet="true" capacity="4032"/>
-  <tank x="-6.5" y="-1.29" z="-0.86" jet="true" capacity="4032"/>
+    <tank x="-6.2" y="3.64" z="-0.48" jet="true" capacity="2040"/><!-- S1 -->
+    <tank x="-6.2" y="2.40" z="-0.48" jet="true" capacity="2040"/><!-- S2 -->
+    <tank x="-6.2" y="0" z="-1.26" jet="true" capacity="2040"/><!-- S3 -->
+    <tank x="-6.2" y="-2.40" z="-0.48" jet="true" capacity="2040"/><!-- S4 -->
+    <tank x="-6.2" y="-3.64" z="-0.48" jet="true" capacity="2040"/><!-- S5 -->
 
 
 
@@ -123,13 +131,13 @@
 <!-- Undercarriage -->
     <!-- nose -->
     <gear x="-2.17" y="0" z="-2.40" retract-time="7" compression="0.44" spring="1.1" damp="1.4">
-        <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
+        <control-input axis="/controls/flight/rudder" control="STEER" square="false"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
         <control-speed control="EXTEND" transition-time="7"/>
         <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
     </gear>
     <!-- left main -->
-    <gear x="-7.69" y="2.5" z="-2.55" retract-time="7" compression="0.72" spring="0.4" damp="1.6">
+    <gear x="-7.69" y="2.5" z="-2.55" retract-time="7" compression="0.72" spring="0.45" damp="1.6">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -137,7 +145,7 @@
         <control-output control="EXTEND" prop="gear/gear[1]/position-norm"/>
     </gear>
     <!-- right main -->
-    <gear x="-7.69" y="-2.5" z="-2.55" retract-time="7" compression="0.72" spring="0.4" damp="1.6">
+    <gear x="-7.69" y="-2.5" z="-2.55" retract-time="7" compression="0.72" spring="0.45" damp="1.6">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -145,8 +153,14 @@
         <control-output control="EXTEND" prop="gear/gear[2]/position-norm"/>
     </gear>
 
-    <ballast x="-2" y="0" z="0" mass="5000"/> <!-- trim -->
-    <weight x="-6.55" y="0" z="0" size="0.9" mass-prop=""/>
+    <ballast x="-5.6" y="0" z="0" mass="5000"/> <!-- fixed trim -->
+    <weight x="0" y="0" z="0" size="0.9" mass-prop="sim/model/A-6E/controls/flight/CG-trim-fwd"/> <!-- speed based moving trim -->
+    <weight x="-4.5" y="0" z="0" size="0.9" mass-prop="sim/model/A-6E/controls/flight/CG-trim-aft"/> <!-- speed based moving trim -->
+    <weight x="-6.2" y="3.64" z="-0.48" size="0.18" mass-prop="sim/weight[0]/weight-lb"/>
+    <weight x="-6.2" y="2.40" z="-0.48" size="0.18" mass-prop="sim/weight[1]/weight-lb"/>
+    <weight x="-6.2" y="0" z="-1.26" size="0.18" mass-prop="sim/weight[2]/weight-lb"/>
+    <weight x="-6.2" y="-2.40" z="-0.48" size="0.18" mass-prop="sim/weight[3]/weight-lb"/>
+    <weight x="-6.2" y="-3.64" z="-0.48" size="0.18" mass-prop="sim/weight[4]/weight-lb"/>
 
     <!-- Hook -->
     <hook x="-11.59" y="0.0" z="-0.41" length="2.28" down-angle="70" up-angle="-3">

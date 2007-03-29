@@ -3,7 +3,7 @@
 ************************************************************************
 Grumman A-6E simulation config.
 
-2007-03-07 Alexis Bory xiii.at.g2ms.com (3D cockpit)
+2007-03-17 Alexis Bory xiii.at.g2ms.com
 ************************************************************************
 -->
 
@@ -18,7 +18,7 @@ Grumman A-6E simulation config.
 		<status>alpha</status>
 		<author>Alexis Bory</author>
 		<aero>A-6E-yasim</aero>
-		<fuel-fraction>1.0</fuel-fraction>
+		<fuel-fraction>0.66</fuel-fraction>
 		<description>Grumman A-6E (YASim FDM)</description>
 		<virtual-cockpit archive="y">false</virtual-cockpit>
 		<chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
@@ -29,11 +29,11 @@ Grumman A-6E simulation config.
 			<type>lookfrom</type>
 			<internal archive="y">true</internal>
 			<config>
-				<x-offset-m archive="y">-0.41</x-offset-m>
-				<y-offset-m archive="y">1.34</y-offset-m>
-				<z-offset-m archive="y">3.30</z-offset-m>
-				<pitch-offset-deg>-9</pitch-offset-deg>
-				<default-field-of-view-deg>55</default-field-of-view-deg>
+				<x-offset-m archive="y">-0.40</x-offset-m>
+				<y-offset-m archive="y">1.35</y-offset-m>
+				<z-offset-m archive="y">3.34</z-offset-m>
+				<pitch-offset-deg>-10</pitch-offset-deg>
+				<default-field-of-view-deg>57</default-field-of-view-deg>
 			</config>
 		</view>
 		<view n="6">
@@ -58,8 +58,7 @@ Grumman A-6E simulation config.
 		</view>
 		<view n="1">
 			<config>
-				<!--<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>-->
-				<target-z-offset-m archive="y" type="double">4.0</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
 				<pitch-offset-deg>0</pitch-offset-deg>
 			</config>
 		</view>
@@ -81,6 +80,51 @@ Grumman A-6E simulation config.
 			</config>
 		</view>
 
+		<weight n="0">
+			<name>Left Outboard</name>
+			<tank>4</tank> <!-- FDM tank index on this pylon -->
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt><name>none</name><lbs>0</lbs></opt>
+			<opt><name>test</name>   <lbs>500</lbs></opt>
+			<opt><name>300 Gallon Fuel Tank</name><lbs>200</lbs><gals>300</gals></opt>
+		</weight>
+		<weight n="1">
+			<name>Left Inboard</name>
+			<tank>5</tank> <!-- FDM tank index on this pylon -->
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt><name>none</name>                          <lbs>0</lbs>  </opt>
+			<opt><name>test</name>   <lbs>500</lbs></opt>
+			<opt><name>300 Gallon Fuel Tank</name><lbs>200</lbs><gals>300</gals></opt>
+		</weight>
+		<weight n="2">
+			<name>Center Fuselage</name>
+			<tank>6</tank> <!-- FDM tank index on this pylon -->
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt><name>none</name>                          <lbs>0</lbs>  </opt>
+			<opt><name>test</name>   <lbs>500</lbs></opt>
+			<opt><name>300 Gallon Fuel Tank</name><lbs>200</lbs><gals>300</gals></opt>
+		</weight>
+		<weight n="3">
+			<name>Right Inboard</name>
+			<tank>7</tank> <!-- FDM tank index on this pylon -->
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt><name>none</name>                          <lbs>0</lbs>  </opt>
+			<opt><name>test</name>   <lbs>500</lbs></opt>
+			<opt><name>300 Gallon Fuel Tank</name><lbs>200</lbs><gals>300</gals></opt>
+		</weight>
+		<weight n="4">
+			<name>Right Outboard</name>
+			<tank>8</tank> <!-- FDM tank index on this pylon -->
+			<weight-lb>0</weight-lb>
+			<selected>none</selected>
+			<opt><name>none</name><lbs>0</lbs></opt>
+			<opt><name>test</name>   <lbs>500</lbs></opt>
+			<opt><name>300 Gallon Fuel Tank</name><lbs>200</lbs><gals>300</gals></opt>
+		</weight>
 
 
 		<sound>
@@ -90,12 +134,16 @@ Grumman A-6E simulation config.
 
 		<model>
 			<path>Aircraft/A-6E/Models/A-6E-model.xml</path>
-			<A-6E>
-			    <controls>
-			        <gear>
-			            <gear-down type="bool">true</gear-down>
-			        </gear>
-			    </controls>
+				<A-6E>
+					<controls>
+				<flight>
+					<CG-trim-fwd type="double">0</CG-trim-fwd>
+					<CG-trim-aft type="double">5000</CG-trim-aft>
+				</flight>
+				<!--<gear>
+					 <gear-down type="bool">true</gear-down>
+				</gear>-->
+				</controls>
 			</A-6E>
 		</model>
 
@@ -108,49 +156,51 @@ Grumman A-6E simulation config.
 
 		<help>
 			<title>Fairchild A-6E</title>
-            <key>
-                <name>C</name>
-                <desc>catapult launch command</desc>
-            </key>
-            <key>
-                <name>L</name>
-                <desc>carrier launch-bar engage</desc>
-            </key>
-            <key>
-                <name>o/O</name>
-                <desc>hook up/down</desc>
-            </key>
+			<line>Cruise Speed:      412 kt @ 25000 ft (90% throttle)</line>
+			<line>Max speed:         650 kt</line>
+			<line>Min Speed:         120 kt (full flaps)</line>
+			<line>Approach:          155/170 kt</line>
+			<line>Landing:           115/140 kt</line>
+			<line>Stall:             145 kt (clean)</line>
+				<key>
+					<name>C</name>
+						<desc>catapult launch command</desc>
+					</key>
+					<key>
+						<name>L</name>
+						<desc>carrier launch-bar engage</desc>
+					</key>
+					<key>
+						<name>o/O</name>
+						<desc>hook up/down</desc>
+					</key>
 			<!--<key>
 				<name>C</name>
 				<desc>open/close canopy</desc>
 			</key>-->
-			<!--<line>Top Speed:      380 kt @ 15000 ft)</line>-->
 		</help>
 
 
 	</sim>
 
 	<input>
-        <keyboard include="../../Input/Keyboard/carrier-bindings.xml">
-
-		</keyboard>
-
+		<keyboard include="../../Input/Keyboard/carrier-bindings.xml"></keyboard>
 	</input>
 
-    <controls>
-    	<flight>
-    	    <elevator-trim type="double">0.0295</elevator-trim>
-    	</flight>
-        <gear>
-            <brake-parking type="bool">1</brake-parking>
-        </gear>
-    </controls>
+	<controls>
+		<flight>
+		<elevator-trim type="double">0.017</elevator-trim>
+	</flight>
+		<gear>
+			<brake-parking type="bool">1</brake-parking>
+		</gear>
+	</controls>
 
-
-
-
-
-
+	<nasal>
+		<A6E>
+			<file>Aircraft/A-6E/Nasal/A-6E.nas</file>
+		</A6E>
+	</nasal>
 
 
 

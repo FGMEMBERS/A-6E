@@ -6,13 +6,92 @@
 <PropertyList>
 
 	<path>A-6E.ac</path>
+	
+
+	
+<!-- ####### Select the external loads as appropriate ###### -->
+	<!-- Select extermal tanks -->
+	<animation>
+		<type>select</type>
+		<object-name>tank-1</object-name>
+		<condition>   
+			<equals>
+				<property>sim/weight[0]/selected</property>
+				<value>300 Gallon Fuel Tank</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>tank-2</object-name>
+		<condition>   
+			<equals>
+				<property>sim/weight[1]/selected</property>
+				<value>300 Gallon Fuel Tank</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>tank-3</object-name>
+		<condition>   
+			<equals>
+				<property>sim/weight[2]/selected</property>
+				<value>300 Gallon Fuel Tank</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>tank-4</object-name>
+		<condition>   
+			<equals>
+				<property>sim/weight[3]/selected</property>
+				<value>300 Gallon Fuel Tank</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>tank-5</object-name>
+		<condition>   
+			<equals>
+				<property>sim/weight[4]/selected</property>
+				<value>300 Gallon Fuel Tank</value>
+			</equals>
+		</condition>
+	</animation>
+	
+<!-- ###### De-select when in view 0 ###### -->
+	<animation>
+		<type>select</type>
+		<object-name>CPT-Pilot-L-Face-Mask</object-name>
+		<object-name>CPT-Pilot-L-Helmet</object-name>
+		<object-name>CPT-Pilot-L-Life-jacket</object-name>
+		<object-name>CPT-Pilot-L-Face-Mask-Tube</object-name>
+		<object-name>CPT-Pilot-L-Visor</object-name>
+		<object-name>CPT-Pilot-L-Head</object-name>
+		<object-name>canopy-main-glass</object-name>
+		<object-name>windshield-side-glass</object-name>
+		<object-name>windshield-front-glass</object-name>
+		<object-name>windshield-top-glass</object-name>
+		<condition>
+			<not>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>0</value>
+				</equals>
+			</not>
+		</condition>
+	</animation>
+		
 <!-- ######### Instruments ########### -->
 	<model>
-		<path>Aircraft/A-6E/Models/A-10-AoA-gauge.xml</path>
+		<path>Aircraft/A-6E/Models/aoa-gauge.xml</path>
 		<offsets> 
-			<x-m>2.615</x-m>
-			<y-m>-0.52</y-m>
-			<z-m>0.98</z-m>
+			<x-m>2.5985</x-m>
+			<y-m>-0.5533</y-m>
+			<z-m>1.0225</z-m>
 			<pitch-deg>-14</pitch-deg>
 		</offsets>
 		<animation>
@@ -21,11 +100,24 @@
 	</model>
 
 	<model>
-		<path>Aircraft/A-6E/Models/A-10-asi.xml</path>
+		<path>Aircraft/A-6E/Models/radar-alti.xml</path>
 		<offsets> 
-			<x-m>2.5897</x-m>
-			<y-m>-0.2111</y-m>
-			<z-m>1.0814</z-m>
+			<x-m>2.6193</x-m>
+			<y-m>-0.5529</y-m>
+			<z-m>.9364</z-m>
+			<pitch-deg>-14</pitch-deg>
+		</offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+	</model>
+
+	<model>
+		<path>Aircraft/A-6E/Models/asi.xml</path>
+		<offsets> 
+			<x-m>2.5847</x-m>
+			<y-m>-0.2274</y-m>
+			<z-m>1.0788</z-m>
 			<pitch-deg>-14</pitch-deg>
 		</offsets>
 		<animation>
@@ -34,11 +126,11 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/A-6E/Models/A-10-alti.xml</path>
+		<path>Aircraft/A-6E/Models/altimeter.xml</path>
 		<offsets> 
-			<x-m>2.6146</x-m>
-			<y-m>-0.2111</y-m>
-			<z-m>0.9817</z-m>
+			<x-m>2.6128</x-m>
+			<y-m>-0.2274</y-m>
+			<z-m>0.9647</z-m>
 			<pitch-deg>-14</pitch-deg>
 		</offsets>
 		<animation>
@@ -47,7 +139,58 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/A-6E/Models/A-6E-aoa-indexer.xml</path>
+		<path>Aircraft/A-6E/Models/ai.xml</path>
+		<offsets> 
+			<x-m>2.5846</x-m>
+			<y-m>-0.102</y-m>
+			<z-m>1.0758</z-m>
+			<pitch-deg>-14</pitch-deg>
+		</offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+	</model>
+	
+	<model>
+		<path>Aircraft/A-6E/Models/hsi.xml</path>
+		<offsets> 
+			<x-m>2.6121</x-m>
+			<y-m>-0.095</y-m>
+			<z-m>0.9685</z-m>
+			<pitch-deg>-14</pitch-deg>
+		</offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+	</model>
+	
+	<model>
+		<path>Aircraft/A-6E/Models/hsi-2.xml</path>
+		<offsets> 
+			<x-m>2.6121</x-m>
+			<y-m>-0.095</y-m>
+			<z-m>0.9685</z-m>
+			<pitch-deg>-14</pitch-deg>
+		</offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+	</model>
+	<model>
+		<path>Aircraft/A-6E/Models/vsi.xml</path>
+		<offsets> 
+			<x-m>2.5996</x-m>
+			<y-m>-0.001</y-m>
+			<z-m>1.0176</z-m>
+			<pitch-deg>-14</pitch-deg>
+		</offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+	</model>
+	
+	<model>
+		<path>Aircraft/A-6E/Models/aoa-indexer.xml</path>
 		<offsets> 
 			<x-m>0</x-m>
 			<y-m>0</y-m>
@@ -159,7 +302,7 @@
 		</center>
 		<axis>
 			<x>1</x>
-			<y>0.2060</y>
+			<y>-0.2060</y>
 			<z>-0.0829</z>
 		</axis>
 	</animation>
@@ -198,13 +341,229 @@
 		</axis>
 	</animation>
 	
-    <!-- ########## Tail Hook ########### -->
-    <!-- Left Flaps -->	
+    <!-- ########## Flaperons ########### -->
+    <!-- Left Flaperons -->
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-Int-Flaperon</object-name>
+		<property>surface-positions/left-aileron-pos-norm</property>
+		<interpolation>
+			<entry><ind>1</ind><dep>0</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>-1</ind><dep>45</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>7.8303</x1-m>
+			<y1-m>-1.4527</y1-m>
+			<z1-m>0.2179</z1-m>
+			<x2-m>8.3421</x2-m>
+			<y2-m>-3.7321</y2-m>
+			<z2-m>0.1692</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-Ext-Flaperon</object-name>
+		<property>surface-positions/left-aileron-pos-norm</property>
+		<interpolation>
+		    <entry><ind>1</ind><dep>0</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>-1</ind><dep>51</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>8.3421</x1-m>
+			<y1-m>-3.7321</y1-m>
+			<z1-m>0.1692</z1-m>
+			<x2-m>9.0984</x2-m>
+			<y2-m>-6.9923</y2-m>
+			<z2-m>0.0683</z2-m>
+		</axis>
+	</animation>
+	
+    <!-- Right Flaperons -->	
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-Int-Flaperon</object-name>
+		<property>surface-positions/right-aileron-pos-norm</property>
+		<interpolation>
+		    <entry><ind>1</ind><dep>0</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>-1</ind><dep>45</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>8.3421</x1-m>
+			<y1-m>3.7321</y1-m>
+			<z1-m>0.1692</z1-m>
+			<x2-m>7.8303</x2-m>
+			<y2-m>1.4527</y2-m>
+			<z2-m>0.2179</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-Ext-Flaperon</object-name>
+		<property>surface-positions/right-aileron-pos-norm</property>
+		<interpolation>
+		    <entry><ind>1</ind><dep>0</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>-1</ind><dep>51</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>9.0984</x1-m>
+			<y1-m>6.9923</y1-m>
+			<z1-m>0.0683</z1-m>
+			<x2-m>8.3421</x2-m>
+			<y2-m>3.7321</y2-m>
+			<z2-m>0.1692</z2-m>
+		</axis>
+	</animation>
+		
+    <!-- ########## Air-brakes ########### -->
+    <!-- Left Air-brake -->
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-Upper-airbrake</object-name>
+		<property>surface-positions/left-spoiler-pos-norm</property>
+		<factor>60</factor>
+		<center>
+			<x-m>9.1307</x-m>
+			<y-m>-7.4995</y-m>
+			<z-m>0.0716</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-Lower-airbrake</object-name>
+		<property>surface-positions/left-spoiler-pos-norm</property>
+		<factor>60</factor>
+		<center>
+			<x-m>9.1307</x-m>
+			<y-m>-7.4995</y-m>
+			<z-m>-0.0780</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+    <!-- Right Air-brake -->	
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-Upper-airbrake</object-name>
+		<property>surface-positions/right-spoiler-pos-norm</property>
+		<factor>60</factor>
+		<center>
+			<x-m>9.1307</x-m>
+			<y-m>7.4995</y-m>
+			<z-m>0.0716</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-Lower-airbrake</object-name>
+		<property>surface-positions/right-spoiler-pos-norm</property>
+		<factor>60</factor>
+		<center>
+			<x-m>9.1307</x-m>
+			<y-m>7.4995</y-m>
+			<z-m>-0.0780</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!-- ########## Slats ########### -->
+	<!-- Left Slats -->
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-Ext-slat</object-name>
+		<object-name>W-L-Int-slat</object-name>
+		<property>surface-positions/left-flap-pos-norm</property>
+		<factor>25</factor>
+		<axis>
+			<x1-m>4.9910</x1-m>
+			<y1-m>-1.6652</y1-m>
+			<z1-m>0.4141</z1-m>
+			<x2-m>8.4040</x2-m>
+			<y2-m>-8.3966</y2-m>
+			<z2-m>0.0105</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-Ext-slat</object-name>
+		<object-name>W-L-Int-slat</object-name>
+		<property>surface-positions/left-flap-pos-norm</property>
+		<factor>-1</factor>
+		<axis>
+			<x1-m>9.7970</x1-m>
+			<y1-m>-13.5505</y1-m>
+			<z1-m>3.2153</z1-m>
+			<x2-m>11.7772</x2-m>
+			<y2-m>-12.5061</y2-m>
+			<z2-m>-3.1456</z2-m>
+		</axis>
+	</animation>
+
+	<!-- Rights -->
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-Ext-slat</object-name>
+		<object-name>W-R-Int-slat</object-name>
+		<property>surface-positions/left-flap-pos-norm</property>
+		<factor>25</factor>
+		<axis>
+			<x1-m>8.4040</x1-m>
+			<y1-m>8.3966</y1-m>
+			<z1-m>0.0105</z1-m>
+			<x2-m>4.9910</x2-m>
+			<y2-m>1.6652</y2-m>
+			<z2-m>0.4141</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-Ext-slat</object-name>
+		<object-name>W-R-Int-slat</object-name>
+		<property>surface-positions/left-flap-pos-norm</property>
+		<factor>-1</factor>
+		<axis>
+			<x1-m>11.7772</x1-m>
+			<y1-m>12.5061</y1-m>
+			<z1-m>-3.1456</z1-m>
+			<x2-m>9.7970</x2-m>
+			<y2-m>13.5505</y2-m>
+			<z2-m>3.2153</z2-m>
+		</axis>
+	</animation>
+
+	
+	
+	
+			
+    <!-- ########## Tail Hook ########### -->	
 	<animation>
 		<type>rotate</type>
 		<object-name>tail-hook</object-name>
 		<property>gear/tailhook/position-norm</property>
-		<factor>100</factor>
+		<factor>70</factor>
 		<center>
 			<x-m>11.59</x-m>
 			<y-m>0</y-m>
@@ -344,6 +703,7 @@
 			<z2-m>-2.55</z2-m>
 		</axis>
 	</animation>
+	
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-R-BottomArm</object-name>
@@ -351,9 +711,9 @@
 		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>30</dep></entry>
-			<entry><ind>0.4</ind><dep>30</dep></entry>
-			<entry><ind>0.5</ind><dep>43</dep></entry>
-			<entry><ind>0.60</ind><dep>43</dep></entry>
+			<entry><ind>0.35</ind><dep>30</dep></entry>
+			<entry><ind>0.45</ind><dep>53</dep></entry>
+			<entry><ind>0.60</ind><dep>53</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>			
 		<axis>
@@ -538,27 +898,7 @@
 			<z2-m>0.04</z2-m>
 		</axis>
 	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>UC-L-OpeningJackTop</object-name>
-		<object-name>UC-L-OpeningJackBottom</object-name>
-		<property>gear/gear[1]/position-norm</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>75</dep></entry>
-			<entry><ind>0.30</ind><dep>75</dep></entry>
-			<entry><ind>0.485</ind><dep>58.5</dep></entry>
-			<entry><ind>0.67</ind><dep>40</dep></entry>
-			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
-		<axis>
-			<x1-m>7.90</x1-m>
-			<y1-m>-1.46</y1-m>
-			<z1-m>-0.01</z1-m>
-			<x2-m>7.92</x2-m>
-			<y2-m>-0.93</y2-m>
-			<z2-m>-0.07</z2-m>
-		</axis>
-	</animation>	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-L-StrutShaft-cont</object-name>
@@ -591,9 +931,9 @@
 		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>30</dep></entry>
-			<entry><ind>0.4</ind><dep>30</dep></entry>
-			<entry><ind>0.5</ind><dep>43</dep></entry>
-			<entry><ind>0.60</ind><dep>43</dep></entry>
+			<entry><ind>0.35</ind><dep>30</dep></entry>
+			<entry><ind>0.45</ind><dep>53</dep></entry>
+			<entry><ind>0.60</ind><dep>53</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>			
 		<axis>
@@ -623,6 +963,27 @@
 			<x2-m>6.86</x2-m>
 			<y2-m>-0.98</y2-m>
 			<z2-m>-0.60</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>UC-L-OpeningJackTop</object-name>
+		<object-name>UC-L-OpeningJackBottom</object-name>
+		<property>gear/gear[1]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>75</dep></entry>
+			<entry><ind>0.30</ind><dep>75</dep></entry>
+			<entry><ind>0.485</ind><dep>58.5</dep></entry>
+			<entry><ind>0.67</ind><dep>40</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>			
+		<axis>
+			<x1-m>7.90</x1-m>
+			<y1-m>-1.46</y1-m>
+			<z1-m>-0.01</z1-m>
+			<x2-m>7.92</x2-m>
+			<y2-m>-0.93</y2-m>
+			<z2-m>-0.07</z2-m>
 		</axis>
 	</animation>
 	

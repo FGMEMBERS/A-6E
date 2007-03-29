@@ -3,7 +3,7 @@
 <PropertyList>
 
  <name>AoA-gauge</name>
- <path>A-10-AoA-gauge.ac</path>
+ <path>aoa-gauge.ac</path>
 
  <animation>
   <type>rotate</type>

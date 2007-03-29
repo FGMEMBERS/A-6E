@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>ai.ac</path>
+ <animation>
+  <type>select</type>
+  <object-name>off-flag</object-name>
+    <condition>
+      <less-than>
+        <property>systems/electrical/outputs/adi</property>
+        <value>24</value>
+      </less-than>
+    </condition>
+ </animation>
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>sphere</object-name>
+  <property>orientation/roll-deg</property>
+  <center>
+   <x-m>-0.0352</x-m>
+   <y-m>0</y-m>
+   <z-m>0.0007</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>sphere</object-name>
+  <property>orientation/pitch-deg</property>
+  <center>
+   <x-m>-0.0352</x-m>
+   <y-m>0</y-m>
+   <z-m>0.0007</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>bank-index</object-name>
+  <property>orientation/roll-deg</property>
+  <center>
+   <x-m>-0.0015</x-m>
+   <y-m>0</y-m>
+   <z-m>0.0007</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<!-- lighting -->
+
+  <animation> 
+   <object-name>mount</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>controls/lighting/panel-norm</factor-prop>
+        <red>0.45</red>
+        <green>0.34</green>
+        <blue>0.18</blue>
+      </emission>
+  </animation>
+
+  <animation> 
+   <object-name>off-flag</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>controls/lighting/panel-norm</factor-prop>
+        <red>0.45</red>
+        <green>0.34</green>
+        <blue>0.18</blue>
+      </emission>
+  </animation>
+
+  <animation> 
+   <object-name>ai-ring</object-name>
+   <object-name>knob-index</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        <red>0.45</red>
+        <green>0.34</green>
+        <blue>0.18</blue>
+      </emission>
+  </animation>
+
+  <animation> 
+   <object-name>sphere</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        <red>0.55</red>
+        <green>0.30</green>
+        <blue>0.12</blue>
+      </emission>
+  </animation>
+
+  <animation> 
+   <object-name>reticl</object-name>
+   <type>material</type>
+    <emission> 
+     <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>0.50</red>
+      <green>0.35</green>
+      <blue>0.20</blue>
+    </emission>
+  </animation>
+
+  <animation> 
+   <object-name>bank-index</object-name>
+   <type>material</type>
+    <emission> 
+     <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>0.50</red>
+      <green>0.35</green>
+      <blue>0.20</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>5</max-m>
+  </animation>
+
+</PropertyList>
