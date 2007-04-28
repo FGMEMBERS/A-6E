@@ -23,6 +23,18 @@ Grumman A-6E simulation config.
 		<virtual-cockpit archive="y">false</virtual-cockpit>
 		<chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
 
+		<gui>
+			<style>
+				<colors>
+					<splash-screen>
+						<red>0.5</red>
+						<green>0.5</green>
+						<blue>0.4</blue>
+					</splash-screen>
+				</colors>
+			</style>
+		</gui>
+
 		<number-views type="int" archive="y">7</number-views>
 		<view n="0">
 			<name>Cockpit View</name>
@@ -128,8 +140,8 @@ Grumman A-6E simulation config.
 
 
 		<sound>
-			<audible>false</audible>
-			<path></path>
+			<audible>true</audible>
+			<path>Aircraft/Hunter/Sounds/hunter-sound.xml</path>
 		</sound>
 
 		<model>
