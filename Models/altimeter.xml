@@ -294,10 +294,16 @@
       </emission>
   </animation>
 
- <animation>
-  <type>range</type>
-  <min-m>0</min-m>
-  <max-m>5</max-m>
- </animation>
+	<animation>
+		<object-name>altimeter</object-name>
+		<type>noshadow</type>
+	</animation>
+
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>35</max-m>
+	</animation>
 
 </PropertyList>

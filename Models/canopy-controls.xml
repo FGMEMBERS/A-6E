@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+	<path>canopy-controls.ac</path>
+
+	<animation> 
+		<type>rotate</type>
+		<object-name>canopy-switch</object-name>
+		<property>sim/model/A-6E/controls/canopy/canopy-switch</property>
+		<factor>25</factor>
+		<center>
+			<x-m>0.0026</x-m>
+			<y-m>0.0000</y-m>
+			<z-m>0.0270</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- lighting -->
+
+	<animation> 
+		<object-name>mount</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.45</red>
+			<green>0.34</green>
+			<blue>0.18</blue>
+		</emission>
+	</animation>
+	<animation> 
+		<object-name>canopy-switch</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.35</red>
+			<green>0.27</green>
+			<blue>0.13</blue>
+		</emission>
+	</animation>
+	<animation> 
+		<object-name>handle</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.45</red>
+			<green>0.34</green>
+			<blue>0.18</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<object-name>canopy-control-group</object-name>
+		<type>noshadow</type>
+	</animation>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>35</max-m>
+	</animation>
+
+</PropertyList>

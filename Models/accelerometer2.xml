@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>accelerometer2.ac</path>
+
+	<animation>
+		<type>translate</type>
+		<object-name>needle</object-name>
+		<property>accelerations/pilot-g</property>
+		<interpolation>
+			<entry><ind>-6</ind><dep>-0.0270</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>11</ind><dep>0.0522</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+ 
+<!-- lighting -->
+
+	<animation> 
+		<object-name>mount</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.45</red>
+			<green>0.34</green>
+			<blue>0.18</blue>
+		</emission>
+	</animation>
+
+	<animation> 
+		<object-name>face</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>0.50</red>
+			<green>0.25</green>
+			<blue>0.18</blue>
+		</emission>
+	</animation>
+
+	<animation> 
+		<object-name>needle</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>0.75</red>
+			<green>0.55</green>
+			<blue>0.35</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<object-name>accel2</object-name>
+		<type>noshadow</type>
+	</animation>
+
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>35</max-m>
+	</animation>
+
+</PropertyList>

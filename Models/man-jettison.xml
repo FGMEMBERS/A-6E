@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>man-jettison.ac</path>
+
+
+ 
+<!-- lighting -->
+
+  <animation> 
+   <object-name>mount</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>controls/lighting/panel-norm</factor-prop>
+        <red>0.45</red>
+        <green>0.34</green>
+        <blue>0.18</blue>
+      </emission>
+  </animation>
+
+  <animation> 
+   <object-name>button</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>controls/lighting/panel-norm</factor-prop>
+        <red>0.45</red>
+        <green>0.34</green>
+        <blue>0.18</blue>
+      </emission>
+  </animation>
+
+	<animation>
+		<object-name>man-jettison</object-name>
+		<type>noshadow</type>
+	</animation>
+
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>35</max-m>
+  </animation>
+
+</PropertyList>

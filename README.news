@@ -2,8 +2,37 @@ TODOS:
 ------
 - The B/N (Bombardier/Navigator) should be a bit more friendly...
 - Sounds, fuel, flaps and trim indicators would be usefull too.
-- Internal lights.
-- A Sexy Splash Screen :)
+- A Sexy Splash Screen :) in progress...
+- FDM: improved rudder. (mysteriouly the rudder induces a inverted roll).
+
+2007/05/29
+----------
+- VDI (Vertical display indicator).
+- PHD (Pilot Horizontal Display)
+    Displays only Terrain Clearance Mode, crashes FG OSG with a range > 1.5
+    miles. Can be turned off via the controls on the right side of the main
+    panel:
+        HORIZONTAL: - off or standby (disables the nasal loop).
+                    - Display scale miles (with OSG a range greater than
+                      1.5 makes FG crash.
+	
+	
+ 
+- loads of knew things.
+
+2007/04/07
+----------
+- External livery: black are lighter, 'AJ' letters are green as they should
+  be.
+- Under-carriage animations fixed for FG-PLIB branch.
+- Cokpit: Canopy frames improved, added a clock, tunned the Air-speed indicator.
+  Added the begining of the VDI (Vertical Display indicator) I will explain all
+  it's functions in the wiki later. Note this is the early version of the VDI.
+  (A6-Es with TRAM revision have another VDI, model IP-722/AVA-1 wich looks more
+  'professional' and as lot more symbols.)
+- Added the overall geometry of the optical sight.
+- Better pilots with nice gloves and semi articulated members.
+
 
 2007/03/29
 ----------
@@ -13,7 +42,7 @@ TODOS:
 - Cockpit: only the fives ones: Alti, Airspeed, Vario, Attitude, Gyro, and
   a sixth, a Radar Altimeter. Useful as you can't set your Barometric
   Altimeter yet.
-- FDM: begins to be sweet now, thanks to the inflight auto-moving C.G.
+- FDM: begins to be sweet now, thanks to inflight 'auto-moving-cheating' C.G.
 - External fuel tanks (TY Andy).  
 
 
@@ -24,7 +53,6 @@ TODOS:
   - animations: rudder, elevator, flaps, tail hook.
 - FDM:
   - launch bar, tail hook.
-  - CG at
 - AoA indexer
 
 

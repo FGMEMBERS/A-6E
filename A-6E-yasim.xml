@@ -90,40 +90,39 @@ and filled by a nasal script depending of the speed of the A/C. -->
     <control-speed control="FLAP0" transition-time="2"/>
   </hstab>
 
-  <vstab x="-14.88" y="0" z="-0.2" taper="0.5" effectiveness="1"
+  <vstab x="-14.88" y="0" z="-0.2" taper="0.5" effectiveness="2"
          length="2.77" chord="3.59" sweep="16">
-    <stall aoa="25" width="10" peak="1.5"/>
-    <flap0 start="0" end="0.64" lift="1.6" drag="1.2"/>
-    <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
-    <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+    <stall aoa="16" width="5" peak="1.5"/>
+    <flap0 start="0" end="0.64" lift="1.25" drag="1.2"/>
+    <control-input axis="/controls/flight/rudder" control="FLAP0" invert="false"/>
+    <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="false"/>
     <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
-    <control-speed control="FLAP0" transition-time="2"/>
+    <control-speed control="FLAP0" transition-time="1"/>
   </vstab>
 
   
 
 <!-- 2 x J52 P8-A/B -->
-  <jet x="-5.20" y="-0.70" z="-0.33" mass="2118" thrust="8660" tsfc="0.371">
+  <jet x="-5.20" y="-0.70" z="-0.33" mass="2118" thrust="8660" tsfc="0.371" egt="950">
     <actionpt x="-9.3" y="-1.03" z="-0.37"/>
     <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
   </jet>
 
-  <jet x="-5.20" y="0.70" z="-0.33" mass="2118" thrust="8660" tsfc="0.371">
-    <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+  <jet x="-5.20" y="0.70" z="-0.33" mass="2118" thrust="8660" tsfc="0.371" egt="950">
     <actionpt x="-9.3" y="1.03" z="-0.37"/>
+    <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
   </jet>
 
 <!-- Internal tanks -->
-    <tank x="-6.2" y="2.0" z="0.0" jet="true" capacity="4508"/>
-    <tank x="-6.2" y="-0.5" z="0.63" jet="true" capacity="3461"/>
-    <tank x="-6.2" y="0.5" z="0.63" jet="true" capacity="3461"/>
-    <tank x="-6.2" y="-2.0" z="0.0" jet="true" capacity="4508"/>
+    <tank x="-6.2" y="0.0" z="0.63" jet="true" capacity="9016"/>	<!-- #0 - Fuselage -->
+    <tank x="-6.2" y="0.0" z="0.0" jet="true" capacity="6922"/>		<!-- #1 - Wing -->
+
 <!-- Ferry Tanks -->
-    <tank x="-6.2" y="3.64" z="-0.48" jet="true" capacity="2040"/><!-- S1 -->
-    <tank x="-6.2" y="2.40" z="-0.48" jet="true" capacity="2040"/><!-- S2 -->
-    <tank x="-6.2" y="0" z="-1.26" jet="true" capacity="2040"/><!-- S3 -->
-    <tank x="-6.2" y="-2.40" z="-0.48" jet="true" capacity="2040"/><!-- S4 -->
-    <tank x="-6.2" y="-3.64" z="-0.48" jet="true" capacity="2040"/><!-- S5 -->
+    <tank x="-6.2" y="3.64" z="-0.48" jet="true" capacity="2040"/>	<!-- #2 - S1 -->
+    <tank x="-6.2" y="2.40" z="-0.48" jet="true" capacity="2040"/>	<!-- #3 - S2 -->
+    <tank x="-6.2" y="0" z="-1.26" jet="true" capacity="2040"/>		<!-- #4 - S3 center -->
+    <tank x="-6.2" y="-2.40" z="-0.48" jet="true" capacity="2040"/>	<!-- #5 - S4 -->
+    <tank x="-6.2" y="-3.64" z="-0.48" jet="true" capacity="2040"/>	<!-- #6 - S5 -->
 
 
 
@@ -137,7 +136,7 @@ and filled by a nasal script depending of the speed of the A/C. -->
         <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
     </gear>
     <!-- left main -->
-    <gear x="-7.69" y="2.5" z="-2.55" retract-time="7" compression="0.72" spring="0.45" damp="1.6">
+    <gear x="-7.69" y="2.5" z="-2.55" retract-time="7" compression="0.72" spring="0.85" damp="2">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -145,7 +144,7 @@ and filled by a nasal script depending of the speed of the A/C. -->
         <control-output control="EXTEND" prop="gear/gear[1]/position-norm"/>
     </gear>
     <!-- right main -->
-    <gear x="-7.69" y="-2.5" z="-2.55" retract-time="7" compression="0.72" spring="0.45" damp="1.6">
+    <gear x="-7.69" y="-2.5" z="-2.55" retract-time="7" compression="0.72" spring="0.85" damp="2">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>

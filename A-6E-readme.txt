@@ -26,6 +26,17 @@ high AoA flight at very low speed (aft CG).
 
 Keyboard mapping
 ----------------
+c : opens/closes the canopy.
+
+k : opens full airbrakes
+j : closes the airbrakes
+
+L : engages the launch bar (carrier operations)
+C : releases the catapult
+
+O : releases the hook.
+o : pull in the hook back.
+
 
 
 

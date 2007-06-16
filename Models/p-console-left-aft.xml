@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+
+<PropertyList> 
+	<name>Pilot-Console-Left-Aft</name>
+	<background>Aircraft/A-6E/Models/transparent-bg.rgb</background>
+	<w>1024</w>
+	<h>768</h>
+	<y-offset>0</y-offset>
+
+	<instruments> 
+		<instrument> 
+			<name>P-Console-Left-Aft</name>
+        	<w>1024</w>
+        	<h>768</h>
+        	<w-base>1024</w-base>
+        	<h-base>1024</h-base>
+        	<x>512</x>
+			<y>384</y>  
+			<layers> 
+				<layer> 
+					<name>background</name>
+					<texture> 
+						<path>Aircraft/A-6E/Models/transparent-bg.rgb</path>
+						<!--<path>Aircraft/A-6E/Models/hotspotgrid.rgb</path>-->
+						<x1>0.0</x1>
+						<y1>0.0</y1>
+						<x2>1.0</x2>
+						<y2>1.0</y2>
+					</texture>
+				</layer>
+			</layers>
+			<actions> 
+				<!-- ######### Light-Left-Panel ######### -->
+				<!-- Collision switch -->
+				<action> 
+					<name>collision-switch-up</name>
+					<button>0</button>
+					<x>-120</x>
+					<y>-68</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>property-toggle</command>
+						<property>controls/lighting/beacon</property>
+					</binding>
+				</action>
+				<action> 
+					<name>collision-switch-down</name>
+					<button>0</button>
+					<x>-120</x>
+					<y>-103</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>property-toggle</command>
+						<property>controls/lighting/beacon</property>
+					</binding>
+				</action>
+
+				<!-- Taxi/Probe switch -->
+				<action> 
+					<name>taxi-probe-switch-up</name>
+					<button>0</button>
+					<x>-120</x>
+					<y>-153</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>property-toggle</command>
+						<property>controls/lighting/taxi-light</property>
+					</binding>
+				</action>
+				<action> 
+					<name>taxi-probe-switch-down</name>
+					<button>0</button>
+					<x>-120</x>
+					<y>-187</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>property-toggle</command>
+						<property>controls/lighting/taxi-light</property>
+					</binding>
+				</action>
+
+				<!-- Pylon switch -->
+				<action> 
+					<name>pylon-switch-up</name>
+					<button>0</button>
+					<x>-120</x>
+					<y>-295</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>nasal</command>
+						<script>A6Econtrols.three_pos_sw("sim/model/A-6E/controls/lighting/pylons-lts", 1)</script>
+					</binding>
+				</action>
+				<action> 
+					<name>pylon-switch-down</name>
+					<button>0</button>
+					<x>-120</x>
+					<y>-330</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>nasal</command>
+						<script>A6Econtrols.three_pos_sw("sim/model/A-6E/controls/lighting/pylons-lts", -1)</script>
+					</binding>
+				</action>
+
+
+				<!-- Instruments thumbwheel -->
+				<action> 
+					<name>instruments-thumbwheel-left</name>
+					<button>0</button>
+					<x>0</x>
+					<y>-140</y>
+					<w>90</w>
+					<h>40</h>
+					<binding>
+						<command>property-adjust</command>
+						<property>controls/lighting/instruments-norm</property>
+						<step>0.05</step>
+					</binding>
+				</action>
+				<action> 
+					<name>instruments-thumbwheel-right</name>
+					<button>0</button>
+					<x>105</x>
+					<y>-140</y>
+					<w>90</w>
+					<h>40</h>
+					<binding>
+						<command>property-adjust</command>
+						<property>controls/lighting/instruments-norm</property>
+						<step>-0.05</step>
+					</binding>
+				</action>
+
+				<!-- Console thumbwheel -->
+				<action> 
+					<name>console-thumbwheel-left</name>
+					<button>0</button>
+					<x>0</x>
+					<y>-230</y>
+					<w>90</w>
+					<h>40</h>
+					<binding>
+						<command>property-adjust</command>
+						<property>controls/lighting/panel-norm</property>
+						<step>0.05</step>
+					</binding>
+				</action>
+				<action> 
+					<name>console-thumbwheel-right</name>
+					<button>0</button>
+					<x>105</x>
+					<y>-230</y>
+					<w>90</w>
+					<h>40</h>
+					<binding>
+						<command>property-adjust</command>
+						<property>controls/lighting/panel-norm</property>
+						<step>-0.05</step>
+					</binding>
+				</action>
+
+				<!-- Approach Index thumbwheel -->
+				<action> 
+					<name>approach-index-thumbwheel-left</name>
+					<button>0</button>
+					<x>0</x>
+					<y>-315</y>
+					<w>90</w>
+					<h>40</h>
+					<binding>
+						<command>property-adjust</command>
+						<property>sim/model/A-6E/controls/lighting/index-norm</property>
+						<step>0.05</step>
+						<min>0</min>
+						<max>1</max>
+					</binding>
+				</action>
+				<action> 
+					<name>approach-index-thumbwheel-right</name>
+					<button>0</button>
+					<x>105</x>
+					<y>-315</y>
+					<w>90</w>
+					<h>40</h>
+					<binding>
+						<command>property-adjust</command>
+						<property>sim/model/A-6E/controls/lighting/index-norm</property>
+						<step>-0.05</step>
+						<min>0</min>
+						<max>1</max>
+					</binding>
+				</action>
+
+
+				<!-- Tail switch -->
+				<action> 
+					<name>tail-switch-up</name>
+					<button>0</button>
+					<x>232</x>
+					<y>-68</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>nasal</command>
+						<script>A6Econtrols.three_pos_sw("sim/model/A-6E/controls/lighting/tail-lt", 1)</script>
+					</binding>
+				</action>
+				<action> 
+					<name>tail-switch-down</name>
+					<button>0</button>
+					<x>232</x>
+					<y>-103</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>nasal</command>
+						<script>A6Econtrols.three_pos_sw("sim/model/A-6E/controls/lighting/tail-lt", -1)</script>
+					</binding>
+				</action>
+
+				<!-- Wing switch -->
+				<action> 
+					<name>wing-switch-up</name>
+					<button>0</button>
+					<x>232</x>
+					<y>-141</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>nasal</command>
+						<script>A6Econtrols.three_pos_sw("sim/model/A-6E/controls/lighting/wings-lts", 1)</script>
+					</binding>
+				</action>
+				<action> 
+					<name>wing-switch-down</name>
+					<button>0</button>
+					<x>232</x>
+					<y>-176</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>nasal</command>
+						<script>A6Econtrols.three_pos_sw("sim/model/A-6E/controls/lighting/wings-lts", -1)</script>
+					</binding>
+				</action>
+
+				<!-- Formation switch -->
+				<action> 
+					<name>formation-switch-up</name>
+					<button>0</button>
+					<x>232</x>
+					<y>-218</y>
+					<w>100</w>
+					<h>30</h> 
+					<binding> 
+						<command>nasal</command>
+						<script>A6Econtrols.three_pos_sw_b("sim/model/A-6E/controls/lighting/formation-lts", 1)</script>
+					</binding>
+				</action>
+				<action> 
+					<name>formation-switch-down</name>
+					<button>0</button>
+					<x>232</x>
+					<y>-253</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>nasal</command>
+						<script>A6Econtrols.three_pos_sw_b("sim/model/A-6E/controls/lighting/formation-lts", -1)</script>
+					</binding>
+				</action>
+
+				<!-- Flood switch -->
+				<action> 
+					<name>flood-switch-up</name>
+					<button>0</button>
+					<x>232</x>
+					<y>-295</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>nasal</command>
+						<script>A6Econtrols.three_pos_sw_flood("sim/model/A-6E/controls/lighting/flood-lts", 1)</script>
+					</binding>
+				</action>
+				<action> 
+					<name>flood-switch-down</name>
+					<button>0</button>
+					<x>232</x>
+					<y>-330</y>
+					<w>100</w>
+					<h>30</h>
+					<binding> 
+						<command>nasal</command>
+						<script>A6Econtrols.three_pos_sw_flood("sim/model/A-6E/controls/lighting/flood-lts", -1)</script>
+					</binding>
+				</action>
+
+			</actions> 
+
+		</instrument>
+	</instruments>
+</PropertyList>
