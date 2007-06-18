@@ -28,8 +28,8 @@ Grumman A-6E simulation config.
  				<colors>
  					<splash-screen>
  						<red>0.5</red>
- 						<green>0.5</green>
- 						<blue>0.4</blue>
+ 						<green>0.55</green>
+ 						<blue>0.55</blue>
  					</splash-screen>
  				</colors>
  			</style>
@@ -171,6 +171,9 @@ Grumman A-6E simulation config.
 						<TCrealistic-shadow type="bool">1</TCrealistic-shadow>
 						<off-stdby-on type="int">2</off-stdby-on>
 					</PHD>
+					<tacan>
+						<xy-switch type="bool">0</xy-switch>
+					</tacan>
 					<VDI>
 						<display>
 							<contanalog type="bool">false</contanalog>
@@ -214,6 +217,11 @@ Grumman A-6E simulation config.
 						<h-deviation type="double">0.0</h-deviation>
 						<v-deviation type="double">0.0</v-deviation>
 					</PHD>
+					<tacan>
+						<nogo-lamp type="bool">false</nogo-lamp>
+						<go-lamp type="bool">false</go-lamp>
+						<mode type="int">0</mode>
+					</tacan>
 					<warning-lights>
 						<master-caution type="bool">false</master-caution>
 						<L-fire type="bool">false</L-fire>
@@ -244,26 +252,26 @@ Grumman A-6E simulation config.
 			<line>Approach:          155/170 kt</line>
 			<line>Landing:           115/140 kt</line>
 			<line>    Flaps:         LD (40°)</line>
-				<key>
-					<name>c</name>
-						<desc>Canopy open/close command</desc>
-					</key>
-					<key>
-					<name>C</name>
-						<desc>Catapult launch command</desc>
-					</key>
-					<key>
-						<name>k/j</name>
-						<desc>Air Brakes open/close</desc>
-					</key>
-					<key>
-						<name>L</name>
-						<desc>Carrier Launch-bar engage</desc>
-					</key>
-					<key>
-						<name>o/O</name>
-						<desc>Hook up/down</desc>
-					</key>
+			<key>
+				<name>c</name>
+					<desc>Canopy open/close command</desc>
+			</key>
+			<key>
+				<name>C</name>
+				<desc>Catapult launch command</desc>
+			</key>
+			<key>
+				<name>k/j</name>
+				<desc>Air Brakes open/close</desc>
+			</key>
+			<key>
+				<name>L</name>
+				<desc>Carrier Launch-bar engage</desc>
+			</key>
+			<key>
+				<name>o/O</name>
+				<desc>Hook up/down</desc>
+			</key>
 		</help>
 
 
@@ -275,8 +283,8 @@ Grumman A-6E simulation config.
 				<name>c</name>
 				<desc>Canopy open/close command</desc>
 				<binding>
-				   <command>nasal</command>
-				   <script>A6Econtrols.canopyswitch(2)</script>
+					<command>nasal</command>
+					<script>A6Econtrols.canopyswitch(2)</script>
 				</binding>
 			</key>
 		</keyboard>

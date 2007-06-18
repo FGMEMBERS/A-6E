@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<PropertyList>
+	<name>Pilot-Console-Center-Fwd</name>
+	<background>Aircraft/A-6E/Models/transparent-bg.rgb</background>
+	<w>1024</w>
+	<h>768</h>
+	<y-offset>0</y-offset>
+
+	<instruments>
+		<instrument>
+			<name>P-Console-Center-Fwd</name>
+			<w>1024</w>
+			<h>768</h>
+			<w-base>1024</w-base>
+			<h-base>1024</h-base>
+			<x>512</x>
+			<y>384</y>
+			<layers>
+				<layer>
+					<name>background</name>
+					<texture>
+						<path>Aircraft/A-6E/Models/transparent-bg.rgb</path>
+						<!--<path>Aircraft/A-6E/Models/hotspotgrid.rgb</path>-->
+						<x1>0.0</x1>
+						<y1>0.0</y1>
+						<x2>1.0</x2>
+						<y2>1.0</y2>
+					</texture>
+				</layer>
+			</layers>
+			<actions>
+
+				<!-- ######### Tacan-Panel ######### -->
+
+				<!-- Chan Knob -->
+				<action>
+					<name>chan-knob-left</name>
+					<button>0</button>
+					<x>-420</x>
+					<y>-480</y>
+					<w>125</w>
+					<h>110</h>
+					<binding>
+						<command>property-adjust</command>
+						<property>instrumentation/tacan/frequencies/selected-channel</property>
+						<step>-1</step>
+						<min>1</min>
+					</binding>
+				</action>
+				<action>
+					<name>chan-knob-right</name>
+					<button>0</button>
+					<x>-245</x>
+					<y>-480</y>
+					<w>125</w>
+					<h>110</h>
+					<binding>
+						<command>property-adjust</command>
+						<property>instrumentation/tacan/frequencies/selected-channel</property>
+						<step>1</step>
+						<max>126</max>
+					</binding>
+				</action>
+
+				<!-- Mode Knob -->
+				<action>
+					<name>mode-knob-left</name>
+					<button>0</button>
+					<x>180</x>
+					<y>-495</y>
+					<w>110</w>
+					<h>80</h>
+					<repeatable type="bool">true</repeatable>
+					<binding>
+						<command>property-adjust</command>
+						<property>sim/model/A-6E/controls/instrumentation/tacan/mode</property>
+						<step>-1</step>
+						<min>0</min>
+					</binding>
+				</action>
+				<action>
+					<name>mode-knob-right</name>
+					<button>0</button>
+					<x>305</x>
+					<y>-495</y>
+					<w>110</w>
+					<h>80</h>
+					<repeatable type="bool">true</repeatable>
+					<binding>
+						<command>property-adjust</command>
+						<property>sim/model/A-6E/controls/instrumentation/tacan/mode</property>
+						<step>1</step>
+						<max>4</max>
+					</binding>
+				</action>
+
+
+				<!-- XY switch -->
+				<action>
+					<name>xy-switch-up</name>
+					<button>0</button>
+					<x>0</x>
+					<y>-468</y>
+					<w>100</w>
+					<h>50</h>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.tacan_XYtoggle()</script>
+					</binding>
+				</action>
+
+			</actions>
+		</instrument>
+	</instruments>
+</PropertyList>

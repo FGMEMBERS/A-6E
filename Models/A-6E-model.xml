@@ -314,10 +314,10 @@
 	<model>
 		<path>Aircraft/A-6E/Models/ai.xml</path>
 		<offsets> 
-			<x-m>2.5846</x-m>
-			<y-m>-0.101</y-m>
-			<z-m>1.0758</z-m>
-			<pitch-deg>-14</pitch-deg>
+			<x-m>2.5882</x-m>
+			<y-m>-0.1089</y-m>
+			<z-m>1.0660</z-m>
+			<pitch-deg>-6</pitch-deg>
 		</offsets>
 		<animation>
 			<type>noshadow</type>
@@ -465,10 +465,10 @@
 	<model>
 		<path>Aircraft/A-6E/Models/tacan.xml</path>
 		<offsets> 
-			<x-m>3.0525</x-m>
-			<y-m>0.0000</y-m>
-			<z-m>0.4583</z-m>
-			<pitch-deg>16</pitch-deg>
+			<x-m>3.0540</x-m>
+			<y-m>-0.0015</y-m>
+			<z-m>0.4630</z-m>
+			<pitch-deg>14</pitch-deg>
 		</offsets>
 		<animation>
 			<type>noshadow</type>
@@ -477,9 +477,9 @@
 
 
 <!--  ################ 3D panels for hot-spots  ################ -->	
-	<!-- Pilot-Console-Left-Aft -->
+	<!-- Hotspots-Console-Left-Aft -->
 	<panel>
-		<name>P-Console-Left-Aft</name>
+		<name>Hotspots-Console-Left-Aft</name>
 		<path>Aircraft/A-6E/Models/p-console-left-aft.xml</path>
 		<top-left>
 			<x-m>3.0397</x-m>
@@ -498,9 +498,9 @@
 		</bottom-right>
 	</panel>
 	
-	<!-- Pilot-Panel-Right -->
+	<!-- Hotspots-Panel-Right -->
 	<panel>
-		<name>P-Panel-Right</name>
+		<name>Hotspots-Panel-Right</name>
 		<path>Aircraft/A-6E/Models/p-panel-right.xml</path>
 		<top-left>
 			<x-m>2.6127</x-m>
@@ -516,6 +516,27 @@
 			<x-m>2.7402</x-m>
 			<y-m>0.0803</y-m>
 			<z-m>0.5514</z-m>
+		</bottom-right>
+	</panel>
+
+	<!-- Hotspots-Console-Left-Aft -->
+	<panel>
+		<name>Hotspots-Console-Center-Fwd</name>
+		<path>Aircraft/A-6E/Models/p-console-center-fwd.xml</path>
+		<top-left>
+			<x-m>2.7217</x-m>
+			<y-m>-0.0786</y-m>
+			<z-m>0.5494</z-m>
+		</top-left>
+		<bottom-left>
+			<x-m>3.0955</x-m>
+			<y-m>-0.0786</y-m>
+			<z-m>0.4550</z-m>
+		</bottom-left>
+		<bottom-right>
+			<x-m>3.0955</x-m>
+			<y-m>0.0795</y-m>
+			<z-m>0.4550</z-m>
 		</bottom-right>
 	</panel>
 
@@ -2057,13 +2078,15 @@
 		<type>scale</type>
 		<object-name>noshadow.nav_halo_Tail</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
 		<x-factor>6</x-factor>
 		<y-factor>6</y-factor>
 		<z-factor>6</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2117,13 +2140,15 @@
 		<type>scale</type>
 		<object-name>noshadow.nav_halo_Tail_Dim</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
 		<x-factor>3.5</x-factor>
 		<y-factor>3.5</y-factor>
 		<z-factor>3.5</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2168,13 +2193,15 @@
 		<type>scale</type>
 		<object-name>noshadow.nav_halo_WL</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
 		<x-factor>6</x-factor>
 		<y-factor>6</y-factor>
 		<z-factor>6</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2217,13 +2244,15 @@
 		<type>scale</type>
 		<object-name>noshadow.nav_halo_WL_Dim</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
 		<x-factor>3.5</x-factor>
 		<y-factor>3.5</y-factor>
 		<z-factor>3.5</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2268,13 +2297,15 @@
 		<type>scale</type>
 		<object-name>noshadow.nav_halo_WR</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
 		<x-factor>6</x-factor>
 		<y-factor>6</y-factor>
 		<z-factor>6</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2317,13 +2348,15 @@
 		<type>scale</type>
 		<object-name>noshadow.nav_halo_WR_Dim</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
 		<x-factor>3.5</x-factor>
 		<y-factor>3.5</y-factor>
 		<z-factor>3.5</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2370,13 +2403,15 @@
 		<type>scale</type>
 		<object-name>noshadow.coll_halo_FR</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>12</x-factor>
-		<y-factor>12</y-factor>
-		<z-factor>12</z-factor>
+		<x-factor>8</x-factor>
+		<y-factor>8</y-factor>
+		<z-factor>8</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2419,13 +2454,15 @@
 		<type>scale</type>
 		<object-name>noshadow.coll_halo_FL</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>12</x-factor>
-		<y-factor>12</y-factor>
-		<z-factor>12</z-factor>
+		<x-factor>8</x-factor>
+		<y-factor>8</y-factor>
+		<z-factor>8</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2463,13 +2500,15 @@
 		<type>scale</type>
 		<object-name>noshadow.coll_halo_WL</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>12</x-factor>
-		<y-factor>12</y-factor>
-		<z-factor>12</z-factor>
+		<x-factor>8</x-factor>
+		<y-factor>8</y-factor>
+		<z-factor>8</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2506,13 +2545,15 @@
 		<type>scale</type>
 		<object-name>noshadow.coll_halo_WR</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>12</x-factor>
-		<y-factor>12</y-factor>
-		<z-factor>12</z-factor>
+		<x-factor>8</x-factor>
+		<y-factor>8</y-factor>
+		<z-factor>8</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2550,13 +2591,15 @@
 		<type>scale</type>
 		<object-name>noshadow.coll_halo_TR</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>12</x-factor>
-		<y-factor>12</y-factor>
-		<z-factor>12</z-factor>
+		<x-factor>8</x-factor>
+		<y-factor>8</y-factor>
+		<z-factor>8</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
@@ -2593,13 +2636,15 @@
 		<type>scale</type>
 		<object-name>noshadow.coll_halo_TL</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>12</x-factor>
-		<y-factor>12</y-factor>
-		<z-factor>12</z-factor>
+		<x-factor>8</x-factor>
+		<y-factor>8</y-factor>
+		<z-factor>8</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>

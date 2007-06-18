@@ -69,8 +69,10 @@
 		<z-max>1.3</z-max>
 		<x-factor>0</x-factor>
 		<y-factor>0</y-factor>
-		<z-offset>1</z-offset>
 		<z-factor>0.00333</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<name>horizon-line-roll-rotation</name>
@@ -196,8 +198,10 @@
 		<z-max>1</z-max>
 		<x-factor>0</x-factor>
 		<y-factor>0</y-factor>
-		<z-offset>1</z-offset>
 		<z-factor>-0.01</z-factor>
+		<x-offset>1</x-offset>
+		<y-offset>1</y-offset>
+		<z-offset>1</z-offset>
 	</animation>
 	
 	

@@ -45,9 +45,8 @@ make_beam = func {
 	if ( on != 2 ) { return };
 	var ac_alt_m	= 0;
 	var shadow_lim	= 0;
-	# Define Position the whole plots line at SL.
-	# The pitch rotation of the plots line is made directly
-	# in the animation xml file.
+	# Define the position of the whole plots line at Sea Level.
+	# The plots line pitch rotation is made directly in the animation xml file. 
 	var ptch_deg = pitch.getValue();
 	var ptch_rad = D2R * ptch_deg;
 	var pitch_sin = sin(ptch_rad);
@@ -66,7 +65,7 @@ make_beam = func {
 	
 
 
-	# radar shadow on/off.
+	# Radar shadow on/off.
 	tc_real = TCrealistic.getValue();
 
 	for (var i = 0; i < 100; i += 1) {
