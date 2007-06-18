@@ -62,7 +62,7 @@ make_beam = func {
 	var a_lon = ac_lon.getValue();
 	var a_lat = ac_lat.getValue();
 	var hdg	= ac_hdg.getValue();
-	var beam = geo.Coord.new().set_lonlat(a_lon, a_lat);
+	var beam = geo.Coord.new().set_latlon(a_lat, a_lon);
 	
 
 
@@ -76,7 +76,7 @@ make_beam = func {
 		var i_dist = int(i * s_interval_m);
 		var i_coord = beam.apply_course_distance(hdg, i_dist);
 
-		var i_elev = geo.elevation(i_coord.lon(), i_coord.lat());
+		var i_elev = geo.elevation(i_coord.lat(), i_coord.lon());
 		if ( ! i_elev ) { i_elev = 0 };
 		var i_dev = i_elev * phd_scale;
 		s.getNode("elevation_m", 1).setDoubleValue(i_dev / 2  * dev_calibration);
