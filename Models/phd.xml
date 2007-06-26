@@ -34,6 +34,28 @@
 	</animation>
  
 	<animation>
+		<type>select</type>
+		<object-name>bkg-off</object-name>
+		<condition>
+			<equals>
+				<property>sim/model/A-6E/controls/PHD/off-stdby-on</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+ 
+	<animation>
+		<type>select</type>
+		<object-name>radar-frame</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/A-6E/controls/PHD/off-stdby-on</property>
+				<value>0</value>
+			</greater-than>
+		</condition>
+	</animation>
+ 
+	<animation>
 		<type>translate</type>
 		<object-name>plots</object-name>
 		<property>sim/model/A-6E/instrumentation/PHD/v-deviation</property>
@@ -1524,12 +1546,6 @@
 	<animation>
 		<object-name>radar-frame</object-name>
 		<type>material</type>
-		<condition>
-			<greater-than>
-				<property>sim/model/A-6E/controls/PHD/off-stdby-on</property>
-				<value>0</value>
-			</greater-than>
-		</condition>
 		<emission> 
 			<factor-prop>sim/model/A-6E/controls/VDI/brightness</factor-prop>
 			<red>0.68</red>
@@ -1540,12 +1556,6 @@
 	<animation>
 		<object-name>bkg</object-name>
 		<type>material</type>
-		<condition>
-			<greater-than>
-				<property>sim/model/A-6E/controls/PHD/off-stdby-on</property>
-				<value>0</value>
-			</greater-than>
-		</condition>
 		<emission> 
 			<factor-prop>sim/model/A-6E/controls/VDI/brightness</factor-prop>
 			<red>0.33</red>

@@ -358,7 +358,7 @@
 
 	<!-- velocity marker -->
 	<animation>
-		<name>velocity-marker-translation-y</name>
+		<name>velocity-marker-translation-y</name><!-- horizontal -->
 		<type>translate</type>
 		<object-name>impact-marker</object-name>
 		<condition>
@@ -370,7 +370,7 @@
 		<property>sim/model/A-6E/instrumentation/vdi/velocity_marker_y</property>
 		<max-m>0.1</max-m>
 		<min-m>-0.1</min-m>
-		<factor>0.2</factor>
+		<factor>0.1</factor>
 		<center>
 			<x-m>0</x-m>
 			<y-m>0</y-m>
@@ -383,7 +383,7 @@
 		</axis>
 	</animation>
 	<animation>
-		<name>velocity-marker-translation-z</name>
+		<name>velocity-marker-translation-z</name><!-- vertical -->
 		<type>translate</type>
 		<object-name>impact-marker</object-name>
 		<condition>
@@ -395,7 +395,7 @@
 		<property>sim/model/A-6E/instrumentation/vdi/velocity_marker_z</property>
 		<max>0.7</max>
 		<min>-0.7</min>
-		<factor>0.2</factor>
+		<factor>0.1</factor>
 		<center>
 			<x-m>0</x-m>
 			<y-m>0</y-m>

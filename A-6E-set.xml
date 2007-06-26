@@ -169,7 +169,7 @@ Grumman A-6E simulation config.
 					<PHD>
 						<TCrange-switch type="int">2</TCrange-switch>
 						<TCrealistic-shadow type="bool">1</TCrealistic-shadow>
-						<off-stdby-on type="int">2</off-stdby-on>
+						<off-stdby-on type="int">0</off-stdby-on>
 					</PHD>
 					<tacan>
 						<xy-switch type="bool">0</xy-switch>
@@ -177,10 +177,10 @@ Grumman A-6E simulation config.
 					<VDI>
 						<display>
 							<contanalog type="bool">false</contanalog>
-							<tc type="bool">true</tc>
+							<tc type="bool">false</tc>
 							<tccal type="bool">false</tccal>
 							<stby type="bool">false</stby>
-							<off type="bool">false</off>
+							<off type="bool">true</off>
 						</display>
 						<range-miles>
 							<miles3 type="bool">true</miles3>

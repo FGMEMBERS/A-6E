@@ -14,11 +14,13 @@ var TCrealistic	= props.globals.getNode("/sim/model/A-6E/controls/PHD/TCrealisti
 var TCon_off	= props.globals.getNode("/sim/model/A-6E/controls/PHD/off-stdby-on", 1);
 var v_rng_dev	= props.globals.getNode("/sim/model/A-6E/instrumentation/PHD/v-deviation", 1);
 var h_rng_dev	= props.globals.getNode("/sim/model/A-6E/instrumentation/PHD/h-deviation", 1);
-var ac_hdg      = props.globals.getNode("/orientation/heading-deg", 1);
-var pitch  		= props.globals.getNode("/orientation/pitch-deg", 1);
-var ac_lon		= props.globals.getNode("/position/longitude-deg", 1);
-var ac_lat		= props.globals.getNode("/position/latitude-deg", 1);
-var ac_alt		= props.globals.getNode("/position/altitude-ft", 1);
+var ac_hdg      = props.globals.getNode("/orientation/heading-deg");
+var pitch  		= props.globals.getNode("/orientation/pitch-deg");
+var ac_lon		= props.globals.getNode("/position/longitude-deg");
+var ac_lat		= props.globals.getNode("/position/latitude-deg");
+var ac_alt		= props.globals.getNode("/position/altitude-ft");
+var view_num	= props.globals.getNode("sim/current-view/view-number");
+var view_pitch	= props.globals.getNode("sim/current-view/pitch-offset-deg");
 
 var rng_m			= 0;
 var phd_scale		= 0;
@@ -32,17 +34,22 @@ var D2R = math.pi / 180;
 var FT2M = 0.3048;
 var NM2M = 1852;
 
+
 # loop ####################
 update_loop = func {
-	make_beam();
+	var viewn = view_num.getValue();
+	var viewp = view_pitch.getValue();
+	var on = TCon_off.getValue();
+	if ( viewn == 0 and viewp < -17 and on == 2 ) {
+		print (viewp);
+		make_beam();
+	}
 	settimer(update_loop, UPDATE_PERIOD);
 }
 
 
 # functions ###############
 make_beam = func {
-	var on = TCon_off.getValue();
-	if ( on != 2 ) { return };
 	var ac_alt_m	= 0;
 	var shadow_lim	= 0;
 	# Define the position of the whole plots line at Sea Level.
@@ -63,8 +70,6 @@ make_beam = func {
 	var hdg	= ac_hdg.getValue();
 	var beam = geo.Coord.new().set_latlon(a_lat, a_lon);
 	
-
-
 	# Radar shadow on/off.
 	tc_real = TCrealistic.getValue();
 
@@ -95,8 +100,6 @@ make_beam = func {
 		s.getNode("visible", 1).setBoolValue(v);		
 	}
 }
-
-
 
 
 var TCsettings = func {
