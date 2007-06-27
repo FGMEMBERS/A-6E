@@ -91,6 +91,11 @@ Grumman A-6E simulation config.
 				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
 			</config>
 		</view>
+		<view n="6">
+			<config>
+				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
+			</config>
+		</view>
 
 		<weight n="0">
 			<name>Left Outboard</name>
@@ -317,7 +322,6 @@ Grumman A-6E simulation config.
 			<file>Aircraft/A-6E/Nasal/pilot-g.nas</file>
 		</pilot-g>
 	</nasal>
-
 
 
 </PropertyList>
