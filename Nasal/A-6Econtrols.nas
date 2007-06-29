@@ -71,7 +71,7 @@ controls.stepSpoilers = func {
 
 
 # Canopy switch animation and canopy move
-# ----------------------------------------
+# ---------------------------------------
 # Toggle keystroke and 2 positions switch.
 var cnpy = aircraft.door.new("sim/model/A-6E/canopy", 10);
 var cswitch = props.globals.getNode("sim/model/A-6E/controls/canopy/canopy-switch", 1);
@@ -94,6 +94,38 @@ canopyswitch = func(v) {
 		cswitch.setIntValue(-1);
 		cnpy.open();
 
+	}
+}
+
+
+# Landing gear handle animation 
+# -----------------------------
+setlistener( "controls/gear/gear-down", func { ldg_hdl_main(); } );
+
+var ld_hdl = props.globals.getNode("sim/model/A-6E/controls/gear/ld-gear-handle-anim", 1);
+
+ldg_hdl_main = func {
+	var pos = ld_hdl.getValue();
+	if ( getprop("controls/gear/gear-down") == 1 ) {
+		if ( pos > -1 ) {
+			ldg_hdl_anim(-1, pos);
+		}
+	} elsif ( pos < 0 ) {
+		ldg_hdl_anim(1, pos);
+	}
+}
+
+ldg_hdl_anim = func {
+  	var incr = arg[0]/10;
+	var pos = arg[1] + incr;
+
+	if ( ( arg[0] = 1 ) and ( pos >= 0 ) ) {    
+		ld_hdl.setDoubleValue(0);
+	} elsif ( ( arg[0] = -1 ) and ( pos <= -1 ) ) {
+		ld_hdl.setDoubleValue(-1);
+	} else {
+		ld_hdl.setDoubleValue(pos);
+		settimer( ldg_hdl_main, 0.05 );
 	}
 }
 
@@ -192,12 +224,17 @@ tacan_XYtoggle = func {
 
 # collision lights flasher
 # ------------------------
-beacon = props.globals.getNode("controls/lighting/beacon", 1);
-aircraft.light.new("sim/model/A-6E/lighting/beacon_state", [0.20, 1.20], beacon);
+var beacon = props.globals.getNode("controls/lighting/beacon", 1);
+aircraft.light.new("sim/model/A-6E/lighting/beacon_state", [0.08, 1.20], beacon);
 
 # warning lights medium speed flasher
 # -----------------------------------
-warn_medium_lights_switch = props.globals.getNode("sim/model/A-6E/lighting/warn-medium-lights-switch", 1);
-aircraft.light.new("sim/model/A-6E/lighting/warn-medium-lights", [0.40, 0.30], warn_medium_lights_switch);
+aircraft.light.new("sim/model/A-6E/lighting/warn-medium-lights-switch", [0.4, 0.3]);
+setprop("sim/model/A-6E/lighting/warn-medium-lights-switch/enabled", 1);
+
+# warning lights fast speed flasher
+# -----------------------------------
+aircraft.light.new("sim/model/A-6E/lighting/warn-fast-lights-switch", [0.1, 0.1]);
+setprop("sim/model/A-6E/lighting/warn-fast-lights-switch/enabled", 1);
 
 

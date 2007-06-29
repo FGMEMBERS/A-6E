@@ -163,6 +163,9 @@ Grumman A-6E simulation config.
 						<CG-trim-fwd type="double">0</CG-trim-fwd>
 						<CG-trim-aft type="double">5000</CG-trim-aft>
 					</flight>
+					<gear>
+						<ld-gear-handle-anim type="double">0</ld-gear-handle-anim>
+					</gear>
 					<lighting>
 						<pylons-lts type="int">1</pylons-lts>
 						<index-norm type="double">0.8</index-norm>

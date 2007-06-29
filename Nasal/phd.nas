@@ -41,7 +41,6 @@ update_loop = func {
 	var viewp = view_pitch.getValue();
 	var on = TCon_off.getValue();
 	if ( viewn == 0 and viewp < -17 and on == 2 ) {
-		print (viewp);
 		make_beam();
 	}
 	settimer(update_loop, UPDATE_PERIOD);

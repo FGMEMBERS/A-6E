@@ -184,6 +184,15 @@
 	</model>
 
 	<model>
+		<path>Aircraft/A-6E/Models/ldg-controls.xml</path>
+		<offsets> 
+			<x-m>2.6057</x-m>
+			<y-m>-0.6771</y-m>
+			<z-m>0.8116</z-m>
+		</offsets>
+	</model>
+
+	<model>
 		<path>Aircraft/A-6E/Models/engine-gauges.xml</path>
 		<offsets> 
 			<x-m>2.6030</x-m>
@@ -2035,6 +2044,11 @@
 	</animation>		
 
 	<!-- ############## Position External Lighting ############## -->
+	<light-params>
+		<position-factor>4</position-factor>
+		<position-factor-dim>2</position-factor-dim>
+		<colision-factor>8</colision-factor>
+	</light-params>
 	<!-- position-tail -->
 	<animation>
 		<type>select</type>
@@ -2081,9 +2095,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>6</x-factor>
-		<y-factor>6</y-factor>
-		<z-factor>6</z-factor>
+		<x-factor alias="../../light-params/position-factor"/>
+		<y-factor alias="../../light-params/position-factor"/>
+		<z-factor alias="../../light-params/position-factor"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2093,8 +2107,8 @@
 		<object-name>noshadow.nav_halo_Tail</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
-			<entry><ind>500</ind><dep>4</dep></entry>
-			<entry><ind>50000</ind><dep>300</dep></entry>
+			<entry><ind>500</ind><dep>2.5</dep></entry>
+			<entry><ind>16000</ind><dep>7</dep></entry>
 		</interpolation>
 	</animation>
 	<!-- position-tail Dimmed-->
@@ -2143,9 +2157,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>3.5</x-factor>
-		<y-factor>3.5</y-factor>
-		<z-factor>3.5</z-factor>
+		<x-factor alias="../../light-params/position-factor-dim"/>
+		<y-factor alias="../../light-params/position-factor-dim"/>
+		<z-factor alias="../../light-params/position-factor-dim"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2155,8 +2169,8 @@
 		<object-name>noshadow.nav_halo_Tail_Dim</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
-			<entry><ind>500</ind><dep>4</dep></entry>
-			<entry><ind>50000</ind><dep>300</dep></entry>
+			<entry><ind>500</ind><dep>2.5</dep></entry>
+			<entry><ind>16000</ind><dep>7</dep></entry>
 		</interpolation>
 	</animation>
 
@@ -2196,9 +2210,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>6</x-factor>
-		<y-factor>6</y-factor>
-		<z-factor>6</z-factor>
+		<x-factor alias="../../light-params/position-factor"/>
+		<y-factor alias="../../light-params/position-factor"/>
+		<z-factor alias="../../light-params/position-factor"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2247,9 +2261,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>3.5</x-factor>
-		<y-factor>3.5</y-factor>
-		<z-factor>3.5</z-factor>
+		<x-factor alias="../../light-params/position-factor-dim"/>
+		<y-factor alias="../../light-params/position-factor-dim"/>
+		<z-factor alias="../../light-params/position-factor-dim"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2300,9 +2314,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>6</x-factor>
-		<y-factor>6</y-factor>
-		<z-factor>6</z-factor>
+		<x-factor alias="../../light-params/position-factor"/>
+		<y-factor alias="../../light-params/position-factor"/>
+		<z-factor alias="../../light-params/position-factor"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2351,9 +2365,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>3.5</x-factor>
-		<y-factor>3.5</y-factor>
-		<z-factor>3.5</z-factor>
+		<x-factor alias="../../light-params/position-factor-dim"/>
+		<y-factor alias="../../light-params/position-factor-dim"/>
+		<z-factor alias="../../light-params/position-factor-dim"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2406,9 +2420,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>8</x-factor>
-		<y-factor>8</y-factor>
-		<z-factor>8</z-factor>
+		<x-factor alias="../../light-params/colision-factor"/>
+		<y-factor alias="../../light-params/colision-factor"/>
+		<z-factor alias="../../light-params/colision-factor"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2418,8 +2432,8 @@
 		<object-name>noshadow.coll_halo_FR</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
-			<entry><ind>500</ind><dep>4</dep></entry>
-			<entry><ind>50000</ind><dep>500</dep></entry>
+			<entry><ind>500</ind><dep>2</dep></entry>
+			<entry><ind>50000</ind><dep>300</dep></entry>
 		</interpolation>
 	</animation>
 	<!-- collision-fuselage-left -->
@@ -2457,9 +2471,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>8</x-factor>
-		<y-factor>8</y-factor>
-		<z-factor>8</z-factor>
+		<x-factor alias="../../light-params/colision-factor"/>
+		<y-factor alias="../../light-params/colision-factor"/>
+		<z-factor alias="../../light-params/colision-factor"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2469,8 +2483,8 @@
 		<object-name>noshadow.coll_halo_FL</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
-			<entry><ind>500</ind><dep>4</dep></entry>
-			<entry><ind>50000</ind><dep>500</dep></entry>
+			<entry><ind>500</ind><dep>2</dep></entry>
+			<entry><ind>50000</ind><dep>300</dep></entry>
 		</interpolation>
 	</animation>
 
@@ -2503,9 +2517,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>8</x-factor>
-		<y-factor>8</y-factor>
-		<z-factor>8</z-factor>
+		<x-factor alias="../../light-params/colision-factor"/>
+		<y-factor alias="../../light-params/colision-factor"/>
+		<z-factor alias="../../light-params/colision-factor"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2515,8 +2529,8 @@
 		<object-name>noshadow.coll_halo_WL</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
-			<entry><ind>500</ind><dep>4</dep></entry>
-			<entry><ind>50000</ind><dep>500</dep></entry>
+			<entry><ind>500</ind><dep>2</dep></entry>
+			<entry><ind>50000</ind><dep>300</dep></entry>
 		</interpolation>
 	</animation>
 	<!-- collision-wing-right -->
@@ -2548,9 +2562,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>8</x-factor>
-		<y-factor>8</y-factor>
-		<z-factor>8</z-factor>
+		<x-factor alias="../../light-params/colision-factor"/>
+		<y-factor alias="../../light-params/colision-factor"/>
+		<z-factor alias="../../light-params/colision-factor"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2560,8 +2574,8 @@
 		<object-name>noshadow.coll_halo_WR</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
-			<entry><ind>500</ind><dep>4</dep></entry>
-			<entry><ind>50000</ind><dep>500</dep></entry>
+			<entry><ind>500</ind><dep>2</dep></entry>
+			<entry><ind>50000</ind><dep>300</dep></entry>
 		</interpolation>
 	</animation>
 
@@ -2594,9 +2608,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>8</x-factor>
-		<y-factor>8</y-factor>
-		<z-factor>8</z-factor>
+		<x-factor alias="../../light-params/colision-factor"/>
+		<y-factor alias="../../light-params/colision-factor"/>
+		<z-factor alias="../../light-params/colision-factor"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2606,8 +2620,8 @@
 		<object-name>noshadow.coll_halo_TR</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
-			<entry><ind>500</ind><dep>4</dep></entry>
-			<entry><ind>50000</ind><dep>500</dep></entry>
+			<entry><ind>500</ind><dep>2</dep></entry>
+			<entry><ind>50000</ind><dep>300</dep></entry>
 		</interpolation>
 	</animation>
 	<!-- collision-tail-left -->
@@ -2639,9 +2653,9 @@
 		<x-min>1</x-min>
 		<y-min>1</y-min>
 		<z-min>1</z-min>
-		<x-factor>8</x-factor>
-		<y-factor>8</y-factor>
-		<z-factor>8</z-factor>
+		<x-factor alias="../../light-params/colision-factor"/>
+		<y-factor alias="../../light-params/colision-factor"/>
+		<z-factor alias="../../light-params/colision-factor"/>
 		<x-offset>1</x-offset>
 		<y-offset>1</y-offset>
 		<z-offset>1</z-offset>
@@ -2651,8 +2665,8 @@
 		<object-name>noshadow.coll_halo_TL</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
-			<entry><ind>500</ind><dep>4</dep></entry>
-			<entry><ind>50000</ind><dep>500</dep></entry>
+			<entry><ind>500</ind><dep>2</dep></entry>
+			<entry><ind>50000</ind><dep>300</dep></entry>
 		</interpolation>
 	</animation>
 
