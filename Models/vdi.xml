@@ -408,6 +408,22 @@
 		</axis>
 	</animation>
 
+	<!-- autopilot -->
+    <animation> 
+        <type>select</type>
+        <object-name>afcs-alt</object-name>
+		<condition>
+			<property>sim/model/A-6E/controls/autopilot/vdi-alt-marker</property>
+		</condition>
+    </animation>
+    <animation> 
+        <type>select</type>
+        <object-name>afcs-roll</object-name>
+		<condition>
+			<property>sim/model/A-6E/controls/autopilot/vdi-roll-marker</property>
+		</condition>
+    </animation>
+
 	<!-- break away signal lights -->
     <animation> 
         <type>select</type>
@@ -544,9 +560,28 @@
             <blue>0.85</blue>
         </emission>
     </animation>
-
     <animation> 
         <object-name>ladder</object-name>
+        <type>material</type>
+        <emission> 
+            <factor-prop>sim/model/A-6E/controls/VDI/brightness</factor-prop>
+            <red>0.85</red>
+            <green>0.9</green>
+            <blue>0.85</blue>
+        </emission>
+    </animation>
+    <animation> 
+        <object-name>afcs-alt</object-name>
+        <type>material</type>
+        <emission> 
+            <factor-prop>sim/model/A-6E/controls/VDI/brightness</factor-prop>
+            <red>0.85</red>
+            <green>0.9</green>
+            <blue>0.85</blue>
+        </emission>
+    </animation>
+    <animation> 
+        <object-name>afcs-roll</object-name>
         <type>material</type>
         <emission> 
             <factor-prop>sim/model/A-6E/controls/VDI/brightness</factor-prop>

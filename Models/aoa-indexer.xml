@@ -143,7 +143,7 @@
 				<property>controls/engines/engine[0]/throttle</property>
 				<value>0.58</value>
 			</less-than>
-			<property>sim/model/A-6E/lighting/warn-medium-lights/state</property>
+			<property>sim/model/A-6E/lighting/warn-medium-lights-switch/state</property>
 		</condition>
 	</animation>
 

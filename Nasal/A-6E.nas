@@ -36,7 +36,7 @@ update_loop = func {
 # functions ###############
 
 inc_ticker = func {
-	# used for vdy background continuous translation animation
+	# used for VDI background continuous translation animation
 	var tick = ticker.getValue();
 	tick += 1 ;
 	ticker.setDoubleValue(tick);

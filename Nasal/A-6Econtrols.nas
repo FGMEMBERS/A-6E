@@ -220,6 +220,117 @@ tacan_XYtoggle = func {
 }
 
 
+# AFCS (Auto Flight Control System) Panel
+# ---------------------------------------
+var alt_button = props.globals.getNode("sim/model/A-6E/controls/autopilot/alt-button");
+var mach_button = props.globals.getNode("sim/model/A-6E/controls/autopilot/mach-button");
+var cmd_switch = props.globals.getNode("sim/model/A-6E/controls/autopilot/cmd-switch");
+var afcs_auto = props.globals.getNode("sim/model/A-6E/controls/autopilot/auto-stab-augm-switch");
+var afcs_on_off = props.globals.getNode("sim/model/A-6E/controls/autopilot/on-off-switch");
+var vdi_alt_marker = props.globals.getNode("sim/model/A-6E/controls/autopilot/vdi-alt-marker");
+var vdi_hdg_marker = props.globals.getNode("sim/model/A-6E/controls/autopilot/vdi-roll-marker");
+var press_alt_ft = props.globals.getNode("instrumentation/altimeter/pressure-alt-ft");
+var alt_ref = props.globals.getNode("autopilot/settings/target-altitude-ft");
+var ap_alt_lock = props.globals.getNode("autopilot/locks/altitude");
+var ap_hdg_lock = props.globals.getNode("autopilot/locks/heading");
+var roll_deg = props.globals.getNode("orientation/roll-deg");
+var target_roll_deg = props.globals.getNode("autopilot/internal/target-roll-deg");
+afcs_power = func(n) {
+	if ( n ){
+		afcs_on_off.setBoolValue( 1 );
+	} else {
+		afcs_on_off.setBoolValue( 0 );
+		afcs_auto.setBoolValue( 0 );
+		afcs_disengage();
+	}
+}
+afcs_alt = func {
+	var alt = alt_button.getValue();
+	var engage = afcs_auto.getValue();
+	if ( alt ){
+		alt_button.setBoolValue( 0 );		
+		afcs_auto.setBoolValue( 0 );
+		if ( engage ) {
+			afcs_disengage();
+		}
+	} else {
+		alt_button.setBoolValue( 1 );
+		mach_button.setBoolValue( 0 );
+		if ( engage ) {
+			afcs_engage();
+		}
+	}	
+}
+afcs_mach = func {
+	var mach = mach_button.getValue();
+	var engage = afcs_auto.getValue();
+	if ( mach ){
+		mach_button.setBoolValue( 0 );		
+	} else {
+		mach_button.setBoolValue( 1 );
+		alt_button.setBoolValue( 0 );
+		ap_alt_lock.setValue("");
+		vdi_alt_marker.setBoolValue( 0 );
+		if ( engage ) {
+			afcs_disengage();
+		}
+	}
+}
+afcs_cmd = func(c) {
+	var engage = afcs_auto.getValue();
+	if ( c ) {
+		cmd_switch.setBoolValue( 1 );
+		if ( engage ) {
+			afcs_engage();
+		}
+	} else {
+		cmd_switch.setBoolValue( 0 );
+		ap_hdg_lock.setValue("");
+		vdi_hdg_marker.setBoolValue( 0 );
+	}
+}
+afcs_engage = func() {
+	var power = afcs_on_off.getValue();
+	afcs_auto.setBoolValue(1);
+	var alt = alt_button.getValue();
+	var hdg = cmd_switch.getValue();
+	if (power) {
+		if ( alt ) {
+			alt_ref.setValue(press_alt_ft.getValue());
+			ap_alt_lock.setValue("altitude-hold");
+			vdi_alt_marker.setBoolValue(1);
+		}
+		if ( hdg ) {
+			rdeg = roll_deg.getValue();
+			if ((rdeg < -5) or (rdeg > 5)) {
+				if (rdeg < -60) {
+					rdeg = -60;
+				}
+				if (rdeg > 60) {
+					rdeg = 60;
+				}
+				target_roll_deg.setValue( rdeg );
+				ap_hdg_lock.setValue("roll-hold");
+			} else {
+				ap_hdg_lock.setValue("wing-leveler");
+			}
+			vdi_hdg_marker.setBoolValue(1);
+		}
+	} else {
+		settimer(func { afcs_disengage() }, 0.1);
+	}
+}
+
+afcs_disengage = func() {
+	afcs_auto.setBoolValue(0);
+	alt_ref.setValue(0);
+	ap_alt_lock.setValue("");
+	vdi_alt_marker.setBoolValue(0);
+	ap_hdg_lock.setValue("");
+	target_roll_deg.setValue(0);
+	vdi_hdg_marker.setBoolValue(0);
+}
+
 
 
 # collision lights flasher

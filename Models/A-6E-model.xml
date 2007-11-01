@@ -472,6 +472,18 @@
 
 	<!-- Pilot Right Console -->		
 	<model>
+		<path>Aircraft/A-6E/Models/afcs.xml</path>
+		<offsets> 
+			<x-m>2.8200</x-m>
+			<y-m>-0.0015</y-m>
+			<z-m>0.5200</z-m>
+			<pitch-deg>14</pitch-deg>
+		</offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+	</model>
+	<model>
 		<path>Aircraft/A-6E/Models/tacan.xml</path>
 		<offsets> 
 			<x-m>3.0540</x-m>

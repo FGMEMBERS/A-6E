@@ -103,35 +103,35 @@ Grumman A-6E simulation config.
 			<weight-lb>0</weight-lb>
 			<selected>none</selected>
 			<opt><name>none</name><lbs>0</lbs></opt>
-			<opt><name>test</name>   <lbs>500</lbs></opt>
-			<opt><name>300 Gallon Fuel Tank</name><lbs>200</lbs><gals>300</gals></opt>
+			<opt><name>test</name><lbs>500</lbs></opt>
+			<opt><name>300 Gallons Fuel Tank</name><lbs>2016</lbs><gals>300</gals></opt>
 		</weight>
 		<weight n="1">
 			<name>Left Inboard</name>
 			<tank>3</tank> <!-- FDM tank index on this pylon -->
 			<weight-lb>0</weight-lb>
 			<selected>none</selected>
-			<opt><name>none</name>                          <lbs>0</lbs>  </opt>
-			<opt><name>test</name>   <lbs>500</lbs></opt>
-			<opt><name>300 Gallon Fuel Tank</name><lbs>200</lbs><gals>300</gals></opt>
+			<opt><name>none</name><lbs>0</lbs>  </opt>
+			<opt><name>test</name><lbs>500</lbs></opt>
+			<opt><name>300 Gallons Fuel Tank</name><lbs>2016</lbs><gals>300</gals></opt>
 		</weight>
 		<weight n="2">
 			<name>Center Fuselage</name>
 			<tank>4</tank> <!-- FDM tank index on this pylon -->
 			<weight-lb>0</weight-lb>
 			<selected>none</selected>
-			<opt><name>none</name>                          <lbs>0</lbs>  </opt>
-			<opt><name>test</name>   <lbs>500</lbs></opt>
-			<opt><name>300 Gallon Fuel Tank</name><lbs>200</lbs><gals>300</gals></opt>
+			<opt><name>none</name><lbs>0</lbs>  </opt>
+			<opt><name>test</name><lbs>500</lbs></opt>
+			<opt><name>300 Gallons Fuel Tank</name><lbs>2016</lbs><gals>300</gals></opt>
 		</weight>
 		<weight n="3">
 			<name>Right Inboard</name>
 			<tank>5</tank> <!-- FDM tank index on this pylon -->
 			<weight-lb>0</weight-lb>
 			<selected>none</selected>
-			<opt><name>none</name>                          <lbs>0</lbs>  </opt>
-			<opt><name>test</name>   <lbs>500</lbs></opt>
-			<opt><name>300 Gallon Fuel Tank</name><lbs>200</lbs><gals>300</gals></opt>
+			<opt><name>none</name><lbs>0</lbs>  </opt>
+			<opt><name>test</name><lbs>500</lbs></opt>
+			<opt><name>300 Gallons Fuel Tank</name><lbs>2016</lbs><gals>300</gals></opt>
 		</weight>
 		<weight n="4">
 			<name>Right Outboard</name>
@@ -139,15 +139,21 @@ Grumman A-6E simulation config.
 			<weight-lb>0</weight-lb>
 			<selected>none</selected>
 			<opt><name>none</name><lbs>0</lbs></opt>
-			<opt><name>test</name>   <lbs>500</lbs></opt>
-			<opt><name>300 Gallon Fuel Tank</name><lbs>200</lbs><gals>300</gals></opt>
+			<opt><name>test</name><lbs>500</lbs></opt>
+			<opt><name>300 Gallons Fuel Tank</name><lbs>2016</lbs><gals>300</gals></opt>
 		</weight>
 
 
 		<sound>
 			<audible>true</audible>
-			<path>Aircraft/Hunter/Sounds/hunter-sound.xml</path>
+			<path>Aircraft/A-6E/Sounds/A-6E-sound.xml</path>
 		</sound>
+
+		<systems>
+			<autopilot>
+				<path>Aircraft/A-6E/Systems/A-6E-autopilot.xml</path>
+			</autopilot>
+		</systems>
 
 		<model>
 			<path>Aircraft/A-6E/Models/A-6E-model.xml</path>
@@ -179,6 +185,15 @@ Grumman A-6E simulation config.
 						<TCrealistic-shadow type="bool">1</TCrealistic-shadow>
 						<off-stdby-on type="int">0</off-stdby-on>
 					</PHD>
+					<autopilot>
+						<on-off-switch type="bool">0</on-off-switch>
+						<auto-stab-augm-switch type="bool">0</auto-stab-augm-switch>
+						<alt-button type="bool">0</alt-button>
+						<mach-button type="bool">0</mach-button>
+						<cmd-switch type="bool">0</cmd-switch>
+						<vdi-alt-marker type="bool">0</vdi-alt-marker>
+						<vdi-roll-marker type="bool">0</vdi-roll-marker>
+					</autopilot>
 					<tacan>
 						<xy-switch type="bool">0</xy-switch>
 					</tacan>
@@ -224,6 +239,7 @@ Grumman A-6E simulation config.
 						<TCrange type="double">1.5</TCrange>
 						<h-deviation type="double">0.0</h-deviation>
 						<v-deviation type="double">0.0</v-deviation>
+						<plots-out-of-range type="bool">0</plots-out-of-range>
 					</PHD>
 					<tacan>
 						<nogo-lamp type="bool">false</nogo-lamp>

@@ -32,6 +32,123 @@
 			</layers>
 			<actions>
 
+				<!-- ######### AFCS-Panel ######### -->
+
+				<!-- alt-button -->
+				<action>
+					<name>alt-button</name>
+					<button>0</button>
+					<x>-370</x>
+					<y>275</y>
+					<w>130</w>
+					<h>65</h>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.afcs_alt()</script>
+					</binding>
+				</action>
+
+				<!-- mach-button -->
+				<action>
+					<name>mach-button</name>
+					<button>0</button>
+					<x>-370</x>
+					<y>145</y>
+					<w>130</w>
+					<h>65</h>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.afcs_mach()</script>
+					</binding>
+				</action>
+
+
+				<!-- on-off-switch -->
+				<action>
+					<name>on-off-switch-up</name>
+					<button>0</button>
+					<x>200</x>
+					<y>295</y>
+					<w>130</w>
+					<h>40</h>
+					<repeatable type="bool">true</repeatable>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.afcs_power(1)</script>
+					</binding>
+				</action>
+				<action>
+					<name>on-off-switch-down</name>
+					<button>0</button>
+					<x>200</x>
+					<y>250</y>
+					<w>130</w>
+					<h>40</h>
+					<repeatable type="bool">true</repeatable>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.afcs_power(0)</script>
+					</binding>
+				</action>
+
+				<!-- auto-stab-augm-switch -->
+				<action>
+					<name>auto-stab-augm-switch-switch-up</name>
+					<button>0</button>
+					<x>200</x>
+					<y>185</y>
+					<w>130</w>
+					<h>40</h>
+					<repeatable type="bool">true</repeatable>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.afcs_engage()</script>
+					</binding>
+				</action>
+				<action>
+					<name>auto-stab-augm-switch-down</name>
+					<button>0</button>
+					<x>200</x>
+					<y>140</y>
+					<w>130</w>
+					<h>40</h>
+					<repeatable type="bool">true</repeatable>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.afcs_disengage()</script>
+					</binding>
+				</action>
+
+				<!-- cmd-on-off-switch -->
+				<action>
+					<name>cmd-on-off-switch-up</name>
+					<button>0</button>
+					<x>-80</x>
+					<y>215</y>
+					<w>130</w>
+					<h>40</h>
+					<repeatable type="bool">true</repeatable>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.afcs_cmd(1)</script>
+					</binding>
+				</action>
+				<action>
+					<name>cmd-on-off-switch-down</name>
+					<button>0</button>
+					<x>-80</x>
+					<y>170</y>
+					<w>130</w>
+					<h>40</h>
+					<repeatable type="bool">true</repeatable>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.afcs_cmd(0)</script>
+					</binding>
+				</action>
+
+
+
 				<!-- ######### Tacan-Panel ######### -->
 
 				<!-- Chan Knob -->
@@ -99,7 +216,7 @@
 
 				<!-- XY switch -->
 				<action>
-					<name>xy-switch-up</name>
+					<name>xy-switch-toggle</name>
 					<button>0</button>
 					<x>0</x>
 					<y>-468</y>
