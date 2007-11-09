@@ -7,7 +7,6 @@
 
 	<path>A-6E.ac</path>
 	
-
 	
 <!-- ####### Select the external loads as appropriate ###### -->
 	<!-- Select extermal tanks -->
@@ -17,7 +16,7 @@
 		<condition>   
 			<equals>
 				<property>sim/weight[0]/selected</property>
-				<value>300 Gallon Fuel Tank</value>
+				<value>300 Gallons Fuel Tank</value>
 			</equals>
 		</condition>
 	</animation>
@@ -27,7 +26,7 @@
 		<condition>   
 			<equals>
 				<property>sim/weight[1]/selected</property>
-				<value>300 Gallon Fuel Tank</value>
+				<value>300 Gallons Fuel Tank</value>
 			</equals>
 		</condition>
 	</animation>
@@ -37,7 +36,7 @@
 		<condition>   
 			<equals>
 				<property>sim/weight[2]/selected</property>
-				<value>300 Gallon Fuel Tank</value>
+				<value>300 Gallons Fuel Tank</value>
 			</equals>
 		</condition>
 	</animation>
@@ -47,7 +46,7 @@
 		<condition>   
 			<equals>
 				<property>sim/weight[3]/selected</property>
-				<value>300 Gallon Fuel Tank</value>
+				<value>300 Gallons Fuel Tank</value>
 			</equals>
 		</condition>
 	</animation>
@@ -57,7 +56,7 @@
 		<condition>   
 			<equals>
 				<property>sim/weight[4]/selected</property>
-				<value>300 Gallon Fuel Tank</value>
+				<value>300 Gallons Fuel Tank</value>
 			</equals>
 		</condition>
 	</animation>
@@ -65,10 +64,6 @@
 <!-- ###### De-select when in view 0 ###### -->
 	<animation>
 		<type>select</type>
-		<object-name>canopy-main-glass</object-name>
-		<object-name>windshield-side-glass</object-name>
-		<object-name>windshield-front-glass</object-name>
-		<object-name>windshield-top-glass</object-name>
 		<object-name>L-Pilot</object-name>
 		<condition>
 			<not>
@@ -77,6 +72,43 @@
 					<value>0</value>
 				</equals>
 			</not>
+		</condition>
+	</animation>
+<!-- ###### De-select when in view 100 (Navigator view) ###### -->
+	<animation>
+		<type>select</type>
+		<object-name>R-Pilot</object-name>
+		<condition>
+			<not>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>7</value>
+				</equals>
+			</not>
+		</condition>
+	</animation>
+<!-- ###### De-select when in view 0 or 100 (Navigator view) ###### -->
+	<animation>
+		<type>select</type>
+		<object-name>canopy-main-glass</object-name>
+		<object-name>windshield-side-glass</object-name>
+		<object-name>windshield-front-glass</object-name>
+		<object-name>windshield-top-glass</object-name>
+		<condition>
+			<or>
+				<not>
+					<equals>
+						<property>sim/current-view/view-number</property>
+						<value>7</value>
+					</equals>
+				</not>
+				<not>
+					<equals>
+						<property>sim/current-view/view-number</property>
+						<value>7</value>
+					</equals>
+				</not>
+			</or>
 		</condition>
 	</animation>
 
@@ -258,7 +290,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/asi.xml</path>
 		<offsets> 
-			<x-m>2.5840</x-m>
+			<x-m>2.5870</x-m>
 			<y-m>-0.2295</y-m>
 			<z-m>1.0750</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -470,7 +502,7 @@
 		</animation>
 	</model>
 
-	<!-- Pilot Right Console -->		
+	<!-- Center Console -->		
 	<model>
 		<path>Aircraft/A-6E/Models/afcs.xml</path>
 		<offsets> 
@@ -490,6 +522,32 @@
 			<y-m>-0.0015</y-m>
 			<z-m>0.4630</z-m>
 			<pitch-deg>14</pitch-deg>
+		</offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+	</model>
+
+	<!-- Navigator right Console -->		
+	<model>
+		<path>Aircraft/A-6E/Models/ext-air-temp-gauge.xml</path>
+		<offsets> 
+			<x-m>2.6927</x-m>
+			<y-m>0.6868</y-m>
+			<z-m>0.5000</z-m>
+		</offsets>
+		<animation>
+			<type>noshadow</type>
+		</animation>
+	</model>
+
+	<model>
+		<path>Aircraft/A-6E/Models/doppler.xml</path>
+		<offsets> 
+			<x-m>3.0443</x-m>
+			<y-m>0.7213</y-m>
+			<z-m>0.4622</z-m>
+			<roll-deg>12</roll-deg>
 		</offsets>
 		<animation>
 			<type>noshadow</type>
@@ -519,24 +577,66 @@
 		</bottom-right>
 	</panel>
 	
-	<!-- Hotspots-Panel-Right -->
+	<!-- Hotspots-Pilot-Panel-Right -->
 	<panel>
-		<name>Hotspots-Panel-Right</name>
+		<name>Hotspots-Pilot-Panel-Right</name>
 		<path>Aircraft/A-6E/Models/p-panel-right.xml</path>
 		<top-left>
-			<x-m>2.6127</x-m>
-			<y-m>-0.2828</y-m>
-			<z-m>1.1338</z-m>
+			<x-m>2.5827</x-m>
+			<y-m>-0.2728</y-m>
+			<z-m>1.1238</z-m>
 		</top-left>
 		<bottom-left>
-			<x-m>2.7402</x-m>
-			<y-m>-0.2828</y-m>
-			<z-m>0.5514</z-m>
+			<x-m>2.7302</x-m>
+			<y-m>-0.2728</y-m>
+			<z-m>0.5394</z-m>
 		</bottom-left>
 		<bottom-right>
-			<x-m>2.7402</x-m>
-			<y-m>0.0803</y-m>
-			<z-m>0.5514</z-m>
+			<x-m>2.7302</x-m>
+			<y-m>0.0903</y-m>
+			<z-m>0.5394</z-m>
+		</bottom-right>
+	</panel>
+
+	<!-- Hotspots-Pilot-Panel-Bottom-Right -->
+	<panel>
+		<name>Hotspots-Pilot-Panel-Right</name>
+		<path>Aircraft/A-6E/Models/p-panel-bottom-right.xml</path>
+		<top-left>
+			<x-m>2.6058</x-m>
+			<y-m>-0.2823</y-m>
+			<z-m>0.8788</z-m>
+		</top-left>
+		<bottom-left>
+			<x-m>2.6058</x-m>
+			<y-m>-0.2823</y-m>
+			<z-m>0.6959</z-m>
+		</bottom-left>
+		<bottom-right>
+			<x-m>2.6058</x-m>
+			<y-m>0.0904</y-m>
+			<z-m>0.6959</z-m>
+		</bottom-right>
+	</panel>
+
+	<!-- Hotspots-Pilot-Panel-Canopy-switch -->
+	<panel>
+		<name>Hotspots-Pilot-Canopy-switch</name>
+		<path>Aircraft/A-6E/Models/p-panel-canopy-switch.xml</path>
+		<top-left>
+			<x-m>2.6346</x-m>
+			<y-m>-0.0151</y-m>
+			<z-m>1.0580</z-m>
+		</top-left>
+		<bottom-left>
+			<x-m>2.6468</x-m>
+			<y-m>-0.0151</y-m>
+			<z-m>0.9185</z-m>
+		</bottom-left>
+		<bottom-right>
+			<x-m>2.6468</x-m>
+			<y-m>0.0854</y-m>
+			<z-m>0.9185</z-m>
 		</bottom-right>
 	</panel>
 
@@ -561,7 +661,29 @@
 		</bottom-right>
 	</panel>
 
-	<!-- pilot-g -->
+	<!-- Hotspots-Console-Right (Navigator) -->
+	<panel>
+		<name>Hotspots-Console-Right</name>
+		<path>Aircraft/A-6E/Models/p-console-right.xml</path>
+		<top-left>
+			<x-m>2.6944</x-m>
+			<y-m>0.6434</y-m>
+			<z-m>0.4499</z-m>
+		</top-left>
+		<bottom-left>
+			<x-m>3.5342</x-m>
+			<y-m>0.6434</y-m>
+			<z-m>0.4478</z-m>
+		</bottom-left>
+		<bottom-right>
+			<x-m>3.5342</x-m>
+			<y-m>0.8554</y-m>
+			<z-m>0.4872</z-m>
+		</bottom-right>
+	</panel>
+
+
+<!--  ################ pilot-g  ################ -->	
 	<model>
 		<path>Aircraft/A-6E/Models/blackout.xml</path>
 		<offsets> 
@@ -574,6 +696,76 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
+
+
+<!-- #################### Pilots Animations #################### -->
+<!-- ########################################################### -->
+	
+    <!-- ########## Left Pilot's right arm ########### -->
+	<animation>
+		<type>rotate</type>
+		<object-name>LR-armA</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>22</factor>
+		<center>
+			<x-m>3.4968</x-m>
+			<y-m>0</y-m>
+			<z-m>1.0521</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>LR-armB</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>32</factor>
+		<center>
+			<x-m>3.3120</x-m>
+			<y-m>0</y-m>
+			<z-m>0.7445</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>LR-hand</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>6</factor>
+		<center>
+			<x-m>3.0000</x-m>
+			<y-m>0</y-m>
+			<z-m>0.7390</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>LR-armB</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>10</factor>
+		<center>
+			<x-m>3.3074</x-m>
+			<y-m>-0.1889</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
 	
 	
 <!-- ################### External Animations ################### -->
@@ -1044,16 +1236,24 @@
 		<object-name>UC-N-ArmBottom</object-name>
 		<object-name>UC-N-ArmTop</object-name>
 		<condition>
-			<greater-than>
-				<property>gear/gear[0]/position-norm</property>
-				<value>0.0</value>
-			</greater-than>
-			<not>
-				<equals>
-					<property>sim/current-view/view-number</property>
-					<value>0</value>
-				</equals>
-			</not>
+			<and>
+				<not>
+					<or>
+					<equals>
+						<property>sim/current-view/view-number</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>sim/current-view/view-number</property>
+						<value>7</value>
+					</equals>
+					</or>
+				</not>
+				<greater-than>
+					<property>gear/gear[0]/position-norm</property>
+					<value>0.0</value>
+				</greater-than>
+			</and>
 		</condition>
 	</animation>
 
@@ -2716,7 +2916,7 @@
 		<object-name>CPT-center-panel-sides</object-name>
 		<object-name>CPT-center-panel</object-name>
 		<object-name>CPT-BN-panel</object-name>
-		<object-name>CPT-left-console</object-name>
+		<object-name>CPT-consoles</object-name>
 		<object-name>CPT-panel-1a</object-name>
 		<object-name>CPT-panel-1b</object-name>
 		<object-name>CPT-panel-1c</object-name>

@@ -128,54 +128,6 @@
 					</binding>
 				</action>
 
-				<!-- ######### Canopy switch ######### -->
-				<action> 
-					<name>canopy-close</name>
-					<button>0</button>
-					<x>370</x>
-					<y>315</y>
-					<w>150</w>
-					<h>60</h>
-					<binding>
-						<command>nasal</command>
-						<script>A6Econtrols.canopyswitch(-1)</script>
-					</binding>
-				</action>
-				<action> 
-					<name>canopy-open</name>
-					<button>0</button>
-					<x>370</x>
-					<y>247</y>
-					<w>150</w>
-					<h>60</h>
-					<binding>
-						<command>nasal</command>
-						<script>A6Econtrols.canopyswitch(1)</script>
-					</binding>
-				</action>
-
-
-				<!-- ######### Accelerometer Reset ######### -->
-
-				<action> 
-					<name>Reset Accelerometer</name>
-					<button>0</button>
-					<x>-225</x>
-					<y>15</y>
-					<w>48</w>
-					<h>38</h>
-					<binding> 
-						<command>property-assign</command>
-						<property>sim/model/A-6E/instrumentation/g-meter/g-max</property>
-						<value>1</value>
-					</binding>
-					<binding> 
-						<command>property-assign</command>
-						<property>sim/model/A-6E/instrumentation/g-meter/g-min</property>
-						<value>1</value>
-					</binding>
-				</action>
-
 				<!-- ######### VDI Radar Pilots Control ######### -->
 
 				<!-- VDI Display -->

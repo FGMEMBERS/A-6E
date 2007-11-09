@@ -41,9 +41,9 @@ update_loop = func {
 	var viewn = view_num.getValue();
 	var viewp = view_pitch.getValue();
 	var on = TCon_off.getValue();
-	if ( viewn == 0 and viewp < -17 and on == 2 ) {
+	if (( viewn == 0 and viewp < -17 and on == 2) or ( viewn == 7 )) {
 		make_beam();
-	}
+	} 
 	settimer(update_loop, UPDATE_PERIOD);
 }
 
@@ -77,48 +77,48 @@ make_beam = func {
 		ac_alt_m = FT2M * ac_alt.getValue();
 		var v_dev = ac_alt_m * phd_scale / 2 * dev_calibration;
 		var h_dev = pitch_sin * v_dev;		
-		if ( v_dev < disp_dev_max ) {
-			plots_out.setBoolValue(0);
-			v_rng_dev.setDoubleValue(v_dev);
-			h_rng_dev.setDoubleValue(h_dev);
 
-			var a_lon = ac_lon.getValue();
-			var a_lat = ac_lat.getValue();
-			var hdg	= ac_hdg.getValue();
-			var beam = geo.Coord.new().set_latlon(a_lat, a_lon);
+		plots_out.setBoolValue(0);
+		v_rng_dev.setDoubleValue(v_dev);
+		h_rng_dev.setDoubleValue(h_dev);
 
-			# Radar shadow on/off (for tests purpose).
-			tc_real = TCrealistic.getValue();
+		var a_lon = ac_lon.getValue();
+		var a_lat = ac_lat.getValue();
+		var hdg	= ac_hdg.getValue();
+		var beam = geo.Coord.new().set_latlon(a_lat, a_lon);
 
-			for (var i = 0; i < 100; i += 1) {
-				# Define coords and elev of each plot.	
-				var name = "/sim/model/A-6E/instrumentation/PHD/s[" ~ i ~ "]";
-				var s = props.globals.getNode(name, 1);
-				var i_dist = int(i * s_interval_m);
-				var i_coord = beam.apply_course_distance(hdg, i_dist);
+		# Radar shadow on/off (for tests purpose).
+		tc_real = TCrealistic.getValue();
 
-				var i_elev = geo.elevation(i_coord.lat(), i_coord.lon());
-				if ( ! i_elev ) { i_elev = 0 };
-				var i_dev = i_elev * phd_scale;
-				s.getNode("elevation_m", 1).setDoubleValue(i_dev / 2  * dev_calibration);
+		for (var i = 0; i < 100; i += 1) {
+			# Define coords and elev of each plot.	
+			var name = "/sim/model/A-6E/instrumentation/PHD/s[" ~ i ~ "]";
+			var s = props.globals.getNode(name, 1);
+			var i_dist = int(i * s_interval_m);
+			var i_coord = beam.apply_course_distance(hdg, i_dist);
 
-				# Some plots are invisible because in the radar beam's shadow.
-				if (tc_real == 1) {
-					v = 0;
-					i_shadow =  -atan2((ac_alt_m - i_elev), i_dist);
-					if (i == 0 ) { shadow_lim = i_shadow; }
-					if ( i_shadow >= shadow_lim ) {
-						shadow_lim = i_shadow;
-						v = 1;
-					}
-				} else {
+			var i_elev = geo.elevation(i_coord.lat(), i_coord.lon());
+			if ( ! i_elev ) { i_elev = 0 };
+			var i_dev = i_elev * phd_scale;
+			s.getNode("elevation_m", 1).setDoubleValue(i_dev / 2  * dev_calibration);
+
+			# Some plots are invisible because in the radar beam's shadow
+			# or displayed outside the case of radar screen .
+			if (tc_real == 1) {
+				var total_dev = v_dev - i_dev;
+				v = 0;
+				i_shadow =  -atan2((ac_alt_m - i_elev), i_dist);
+				if (i == 0 ) { shadow_lim = i_shadow; }
+				if (( i_shadow >= shadow_lim ) and ( total_dev < disp_dev_max )) {
+					shadow_lim = i_shadow;
 					v = 1;
 				}
-				s.getNode("visible", 1).setBoolValue(v);		
+			} else {
+				v = 1;
 			}
-		} else {
-			plots_out.setBoolValue(1);
+			s.getNode("visible", 1).setBoolValue(v);		
 		}
+
 	}
 }
 

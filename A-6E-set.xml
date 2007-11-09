@@ -48,26 +48,6 @@ Grumman A-6E simulation config.
 				<default-field-of-view-deg>57</default-field-of-view-deg>
 			</config>
 		</view>
-		<view n="100">
-			<name>Drop View</name>
-			<type>lookat</type>
-			<config>
-				<eye-lat-deg-path>sim/view[100]/latitude-deg</eye-lat-deg-path>
-				<eye-lon-deg-path>sim/view[100]/longitude-deg</eye-lon-deg-path>
-				<eye-alt-ft-path>sim/view[100]/altitude-ft</eye-alt-ft-path>
-				<eye-roll-deg-path>sim/view[100]/roll-deg</eye-roll-deg-path>
-				<eye-pitch-deg-path>sim/view[100]/pitch-deg</eye-pitch-deg-path>
-				<eye-heading-deg-path>sim/view[100]/heading-deg</eye-heading-deg-path>
-				<at-model type="bool">true</at-model>
-				<at-model-idx type="int">0</at-model-idx>
-				<ground-level-nearplane-m type="double">1.0f</ground-level-nearplane-m>
-				<default-field-of-view-deg type="double">8.0</default-field-of-view-deg>
-				<x-offset-m type="double">0</x-offset-m>
-				<y-offset-m type="double">0</y-offset-m>
-				<z-offset-m type="double">0</z-offset-m>
-				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
-			</config>
-		</view>
 		<view n="1">
 			<config>
 				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
@@ -94,6 +74,20 @@ Grumman A-6E simulation config.
 		<view n="6">
 			<config>
 				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="100">
+			<name>Navigator-View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+				<x-offset-m archive="y">0.40</x-offset-m>
+				<y-offset-m archive="y">1.32</y-offset-m>
+				<z-offset-m archive="y">3.54</z-offset-m>
+				<pitch-offset-deg>-10</pitch-offset-deg>
+				<default-field-of-view-deg>57</default-field-of-view-deg>
 			</config>
 		</view>
 
@@ -165,6 +159,7 @@ Grumman A-6E simulation config.
 					<canopy>
 						<canopy-switch type="int">-1</canopy-switch>
 					</canopy>
+
 					<flight>
 						<CG-trim-fwd type="double">0</CG-trim-fwd>
 						<CG-trim-aft type="double">5000</CG-trim-aft>
@@ -172,6 +167,11 @@ Grumman A-6E simulation config.
 					<gear>
 						<ld-gear-handle-anim type="double">0</ld-gear-handle-anim>
 					</gear>
+					<instrumentation>
+						<doppler>
+							<mode-selector type="int">0</mode-selector>
+						</doppler>
+					</instrumentation>
 					<lighting>
 						<pylons-lts type="int">1</pylons-lts>
 						<index-norm type="double">0.8</index-norm>
@@ -216,17 +216,11 @@ Grumman A-6E simulation config.
 					</VDI>
 				</controls>
 				<instrumentation>
-					<g-meter>
-						<g-max archive="y" type="double">1</g-max>
-						<g-min archive="y" type="double">1</g-min>
-					</g-meter>
-					<ticker archive="n" type="double">0</ticker>
-					<optical-sight>
-						<break-lts type="bool">0</break-lts>
-					</optical-sight>
-					<terrain-clearance>
-						<serviceable type="bool">1</serviceable>
-					</terrain-clearance>
+					<doppler>
+						<drift-deg type="double">0.0</drift-deg>
+						<ground-speed-kt type="double">0.0</ground-speed-kt>
+						<memory type="bool">true</memory>
+					</doppler>
 					<engines-gauges>
 						<L-rpm-on type="bool">true</L-rpm-on>
 						<R-rpm-on type="bool">true</R-rpm-on>
@@ -235,6 +229,13 @@ Grumman A-6E simulation config.
 						<L-ff-on type="bool">true</L-ff-on>
 						<R-ff-on type="bool">true</R-ff-on>
 					</engines-gauges>
+					<g-meter>
+						<g-max archive="y" type="double">1</g-max>
+						<g-min archive="y" type="double">1</g-min>
+					</g-meter>
+					<optical-sight>
+						<break-lts type="bool">0</break-lts>
+					</optical-sight>
 					<PHD>
 						<TCrange type="double">1.5</TCrange>
 						<h-deviation type="double">0.0</h-deviation>
@@ -246,6 +247,10 @@ Grumman A-6E simulation config.
 						<go-lamp type="bool">false</go-lamp>
 						<mode type="int">0</mode>
 					</tacan>
+					<terrain-clearance>
+						<serviceable type="bool">1</serviceable>
+					</terrain-clearance>
+					<ticker archive="n" type="double">0</ticker>
 					<warning-lights>
 						<master-caution type="bool">false</master-caution>
 						<L-fire type="bool">false</L-fire>
@@ -331,6 +336,9 @@ Grumman A-6E simulation config.
 		<A6E>
 			<file>Aircraft/A-6E/Nasal/A-6E.nas</file>
 		</A6E>
+		<doppler>
+			<file>Aircraft/A-6E/Nasal/doppler.nas</file>
+		</doppler>
 		<phd>
 			<file>Aircraft/A-6E/Nasal/phd.nas</file>
 		</phd>
@@ -340,6 +348,10 @@ Grumman A-6E simulation config.
 		<pilot-g>
 			<file>Aircraft/A-6E/Nasal/pilot-g.nas</file>
 		</pilot-g>
+		<A6Efuel>
+			<module>fuel</module>
+			<file>Aircraft/Generic/aar.nas</file>
+		</A6Efuel>
 	</nasal>
 
 

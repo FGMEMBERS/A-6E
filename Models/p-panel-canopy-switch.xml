@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+
+<PropertyList> 
+	<name>Pilot-Panel-Right</name>
+	<background>Aircraft/A-6E/Models/transparent-bg.rgb</background>
+	<w>1024</w>
+	<h>768</h>
+	<y-offset>0</y-offset>
+
+	<instruments> 
+		<instrument> 
+			<name>Pilot-Panel-Right</name>
+        	<w>1024</w>
+        	<h>768</h>
+        	<w-base>1024</w-base>
+        	<h-base>1024</h-base>
+        	<x>512</x>
+			<y>384</y>  
+			<layers> 
+				<layer> 
+					<name>background</name>
+					<texture> 
+						<path>Aircraft/A-6E/Models/transparent-bg.rgb</path>
+						<!--<path>Aircraft/A-6E/Models/hotspotgrid.rgb</path>-->
+						<x1>0.0</x1>
+						<y1>0.0</y1>
+						<x2>1.0</x2>
+						<y2>1.0</y2>
+					</texture>
+				</layer>
+			</layers>
+			<actions> 
+
+				<!-- ######### Canopy switch ######### -->
+				<action> 
+					<name>canopy-close</name>
+					<button>0</button>
+					<x>-40</x>
+					<y>250</y>
+					<w>500</w>
+					<h>250</h>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.canopyswitch(-1)</script>
+					</binding>
+				</action>
+				<action> 
+					<name>canopy-open</name>
+					<button>0</button>
+					<x>-40</x>
+					<y>-50</y>
+					<w>500</w>
+					<h>250</h>
+					<binding>
+						<command>nasal</command>
+						<script>A6Econtrols.canopyswitch(1)</script>
+					</binding>
+				</action>
+
+			</actions> 
+
+		</instrument>
+	</instruments>
+</PropertyList>

@@ -34,6 +34,51 @@
   </axis>
  </animation>
 
+ <animation>
+  <type>rotate</type>
+  <object-name>mach-index</object-name>
+  <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+  <factor>0.2</factor>
+		<entry><ind>0</ind><dep>0</dep></entry>
+		<entry><ind>150</ind><dep>30.3</dep></entry>
+		<entry><ind>200</ind><dep>40.9</dep></entry>
+		<entry><ind>250</ind><dep>51.75</dep></entry>
+		<entry><ind>300</ind><dep>62.85</dep></entry>
+		<entry><ind>350</ind><dep>72.2</dep></entry>
+		<entry><ind>400</ind><dep>85.8</dep></entry>
+		<entry><ind>450</ind><dep>97.65</dep></entry>
+		<entry><ind>500</ind><dep>109.75</dep></entry>				
+		<entry><ind>550</ind><dep>122.100</dep></entry>				
+		<entry><ind>600</ind><dep>137.7</dep></entry>				
+		<entry><ind>800</ind><dep>179.6</dep></entry>				
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>mach-scale</object-name>
+		<property>environment/pressure-inhg</property>
+			<interpolation>
+				<entry><ind>33.00</ind><dep>-2</dep></entry>
+				<entry><ind>30.00</ind><dep>-2</dep></entry>
+				<entry><ind>20.50</ind><dep>19.585</dep></entry>
+				<entry><ind>13.80</ind><dep>24.840</dep></entry>
+				<entry><ind>8.90</ind><dep>37.230</dep></entry>
+				<entry><ind>5.33</ind><dep>51.060</dep></entry>
+				<entry><ind>3.43</ind><dep>61.875</dep></entry>
+				<entry><ind>2.12</ind><dep>67.260</dep></entry>				
+			</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
 
   <animation> 
    <object-name>mount</object-name>

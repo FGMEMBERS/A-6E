@@ -1,9 +1,14 @@
-TODOS:
-------
-- The B/N (Bombardier/Navigator) should be a bit more friendly...
-- Sounds, fuel, flaps and trim indicators would be usefull too.
-- A Sexy Splash Screen :) in progress...
-- FDM: improved rudder. (mysteriouly the rudder induces a inverted roll).
+
+2007/11/05
+----------
+- PHD (Pilot Horizontal Display) more optimizations, dotd are not displayed
+    outside the screen anymore.
+- Navigator view, begining of the navigator panel, one external air temperature
+    gauge, and the Doppler Panel wich shows the wind induced drift and the
+    ground speed.
+- The autopilot wich has only few capabilities, maintain altitude and/or bank
+    angle.
+- Added the machmeter feature to the Air Speed indicator.
 
 2007/05/29
 ----------
