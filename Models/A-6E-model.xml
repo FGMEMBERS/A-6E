@@ -61,33 +61,33 @@
 		</condition>
 	</animation>
 	
-<!-- ###### De-select when in view 0 ###### -->
+<!-- ###### De-select when in Cockpit View ###### -->
 	<animation>
 		<type>select</type>
 		<object-name>L-Pilot</object-name>
 		<condition>
 			<not>
 				<equals>
-					<property>sim/current-view/view-number</property>
-					<value>0</value>
+					<property>sim/current-view/name</property>
+					<value>Cockpit View</value>
 				</equals>
 			</not>
 		</condition>
 	</animation>
-<!-- ###### De-select when in view 100 (Navigator view) ###### -->
+<!-- ###### De-select when in Navigator View ###### -->
 	<animation>
 		<type>select</type>
 		<object-name>R-Pilot</object-name>
 		<condition>
 			<not>
 				<equals>
-					<property>sim/current-view/view-number</property>
-					<value>7</value>
+					<property>sim/current-view/name</property>
+					<value>Navigator View</value>
 				</equals>
 			</not>
 		</condition>
 	</animation>
-<!-- ###### De-select when in view 0 or 100 (Navigator view) ###### -->
+<!-- ###### De-select when in Cockpit View or in Navigator View ###### -->
 	<animation>
 		<type>select</type>
 		<object-name>canopy-main-glass</object-name>
@@ -98,14 +98,14 @@
 			<or>
 				<not>
 					<equals>
-						<property>sim/current-view/view-number</property>
-						<value>7</value>
+						<property>sim/current-view/name</property>
+						<value>Cockpit View</value>
 					</equals>
 				</not>
 				<not>
 					<equals>
-						<property>sim/current-view/view-number</property>
-						<value>7</value>
+						<property>sim/current-view/name</property>
+						<value>Navigator View</value>
 					</equals>
 				</not>
 			</or>
@@ -1966,8 +1966,36 @@
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>UC-N-ArmBottom</object-name>
 		<object-name>UC-N-ArmTop</object-name>
+		<property>gear/gear[0]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>75.0</dep></entry>
+			<entry><ind>0.2</ind><dep>75.0</dep></entry>
+			<entry><ind>0.28</ind><dep>60</dep></entry>
+			<entry><ind>0.36</ind><dep>38</dep></entry>
+			<entry><ind>0.44</ind><dep>12</dep></entry>
+			<entry><ind>0.52</ind><dep>-2</dep></entry>
+			<entry><ind>0.6</ind><dep>-16</dep></entry>
+			<entry><ind>0.68</ind><dep>-22</dep></entry>
+			<entry><ind>0.76</ind><dep>-24</dep></entry>
+			<entry><ind>0.84</ind><dep>-23</dep></entry>
+			<entry><ind>0.92</ind><dep>-20</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>2.40</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-1.68</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>UC-N-ArmBottom</object-name>
 		<property>gear/gear[0]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>75.0</dep></entry>
@@ -2085,8 +2113,38 @@
 		<type>translate</type>
 		<object-name>UC-N-StrutBottom</object-name>
 		<object-name>UC-N-DamperBottom</object-name>
-		<object-name>UC-N-ArmBottom</object-name>
+		<property>gear/gear[0]/compression-norm</property>
+		<factor>0.80</factor>
+		<center>
+			<x-m>2.06</x-m>
+			<y-m>0</y-m>
+			<z-m>-2.12</z-m>
+		</center>
+		<axis>
+			<x>-0.07</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
 		<object-name>UC-N-ArmTop</object-name>
+		<property>gear/gear[0]/compression-norm</property>
+		<factor>0.80</factor>
+		<center>
+			<x-m>2.06</x-m>
+			<y-m>0</y-m>
+			<z-m>-2.12</z-m>
+		</center>
+		<axis>
+			<x>-0.07</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>UC-N-ArmBottom</object-name>
 		<property>gear/gear[0]/compression-norm</property>
 		<factor>0.80</factor>
 		<center>
@@ -2118,8 +2176,23 @@
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>UC-N-ArmBottom</object-name>
 		<object-name>UC-N-ArmTop</object-name>
+		<property>gear/gear[0]/compression-norm</property>
+		<factor>25</factor>
+		<center>
+			<x-m>2.40</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-1.68</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>UC-N-ArmBottom</object-name>
 		<property>gear/gear[0]/compression-norm</property>
 		<factor>25</factor>
 		<center>

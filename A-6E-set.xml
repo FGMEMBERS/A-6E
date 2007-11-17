@@ -77,7 +77,7 @@ Grumman A-6E simulation config.
 			</config>
 		</view>
 		<view n="100">
-			<name>Navigator-View</name>
+			<name>Navigator View</name>
 			<type>lookfrom</type>
 			<internal archive="y">true</internal>
 			<config>

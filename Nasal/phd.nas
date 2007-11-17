@@ -20,7 +20,7 @@ var pitch  		= props.globals.getNode("/orientation/pitch-deg");
 var ac_lon		= props.globals.getNode("/position/longitude-deg");
 var ac_lat		= props.globals.getNode("/position/latitude-deg");
 var ac_alt		= props.globals.getNode("/position/altitude-ft");
-var view_num	= props.globals.getNode("sim/current-view/view-number");
+var view_name	= props.globals.getNode("sim/current-view/name");
 var view_pitch	= props.globals.getNode("sim/current-view/pitch-offset-deg");
 
 var rng_m			= 0;
@@ -38,10 +38,10 @@ var NM2M = 1852;
 
 # loop ####################
 update_loop = func {
-	var viewn = view_num.getValue();
+	var viewn = view_name.getValue();
 	var viewp = view_pitch.getValue();
 	var on = TCon_off.getValue();
-	if (( viewn == 0 and viewp < -17 and on == 2) or ( viewn == 7 )) {
+	if (( viewn == "Cockpit View" and viewp < -17 and on == 2) or ( viewn == "Navigator View" )) {
 		make_beam();
 	} 
 	settimer(update_loop, UPDATE_PERIOD);

@@ -2,9 +2,9 @@
 # ------------------------------------------
 
 # define operating charasteristics 
-var min_alt_ft    = 40; # do not compute extreme altitudes decause of system limitations.
+var min_alt_ft    = 40; # do not compute extreme altitudes because of system limitations.
 var max_alt_ft    = 50000; 
-var min_gs_kt     = 80; # do not compute extreme ground speeds decause of system limitations.
+var min_gs_kt     = 80; # do not compute extreme ground speeds because of system limitations.
 var max_gs_kt     = 800;
 var min_pitch_deg = -17; # system rejects doppler signal when pitch or roll values are too high.
 var max_pitch_deg = 17;
@@ -114,8 +114,6 @@ doppler_knob = func {
 # init #################
 init = func {
 	print("Initializing A-6E Doppler");
-	#setlistener("/sim/model/A-6E/instrumentation/PHD/TCrange", TCsettings);
-	#TCsettings();
 	update_loop();
 }
 
