@@ -95,20 +95,14 @@
 		<object-name>windshield-front-glass</object-name>
 		<object-name>windshield-top-glass</object-name>
 		<condition>
-			<or>
-				<not>
-					<equals>
-						<property>sim/current-view/name</property>
-						<value>Cockpit View</value>
-					</equals>
-				</not>
-				<not>
-					<equals>
-						<property>sim/current-view/name</property>
-						<value>Navigator View</value>
-					</equals>
-				</not>
-			</or>
+			<not-equals>
+				<property>sim/current-view/name</property>
+				<value>Cockpit View</value>
+			</not-equals>
+			<not-equals>
+				<property>sim/current-view/name</property>
+				<value>Navigator View</value>
+			</not-equals>
 		</condition>
 	</animation>
 
@@ -1237,18 +1231,14 @@
 		<object-name>UC-N-ArmTop</object-name>
 		<condition>
 			<and>
-				<not>
-					<or>
-					<equals>
-						<property>sim/current-view/view-number</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>sim/current-view/view-number</property>
-						<value>7</value>
-					</equals>
-					</or>
-				</not>
+				<not-equals>
+					<property>sim/current-view/name</property>
+					<value>Cockpit View</value>
+				</not-equals>
+				<not-equals>
+					<property>sim/current-view/name</property>
+					<value>Navigator View</value>
+				</not-equals>
 				<greater-than>
 					<property>gear/gear[0]/position-norm</property>
 					<value>0.0</value>
