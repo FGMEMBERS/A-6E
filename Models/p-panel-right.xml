@@ -36,12 +36,12 @@
 
 				<!-- ######### Altimeter ######### -->
 				<action> 
-					<name>calibrate fine</name>
+					<name>calibrate fine CCW</name>
 					<button>0</button>
-					<x>-500</x>
-					<y>170</y>
-					<w>32</w>
-					<h>40</h>
+					<x>-525</x>
+					<y>172</y>
+					<w>45</w>
+					<h>38</h>
 					<binding> 
 						<command>property-adjust</command>
 						<property>instrumentation/altimeter/setting-inhg</property>
@@ -52,12 +52,12 @@
 					</binding>
 				</action>
 				<action> 
-					<name>calibrate coarse</name>
+					<name>calibrate coarse CCW</name>
 					<button>1</button>
-					<x>-500</x>
-					<y>170</y>
-					<w>32</w>
-					<h>40</h>
+					<x>-525</x>
+					<y>172</y>
+					<w>45</w>
+					<h>38</h>
 					<binding> 
 						<command>property-adjust</command>
 						<property>instrumentation/altimeter/setting-inhg</property>
@@ -68,12 +68,12 @@
 					</binding>
 				</action>
 				<action> 
-					<name>calibrate fine</name>
+					<name>calibrate fine CW</name>
 					<button>0</button>
-					<x>-463</x>
-					<y>170</y>
-					<w>32</w>
-					<h>40</h>
+					<x>-470</x>
+					<y>172</y>
+					<w>45</w>
+					<h>38</h>
 					<binding> 
 						<command>property-adjust</command>
 						<property>instrumentation/altimeter/setting-inhg</property>
@@ -84,12 +84,12 @@
 					</binding>
 				</action>
 				<action> 
-					<name>calibrate coarse</name>
+					<name>calibrate coarse CW</name>
 					<button>1</button>
-					<x>-463</x>
-					<y>170</y>
-					<w>32</w>
-					<h>40</h>
+					<x>-470</x>
+					<y>172</y>
+					<w>45</w>
+					<h>38</h>
 					<binding> 
 						<command>property-adjust</command>
 						<property>instrumentation/altimeter/setting-inhg</property>
@@ -104,10 +104,10 @@
 				<action> 
 					<name>Hook Lift Button</name>
 					<button>0</button>
-					<x>-245</x>
+					<x>-260</x>
 					<y>193</y>
-					<w>55</w>
-					<h>38</h>
+					<w>50</w>
+					<h>35</h>
 					<binding> 
 						<command>property-assign</command>
 						<property>controls/gear/tailhook</property>

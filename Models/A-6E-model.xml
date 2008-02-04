@@ -323,7 +323,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/altimeter.xml</path>
 		<offsets> 
-			<x-m>2.6108</x-m>
+			<x-m>2.6058</x-m>
 			<y-m>-0.2297</y-m>
 			<z-m>0.9650</z-m>
 			<pitch-deg>-14</pitch-deg>
