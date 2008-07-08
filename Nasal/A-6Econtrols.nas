@@ -2,7 +2,7 @@
 
 # PHD's TC range switch (hard coded range in nautical miles)
 # ----------------------------------------------------------
-PHD_TCrange_sw = func {
+var PHD_TCrange_sw = func {
 	var prop = props.globals.getNode(arg[0], 1);
 	var pr = prop.getValue();
 	var target = props.globals.getNode("/sim/model/A-6E/instrumentation/PHD/TCrange", 1);
@@ -77,7 +77,7 @@ var cnpy = aircraft.door.new("sim/model/A-6E/canopy", 10);
 var cswitch = props.globals.getNode("sim/model/A-6E/controls/canopy/canopy-switch", 1);
 var pos = props.globals.getNode("sim/model/A-6E/canopy/position-norm", 1);
 
-canopyswitch = func(v) {
+var canopyswitch = func(v) {
 	var p = pos.getValue();
 	if (v == 2 ) {
 		if ( p < 1 ) {
@@ -104,7 +104,7 @@ setlistener( "controls/gear/gear-down", func { ldg_hdl_main(); } );
 
 var ld_hdl = props.globals.getNode("sim/model/A-6E/controls/gear/ld-gear-handle-anim", 1);
 
-ldg_hdl_main = func {
+var ldg_hdl_main = func {
 	var pos = ld_hdl.getValue();
 	if ( getprop("controls/gear/gear-down") == 1 ) {
 		if ( pos > -1 ) {
@@ -115,7 +115,7 @@ ldg_hdl_main = func {
 	}
 }
 
-ldg_hdl_anim = func {
+var ldg_hdl_anim = func {
   	var incr = arg[0]/10;
 	var pos = arg[1] + incr;
 
@@ -132,7 +132,7 @@ ldg_hdl_anim = func {
 
 # General 3 positions switch (2 - 1 - 0)
 # --------------------------------------
-three_pos_sw = func {
+var three_pos_sw = func {
 	var prop = props.globals.getNode(arg[0], 1);
 	var pr = prop.getValue();
 	if (arg[1] == 1) {
@@ -153,7 +153,7 @@ three_pos_sw = func {
 
 # General 3 positions switch variant (2 - 0 - 1)
 # ----------------------------------------------
-three_pos_sw_b = func {
+var three_pos_sw_b = func {
 	var prop = props.globals.getNode(arg[0], 1);
 	var pr = prop.getValue();
 	if (arg[1] == 1) {
@@ -174,7 +174,7 @@ three_pos_sw_b = func {
 
 # Flood light 3 positions switch variant (1 - 0.5 - 0.25)
 # -------------------------------------------------------
-three_pos_sw_flood = func {
+var three_pos_sw_flood = func {
 	var prop = props.globals.getNode(arg[0], 1);
 	var pr = prop.getValue();
 	if (arg[1] == 1) {
@@ -197,7 +197,7 @@ three_pos_sw_flood = func {
 # -----------------------------------
 # Where group is the parent node that contains the radio state nodes as children.
 
-radio_bt_sel = func(group, which) {
+var radio_bt_sel = func(group, which) {
 	foreach (var n; props.globals.getNode(group).getChildren()) {
 		n.setBoolValue(n.getName() == which);
 	}
@@ -206,7 +206,7 @@ radio_bt_sel = func(group, which) {
 
 # TACAN XY Switch
 # ---------------
-tacan_XYtoggle = func {
+var tacan_XYtoggle = func {
 	var xy_sign = props.globals.getNode("instrumentation/tacan/frequencies/selected-channel[4]");
 	var xy_switch = props.globals.getNode("sim/model/A-6E/controls/instrumentation/tacan/xy-switch");
 	var s = xy_sign.getValue();
@@ -235,7 +235,7 @@ var ap_alt_lock = props.globals.getNode("autopilot/locks/altitude");
 var ap_hdg_lock = props.globals.getNode("autopilot/locks/heading");
 var roll_deg = props.globals.getNode("orientation/roll-deg");
 var target_roll_deg = props.globals.getNode("autopilot/internal/target-roll-deg");
-afcs_power = func(n) {
+var afcs_power = func(n) {
 	if ( n ){
 		afcs_on_off.setBoolValue( 1 );
 	} else {
@@ -244,7 +244,7 @@ afcs_power = func(n) {
 		afcs_disengage();
 	}
 }
-afcs_alt = func {
+var afcs_alt = func {
 	var alt = alt_button.getValue();
 	var engage = afcs_auto.getValue();
 	if ( alt ){
@@ -261,7 +261,7 @@ afcs_alt = func {
 		}
 	}	
 }
-afcs_mach = func {
+var afcs_mach = func {
 	var mach = mach_button.getValue();
 	var engage = afcs_auto.getValue();
 	if ( mach ){
@@ -276,7 +276,7 @@ afcs_mach = func {
 		}
 	}
 }
-afcs_cmd = func(c) {
+var afcs_cmd = func(c) {
 	var engage = afcs_auto.getValue();
 	if ( c ) {
 		cmd_switch.setBoolValue( 1 );
@@ -289,7 +289,7 @@ afcs_cmd = func(c) {
 		vdi_hdg_marker.setBoolValue( 0 );
 	}
 }
-afcs_engage = func() {
+var afcs_engage = func() {
 	var power = afcs_on_off.getValue();
 	afcs_auto.setBoolValue(1);
 	var alt = alt_button.getValue();
@@ -321,7 +321,7 @@ afcs_engage = func() {
 	}
 }
 
-afcs_disengage = func() {
+var afcs_disengage = func() {
 	afcs_auto.setBoolValue(0);
 	alt_ref.setValue(0);
 	ap_alt_lock.setValue("");
