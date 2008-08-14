@@ -148,7 +148,7 @@ Grumman A-6E simulation config.
 				<path>Aircraft/A-6E/Systems/A-6E-autopilot.xml</path>
 			</autopilot>
 			<refuel>
-				<system>probe</system>
+				<type>probe</type>
 			</refuel>
 		</systems>
 
