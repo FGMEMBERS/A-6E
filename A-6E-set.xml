@@ -147,9 +147,6 @@ Grumman A-6E simulation config.
 			<autopilot>
 				<path>Aircraft/A-6E/Systems/A-6E-autopilot.xml</path>
 			</autopilot>
-			<refuel>
-				<type>probe</type>
-			</refuel>
 		</systems>
 
 		<model>
@@ -286,7 +283,7 @@ Grumman A-6E simulation config.
 			<line>    Flaps:         LD (40°)</line>
 			<key>
 				<name>c</name>
-					<desc>Canopy open/close command</desc>
+				<desc>Canopy open/close command</desc>
 			</key>
 			<key>
 				<name>C</name>
@@ -308,6 +305,12 @@ Grumman A-6E simulation config.
 
 
 	</sim>
+
+	<systems>
+		<refuel>
+			<type>probe</type>
+		</refuel>
+	</systems>
 
 	<input>
 		<keyboard include="../../Input/Keyboard/carrier-bindings.xml">
@@ -334,7 +337,15 @@ Grumman A-6E simulation config.
 			<taxi-light>0</taxi-light>
 		</lighting>
 	</controls>
-
+	<instrumentation>
+		<radar>
+			<minimized type="bool">0</minimized>
+			<range type="double">32</range>
+			<range-control type="int">5</range-control>
+			<serviceable type="bool">1</serviceable>
+			<switch type="string">ON</switch>
+		</radar>
+	</instrumentation>
 	<nasal>
 		<A6E>
 			<file>Aircraft/A-6E/Nasal/A-6E.nas</file>
