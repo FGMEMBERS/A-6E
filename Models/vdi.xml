@@ -483,9 +483,9 @@
         <type>material</type>
         <emission> 
             <factor-prop>sim/model/A-6E/controls/VDI/brightness</factor-prop>
-            <red>0.8</red>
+            <red>0</red>
             <green>0.8</green>
-            <blue>0.8</blue>
+            <blue>0</blue>
         </emission>
     </animation>
     <animation> 
@@ -493,9 +493,9 @@
         <type>material</type>
         <emission> 
             <factor-prop>sim/model/A-6E/controls/VDI/brightness</factor-prop>
-            <red>0.8</red>
+            <red>0</red>
             <green>0.8</green>
-            <blue>0.8</blue>
+            <blue>0</blue>
         </emission>
     </animation>
 
@@ -504,9 +504,9 @@
         <type>material</type>
         <emission> 
             <factor-prop>sim/model/A-6E/controls/VDI/brightness</factor-prop>
-            <red>0.1</red>
+            <red>0</red>
             <green>0.15</green>
-            <blue>0.1</blue>
+            <blue>0</blue>
         </emission>
     </animation>
 
