@@ -362,10 +362,9 @@ Grumman A-6E simulation config.
 		<pilot-g>
 			<file>Aircraft/A-6E/Nasal/pilot-g.nas</file>
 		</pilot-g>
-		<A6Efuel>
-			<module>fuel</module>
+		<aar>
 			<file>Aircraft/Generic/aar.nas</file>
-		</A6Efuel>
+		</aar>
 	</nasal>
 
 
