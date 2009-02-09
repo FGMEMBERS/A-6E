@@ -840,7 +840,7 @@ kids 0
 OBJECT poly
 name "miles-drum-1"
 loc -0.00960311 0.0257056 0.036472
-texture "altimeter-gauge.rgb"
+texture "altimeter-gauge.png"
 crease 45.000000
 numvert 4
 0.0135524 -0.0120563 -0.0091351
@@ -859,7 +859,7 @@ kids 0
 OBJECT poly
 name "miles-drum-2"
 loc -0.00960311 0.0257056 0.0397002
-texture "altimeter-gauge.rgb"
+texture "altimeter-gauge.png"
 crease 45.000000
 numvert 4
 0.0134795 0.00275512 -0.00380905
@@ -878,7 +878,7 @@ kids 0
 OBJECT poly
 name "miles-drum-3"
 loc -0.00960311 0.0257056 0.0430132
-texture "altimeter-gauge.rgb"
+texture "altimeter-gauge.png"
 crease 45.000000
 numvert 4
 0.0135524 -0.0120563 -0.00691054
@@ -897,7 +897,7 @@ kids 0
 OBJECT poly
 name "course-drum-3"
 loc -0.00960311 0.0257674 -0.0347075
-texture "altimeter-gauge.rgb"
+texture "altimeter-gauge.png"
 crease 45.000000
 numvert 4
 0.0134795 0.00275512 0.00699743
@@ -916,7 +916,7 @@ kids 0
 OBJECT poly
 name "course-drum-2"
 loc -0.00960311 0.0257674 -0.0380205
-texture "altimeter-gauge.rgb"
+texture "altimeter-gauge.png"
 crease 45.000000
 numvert 4
 0.0135524 -0.0120563 0.00171992
@@ -935,7 +935,7 @@ kids 0
 OBJECT poly
 name "course-drum-1"
 loc -0.00960311 0.0257674 -0.0412488
-texture "altimeter-gauge.rgb"
+texture "altimeter-gauge.png"
 crease 45.000000
 numvert 4
 0.0134795 0.00275512 0.00473412
