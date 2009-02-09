@@ -189,7 +189,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/A-6E/Models/radar-alti.xml</path>
+		<path>Aircraft/A-6E/Models/radar-altimeter.xml</path>
 		<offsets> 
 			<x-m>2.6193</x-m>
 			<y-m>-0.5529</y-m>
@@ -365,7 +365,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/A-6E/Models/clock.xml</path>
+		<path>Aircraft/A-6E/Models/chronograph.xml</path>
 		<offsets> 
 			<x-m>2.5820</x-m>
 			<y-m>-0.0158</y-m>
