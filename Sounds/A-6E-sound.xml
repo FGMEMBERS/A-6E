@@ -284,6 +284,22 @@
 		</volume>
 	</afcs-cmd-switch-down>
 
+		<!-- Warnings tones -->
+		<low-alt-warning>
+			<name>low-alt-warning</name>
+			<path>Aircraft/A-6E/Sounds/low-alt-warning.wav</path>
+			<mode>once</mode>
+			<volume>
+				<factor>0.25</factor>
+			</volume>
+			<condition>
+				<less-than>
+					<property>position/altitude-agl-ft</property>
+					<property>sim/model/A-6E/instrumentation/radar-altimeter/limit-bug</property>
+				</less-than>
+			</condition>
+		</low-alt-warning>
+
 </fx>
  
 </PropertyList>

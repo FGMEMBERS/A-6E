@@ -23,6 +23,7 @@ var g_min	   	= props.globals.getNode("sim/model/A-6E/instrumentation/g-meter/g-
 # loop ####################
 
 update_loop = func {
+	A6Echronograph.update_chrono();
 	inc_ticker();
 	g_min_max();
 	auto_trim();
@@ -94,6 +95,9 @@ print("Initializing A-6 Intruder systems");
 ticker.setDoubleValue(0);
 vdi_vel_y.setDoubleValue(0);
 vdi_vel_z.setDoubleValue(0);
+
+# Radar Altimeter #########
+aircraft.data.add("sim/model/A-6E/instrumentation/radar-altimeter/limit-bug");
 
 #setlistener("/sim/signals/fdm-initialized", update_loop);
 settimer(update_loop, 10);

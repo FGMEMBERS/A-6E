@@ -242,6 +242,9 @@ Grumman A-6E simulation config.
 						<v-deviation type="double">0.0</v-deviation>
 						<plots-out-of-range type="bool">0</plots-out-of-range>
 					</PHD>
+					<radar-altimeter>
+						<limit-bug type="double">250</limit-bug>
+					</radar-altimeter>
 					<tacan>
 						<nogo-lamp type="bool">false</nogo-lamp>
 						<go-lamp type="bool">false</go-lamp>
@@ -365,6 +368,9 @@ Grumman A-6E simulation config.
 		<aar>
 			<file>Aircraft/Generic/aar.nas</file>
 		</aar>
+		<A6Echronograph>
+			<file>Aircraft/A-6E/Nasal/chronograph.nas</file>
+		</A6Echronograph>
 	</nasal>
 
 
