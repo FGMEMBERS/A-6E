@@ -66,7 +66,7 @@ make_beam = func {
 		} elsif ( ptch_deg < 20 ) {
 			disp_dev_max = 0.1025;
 		} else {
-			print ( "pitch: " ~ ptch_deg ~ " between 20 and 45");
+			# print ( "pitch: " ~ ptch_deg ~ " between 20 and 45");
 			disp_dev_max = 0.0850;
 		}
 	}
