@@ -2977,17 +2977,7 @@
 	</animation>
 	<animation>
 		<type>material</type>
-		<object-name>CPT-throttle-mount</object-name>
-		<object-name>CPT-hook-handle</object-name>
-		<object-name>CPT-piedestal</object-name>
-		<object-name>CPT-panel-2</object-name>
-		<object-name>CPT-center-panel-sides</object-name>
-		<object-name>CPT-center-panel</object-name>
-		<object-name>CPT-BN-panel</object-name>
-		<object-name>CPT-consoles</object-name>
-		<object-name>CPT-panel-1a</object-name>
-		<object-name>CPT-panel-1b</object-name>
-		<object-name>CPT-panel-1c</object-name>
+		<object-name>CPT-panels</object-name>
 		<emission>
 			<factor-prop>sim/model/A-6E/controls/lighting/flood-lts</factor-prop>
 			<red>0.2</red>
