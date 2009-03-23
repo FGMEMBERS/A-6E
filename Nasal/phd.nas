@@ -152,9 +152,7 @@ make_beam = func {
 var get_remote_elev = func(d, h, o) {
 	# dist, hdg, own_coord
 	var i_coord = o.apply_course_distance(h, d);
-	var i_elev = geo.elevation(i_coord.lat(), i_coord.lon());
-	if ( ! i_elev ) { i_elev = 0 };
-	return( i_elev );
+	return geo.elevation(i_coord.lat(), i_coord.lon()) or 0;
 }
 
 var TCsettings = func {
