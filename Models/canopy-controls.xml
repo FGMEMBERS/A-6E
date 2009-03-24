@@ -20,6 +20,37 @@
 		</axis>
 	</animation>
 
+
+	<animation>
+		<name>canopy-close</name>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>canopy-up</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.canopyswitch(-1)</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>canopy-open</name>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>canopy-down</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.canopyswitch(1)</script>
+			</binding>
+		</action>
+	</animation>
+
+
 	<!-- lighting -->
 
 	<animation> 
