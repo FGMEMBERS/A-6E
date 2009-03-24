@@ -618,26 +618,6 @@
 		</bottom-right>
 	</panel>
 
-	<!-- Hotspots-Pilot-Panel-Canopy-switch -->
-	<panel>
-		<name>Hotspots-Pilot-Canopy-switch</name>
-		<path>Aircraft/A-6E/Models/p-panel-canopy-switch.xml</path>
-		<top-left>
-			<x-m>2.6346</x-m>
-			<y-m>-0.0151</y-m>
-			<z-m>1.0580</z-m>
-		</top-left>
-		<bottom-left>
-			<x-m>2.6468</x-m>
-			<y-m>-0.0151</y-m>
-			<z-m>0.9185</z-m>
-		</bottom-left>
-		<bottom-right>
-			<x-m>2.6468</x-m>
-			<y-m>0.0854</y-m>
-			<z-m>0.9185</z-m>
-		</bottom-right>
-	</panel>
 
 	<!-- Hotspots-Console-Left-Aft -->
 	<panel>
