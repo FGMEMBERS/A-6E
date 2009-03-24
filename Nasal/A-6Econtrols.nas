@@ -116,7 +116,7 @@ var ldg_hdl_main = func {
 }
 
 var ldg_hdl_anim = func {
-  	var incr = arg[0]/10;
+	var incr = arg[0]/10;
 	var pos = arg[1] + incr;
 
 	if ( ( arg[0] = 1 ) and ( pos >= 0 ) ) {    
@@ -248,7 +248,7 @@ var afcs_alt = func {
 	var alt = alt_button.getValue();
 	var engage = afcs_auto.getValue();
 	if ( alt ){
-		alt_button.setBoolValue( 0 );		
+		alt_button.setBoolValue( 0 );
 		afcs_auto.setBoolValue( 0 );
 		if ( engage ) {
 			afcs_disengage();
@@ -265,7 +265,7 @@ var afcs_mach = func {
 	var mach = mach_button.getValue();
 	var engage = afcs_auto.getValue();
 	if ( mach ){
-		mach_button.setBoolValue( 0 );		
+		mach_button.setBoolValue( 0 );
 	} else {
 		mach_button.setBoolValue( 1 );
 		alt_button.setBoolValue( 0 );
