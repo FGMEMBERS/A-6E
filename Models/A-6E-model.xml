@@ -527,6 +527,92 @@
 		</animation>
 	</model>
 
+	<!-- Wing Fold Panel -->
+	<animation>
+		<name>wing-fold-push-button</name>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>wing-fold-push-button</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.wf_push_button()</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>wing-fold-push-button</object-name>
+		<property>sim/model/A-6E/controls/wing-fold/button-position</property>
+		<factor>0.005</factor>
+		<axis><z>-1</z></axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>wing-fold-handle</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.wf_handle()</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>wing-fold-handle</object-name>
+		<property>sim/model/A-6E/controls/wing-fold/handle-position</property>
+		<factor>35</factor>
+		<center>
+			<x-m>3.1351</x-m>
+			<y-m>0</y-m>
+			<z-m>0.3536</z-m>
+		</center>
+		<axis><y>-1</y></axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>wing-fold-lock</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.wf_switch(1)</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>wing-fold-unlock</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.wf_switch(-1)</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>wing-fold-lock-switch</object-name>
+		<property>sim/model/A-6E/controls/wing-fold/switch-position</property>
+		<factor>30</factor>
+		<center>
+			<x-m>3.3012</x-m>
+			<y-m>0.0345</y-m>
+			<z-m>0.4033</z-m>
+		</center>
+		<axis><x>-1</x></axis>
+	</animation>
+
 	<!-- Navigator right Console -->		
 	<model>
 		<path>Aircraft/A-6E/Models/ext-air-temp-gauge.xml</path>
@@ -923,6 +1009,250 @@
 		</axis>
 	</animation>
 	
+    <!-- ########## Wing Fold ########### -->
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-inner-axis-fairing-shutter</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.2</ind><dep>160</dep></entry>
+			<entry><ind>1</ind><dep>160</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.6339</y1-m>
+			<z1-m>0.4643</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.6339</y2-m>
+			<z2-m>0.2320</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-outer-axis-fairing-shutter</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.2</ind><dep>-160</dep></entry>
+			<entry><ind>1</ind><dep>-160</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.8323</y1-m>
+			<z1-m>0.4643</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.8323</y2-m>
+			<z2-m>0.2320</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-bridge</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>wing-R-outer</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>141</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-inner-jack</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-inner-jack</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>-84</factor>
+		<axis>
+			<x1-m>6.5162</x1-m>
+			<y1-m>3.6260</y1-m>
+			<z1-m>0.3170</z1-m>
+			<x2-m>8.2232</x2-m>
+			<y2-m>3.6260</y2-m>
+			<z2-m>0.0923</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-outer-jack</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-outer-jack</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>58</factor>
+		<axis>
+			<x1-m>6.5162</x1-m>
+			<y1-m>3.8414</y1-m>
+			<z1-m>0.3170</z1-m>
+			<x2-m>8.2232</x2-m>
+			<y2-m>3.8414</y2-m>
+			<z2-m>0.0923</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-inner-axis-fairing-shutter</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.2</ind><dep>-160</dep></entry>
+			<entry><ind>1</ind><dep>-160</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.6339</y1-m>
+			<z1-m>0.4643</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.6339</y2-m>
+			<z2-m>0.2320</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-outer-axis-fairing-shutter</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.2</ind><dep>160</dep></entry>
+			<entry><ind>1</ind><dep>160</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.8323</y1-m>
+			<z1-m>0.4643</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.8323</y2-m>
+			<z2-m>0.2320</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-bridge</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>-88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>wing-L-outer</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>-141</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-inner-jack</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>-88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-inner-jack</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>84</factor>
+		<axis>
+			<x1-m>6.5162</x1-m>
+			<y1-m>-3.6260</y1-m>
+			<z1-m>0.3170</z1-m>
+			<x2-m>8.2232</x2-m>
+			<y2-m>-3.6260</y2-m>
+			<z2-m>0.0923</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-outer-jack</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>-88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-outer-jack</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>-58</factor>
+		<axis>
+			<x1-m>6.5162</x1-m>
+			<y1-m>-3.8414</y1-m>
+			<z1-m>0.3170</z1-m>
+			<x2-m>8.2232</x2-m>
+			<y2-m>-3.8414</y2-m>
+			<z2-m>0.0923</z2-m>
+		</axis>
+	</animation>
+
+
     <!-- ########## Elevator ########### -->
     <!-- Left Flaps -->	
 	<animation>
@@ -2444,6 +2774,10 @@
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
 				<value>2</value>
 			</equals>
+			<equals>
+				<property>surface-positions/wing-pos-norm/position-norm</property>
+				<value>0</value>
+			</equals>
 			<not>
 				<property>sim/model/A-6E/lighting/beacon_state/state</property>
 			</not>
@@ -2493,6 +2827,10 @@
 		<condition>
 			<equals>
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
+				<value>0</value>
+			</equals>
+			<equals>
+				<property>surface-positions/wing-pos-norm/position-norm</property>
 				<value>0</value>
 			</equals>
 			<not>
@@ -2548,6 +2886,10 @@
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
 				<value>2</value>
 			</equals>
+			<equals>
+				<property>surface-positions/wing-pos-norm/position-norm</property>
+				<value>0</value>
+			</equals>
 			<not>
 				<property>sim/model/A-6E/lighting/beacon_state/state</property>
 			</not>
@@ -2561,6 +2903,20 @@
 			<x>8.1670</x>
 			<y>7.9102</y>
 			<z>0.0682</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>noshadow.nav_halo_WR</object-name>
+		<property>surface-positions/wing-pos-norm/position-norm</property>
+		<factor>145</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
 		</axis>
 	</animation>
 	<animation>
@@ -2597,6 +2953,10 @@
 		<condition>
 			<equals>
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
+				<value>0</value>
+			</equals>
+			<equals>
+				<property>surface-positions/wing-pos-norm/position-norm</property>
 				<value>0</value>
 			</equals>
 			<not>
