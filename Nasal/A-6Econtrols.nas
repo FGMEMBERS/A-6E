@@ -130,6 +130,83 @@ var ldg_hdl_anim = func {
 }
 
 
+# Wing Fold System
+# ----------------
+
+var wf_hdl		= props.globals.getNode("sim/model/A-6E/controls/wing-fold/handle-position");
+var wf_btn		= props.globals.getNode("sim/model/A-6E/controls/wing-fold/button-position");
+var wf_sw		= props.globals.getNode("sim/model/A-6E/controls/wing-fold/switch-position");
+var wf_hdl_dir	= 0;
+var wf_wing_pos = aircraft.door.new("surface-positions/wing-pos-norm", 7);
+
+var wf_push_button = func {
+	var hdl_pos = wf_hdl.getValue();
+	var btn_pos = wf_btn.getValue();
+	if ( hdl_pos == 0 and ! btn_pos) {
+		wf_btn.setValue(1);
+		wf_hdl.setValue(0.3);
+	}
+}
+
+var wf_handle = func {
+	var hdl_pos = wf_hdl.getValue();
+	var btn_pos = wf_btn.getValue();
+	var sw_pos = wf_sw.getValue();
+	if ( btn_pos == 1 and sw_pos == -1 ) {
+		if ( wf_hdl_dir >= 0 and hdl_pos >= 0.3 and hdl_pos < 1  ) {
+			wf_hdl_dir = 1;
+			var max = 1;
+			wf_hdl_anim(1, hdl_pos, max)
+		} elsif ( wf_hdl_dir <= 0 and hdl_pos <= 1 and hdl_pos > 0.3  ) {
+			wf_hdl_dir = -1;
+			var min = 0.3;
+			wf_hdl_anim(-1, hdl_pos, min)
+		}
+	} elsif ( btn_pos == 1 and sw_pos == 1 ) {
+		wf_btn.setValue(0);
+		wf_hdl.setValue(0);
+	}
+}
+
+var wf_switch = func {
+	var cmd = arg[0];
+	var sw_pos = wf_sw.getValue();
+	var hdl_pos = wf_hdl.getValue();
+	if ( cmd == 1 and sw_pos == -1 ) {
+		wf_sw.setValue(1);
+		if ( hdl_pos > 0.3 ) { settimer( func { wf_switch_return() }, 0.1 ) }
+		#check lateral ctrl
+		#lock flaperons
+	} elsif ( cmd == -1 and sw_pos == 1 ) {
+		wf_sw.setValue(-1);
+	}
+}
+var wf_switch_return = func {
+	wf_sw.setValue(-1);
+}
+
+var wf_hdl_anim = func {
+	var pos = arg[1] + arg[0]/20;
+	var limit = arg[2];
+	if (( arg[0] == 1 and pos >= limit ) or ( arg[0] == -1 and pos <= limit )) {
+		wf_hdl.setValue(limit);
+		wf_fold(wf_hdl_dir);
+		wf_hdl_dir = 0;
+	} else { 
+		wf_hdl.setValue(pos);
+		settimer( wf_handle, 0.02 );
+	}
+}
+
+var wf_fold = func(n) {
+	if ( n == 1 ) {
+		settimer( func { wf_wing_pos.open() }, 2 );
+	} else {
+		settimer( func { wf_wing_pos.close() }, 2 );
+	}
+}
+
+
 # General 3 positions switch (2 - 1 - 0)
 # --------------------------------------
 var three_pos_sw = func {
