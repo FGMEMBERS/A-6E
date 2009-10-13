@@ -5,7 +5,7 @@
 <!-- Real Dry Mass: 27400 lbs.
 We have also an in flight movable ballast weighting 5000 lbs, that's because
 it's really hard to get a CG suitable for high AoA and speeds below 130 Kts and
-having a smooth pitch beyond 250 Kts. So I added two "weights" at different positions
+having a smooth pitch above 250 Kts. So I added two "weights" at different positions
 and filled by a nasal script depending of the speed of the A/C. --> 
 
 <!-- Approach configuration -->
@@ -43,7 +43,7 @@ and filled by a nasal script depending of the speed of the A/C. -->
 
     <control-input axis="/controls/flight/flaps" control="FLAP0"/>
     <control-input axis="/controls/flight/flaps" control="SLAT"/>
-    <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+    <control-input axis="/controls/flight/aileron" control="FLAP1" split="true" square="true"/>
     <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
     <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
 
@@ -78,7 +78,7 @@ and filled by a nasal script depending of the speed of the A/C. -->
     <stall aoa="25" width="5" peak="1.3"/>
     <flap0 start="0" end="1" lift="1.35" drag="1.3"/>
     <control-input axis="/controls/flight/elevator" control="FLAP0"
-                   square="false"/>
+                   square="true"/>
     <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
 
     <control-output control="FLAP0" side="left"
