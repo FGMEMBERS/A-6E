@@ -9,7 +9,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>compass-card</object-name>
-		<property>orientation/heading-deg</property>
+		<property>orientation/heading-magnetic-deg</property>
 		<center>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
