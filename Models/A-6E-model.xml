@@ -748,21 +748,6 @@
 	</panel>
 
 
-<!--  ################ pilot-g  ################ -->	
-	<model>
-		<path>Aircraft/A-6E/Models/blackout.xml</path>
-		<offsets> 
-			<x-m>3.34</x-m>
-			<y-m>-0.40</y-m>
-			<z-m>1.32</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-		<animation>
-			<type>noshadow</type>
-		</animation>
-	</model>
-
-
 <!-- #################### Pilots Animations #################### -->
 <!-- ########################################################### -->
 	
