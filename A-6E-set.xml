@@ -35,7 +35,6 @@ Grumman A-6E simulation config.
  			</style>
  		</gui>
 
-		<!--<number-views type="int" archive="y">6</number-views>-->
 		<view n="0">
 			<name>Cockpit View</name>
 			<type>lookfrom</type>
@@ -46,6 +45,19 @@ Grumman A-6E simulation config.
 				<z-offset-m archive="y">3.34</z-offset-m>
 				<pitch-offset-deg>-10</pitch-offset-deg>
 				<default-field-of-view-deg>57</default-field-of-view-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">25</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">25</x-offset-threshold-deg>
+					</right>
+				</limits>
 			</config>
 		</view>
 		<view n="1">
@@ -88,6 +100,19 @@ Grumman A-6E simulation config.
 				<z-offset-m archive="y">3.54</z-offset-m>
 				<pitch-offset-deg>-10</pitch-offset-deg>
 				<default-field-of-view-deg>57</default-field-of-view-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">25</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">25</x-offset-threshold-deg>
+					</right>
+				</limits>
 			</config>
 		</view>
 
@@ -214,6 +239,11 @@ Grumman A-6E simulation config.
 						</range-miles>
 						<brightness type="double">0.6</brightness>
 					</VDI>
+					<wing-fold>
+						<button-position type="int">0</button-position>
+						<handle-position type="double">0.0</handle-position>
+						<switch-position type="int">1</switch-position> <!-- 1=lock, -1=unlock -->
+					</wing-fold>
 				</controls>
 				<instrumentation>
 					<doppler>
