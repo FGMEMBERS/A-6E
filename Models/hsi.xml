@@ -1,85 +1,52 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-  <!-- horizontal situation indicator -->
-  <name>HSI</name>
-  <path>hsi.ac</path>
+	<!-- horizontal situation indicator -->
+	<name>HSI</name>
+	<path>hsi.ac</path>
 
-  <animation>
-    <type>rotate</type>
-    <object-name>HSI-compass-card</object-name>
-    <condition>
-      <greater-than>
-        <property>systems/electrical/outputs/hsi</property>
-        <value>24</value>
-      </greater-than>
-    </condition>
-    <property>orientation/heading-deg</property>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>HSI-compass-card</object-name>
+		<property>orientation/heading-magnetic-deg</property>
+		<axis><x>1</x></axis>
+	</animation>
  
-  <animation>
-    <type>rotate</type>
-    <object-name>bearing-needle-1</object-name>
-    <condition>
-      <greater-than>
-        <property>systems/electrical/outputs/hsi</property>
-        <value>24</value>
-      </greater-than>
-    </condition>
-    <property>orientation/heading-deg</property>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+	<animation>
+		<type>select</type>
+		<object-name>bearing-tcn-needle-on</object-name>
+		<condition>
+			<property>instrumentation/tacan/in-range</property>
+		</condition>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>bearing-tcn-needle-on</object-name>
+		<property>orientation/heading-magnetic-deg</property>
+		<axis><x>1</x></axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>bearing-tcn-needle-on</object-name>
+		<property>instrumentation/tacan/indicated-mag-bearing-deg</property>
+		<axis><x>-1</x></axis>
+	</animation>
 
-  <animation>
-    <type>rotate</type>
-    <object-name>bearing-needle-1</object-name>
-    <condition>
-      <greater-than>
-        <property>systems/electrical/outputs/hsi</property>
-        <value>24</value>
-      </greater-than>
-      <not>
-        <equals>
-          <property>instrumentation/tacan/indicated-bearing-true-deg</property>
-          <value>0</value>
-        </equals>
-      </not>
-      <equals>
-        <property>instrumentation/tacan/switch-position</property>
-        <value>1</value>
-      </equals>
-    </condition>
-    <property>instrumentation/tacan/indicated-bearing-true-deg</property>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+	<animation>
+		<type>select</type>
+		<object-name>bearing-needle-off</object-name>
+		<condition>
+			<not>
+				<property>instrumentation/tacan/in-range</property>
+			</not>
+		</condition>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>bearing-needle-off</object-name>
+		<property>orientation/heading-magnetic-deg</property>
+		<axis><x>1</x></axis>
+	</animation>
 
   <animation>
     <type>select</type>
@@ -263,9 +230,9 @@
    <type>material</type>
      <emission> 
       <factor-prop>controls/lighting/panel-norm</factor-prop>
-        <red>0.44</red>
-        <green>0.27</green>
-        <blue>0.15</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
       </emission>
   </animation>
   
@@ -274,9 +241,9 @@
    <type>material</type>
      <emission> 
       <factor-prop>controls/lighting/panel-norm</factor-prop>
-        <red>0.44</red>
-        <green>0.27</green>
-        <blue>0.15</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
       </emission>
   </animation>
   
@@ -296,20 +263,30 @@
     <type>material</type>
     <emission> 
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.60</red>
-      <green>0.35</green>
-      <blue>0.23</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
     </emission>
   </animation>
 
   <animation>
-    <object-name>bearing-needle-1</object-name>
+    <object-name>bearing-tcn-needle-on</object-name>
     <type>material</type>
     <emission> 
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.60</red>
-      <green>0.35</green>
-      <blue>0.23</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
+    </emission>
+  </animation>
+  <animation>
+    <object-name>bearing-needle-off</object-name>
+    <type>material</type>
+    <emission> 
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
     </emission>
   </animation>
 
@@ -318,9 +295,9 @@
     <type>material</type>
     <emission> 
       <factor-prop>controls/lighting/panel-norm</factor-prop>
-      <red>0.60</red>
-      <green>0.35</green>
-      <blue>0.23</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
     </emission>
   </animation>
 
@@ -329,9 +306,9 @@
     <type>material</type>
     <emission> 
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.60</red>
-      <green>0.35</green>
-      <blue>0.23</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
     </emission>
   </animation>
 
@@ -340,9 +317,9 @@
     <type>material</type>
     <emission> 
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.60</red>
-      <green>0.35</green>
-      <blue>0.23</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
     </emission>
   </animation>
   <animation>
@@ -350,9 +327,9 @@
     <type>material</type>
     <emission> 
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.60</red>
-      <green>0.35</green>
-      <blue>0.23</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
     </emission>
   </animation>
   <animation>
@@ -360,9 +337,9 @@
     <type>material</type>
     <emission> 
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.60</red>
-      <green>0.35</green>
-      <blue>0.23</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
     </emission>
   </animation>
 
@@ -371,9 +348,9 @@
     <type>material</type>
     <emission> 
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.60</red>
-      <green>0.35</green>
-      <blue>0.23</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
     </emission>
   </animation>
   <animation>
@@ -381,9 +358,9 @@
     <type>material</type>
     <emission> 
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.60</red>
-      <green>0.35</green>
-      <blue>0.23</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
     </emission>
   </animation>
   <animation>
@@ -391,9 +368,9 @@
     <type>material</type>
     <emission> 
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.60</red>
-      <green>0.35</green>
-      <blue>0.23</blue>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
     </emission>
   </animation>
 

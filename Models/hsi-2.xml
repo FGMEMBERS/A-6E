@@ -1,104 +1,69 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-  <!-- horizontal situation indicator -->
-  <name>HSI</name>
-  <path>hsi-2.ac</path>
+
+	<!-- horizontal situation indicator -->
+	<name>HSI</name>
+	<path>hsi-2.ac</path>
 
 
-<!--HSI-course-card-->
-  <animation>
-    <type>rotate</type>
-    <object-name>HSI-course-card</object-name>
-    <condition>
-      <greater-than>
-        <property>systems/electrical/outputs/hsi</property>
-        <value>24</value>
-      </greater-than>
-    </condition>
-    <property>orientation/heading-deg</property>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-    <z-m>0.0</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+	<!--HSI-course-card-->
+	<animation>
+		<type>rotate</type>
+		<object-name>HSI-course-card</object-name>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/hsi</property>
+				<value>24</value>
+			</greater-than>
+		</condition>
+		<property>orientation/heading-magnetic-deg</property>
+		<axis><x>1</x></axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>HSI-course-card</object-name>
+		<property>instrumentation/nav[1]/radials/selected-deg</property>
+		<axis><x>-1</x></axis>
+	</animation>
   
-  <animation>
-    <type>rotate</type>
-    <object-name>HSI-course-card</object-name>
-    <property>instrumentation/nav[1]/radials/selected-deg</property>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+	<!--bearing-validity-flag-->
+	<animation>
+		<type>select</type>
+		<object-name>bearing-validity-flag</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>instrumentation/tacan/in-range</property>
+					<value>false</value>
+				</equals>
+				<equals>
+					<property>instrumentation/tacan/switch-position</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
   
-<!--bearing-validity-flag-->
-  <animation>
-    <type>select</type>
-    <object-name>bearing-validity-flag</object-name>
-    <condition>
-      <or>
-        <equals>
-          <property>instrumentation/tacan/in-range</property>
-          <value>false</value>
-        </equals>
-        <equals>
-          <property>instrumentation/tacan/switch-position</property>
-          <value>0</value>
-        </equals>
-      </or>
-    </condition>
-  </animation>
-  
-  <animation>
-    <type>rotate</type>
-    <object-name>bearing-validity-flag</object-name>
-    <condition>
-      <greater-than>
-        <property>systems/electrical/outputs/hsi</property>
-        <value>24</value>
-      </greater-than>
-    </condition>
-    <property>orientation/heading-deg</property>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
-  <animation>
-    <type>rotate</type>
-    <object-name>bearing-validity-flag</object-name>
-    <property>instrumentation/nav[1]/radials/selected-deg</property>
-    <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>bearing-validity-flag</object-name>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/hsi</property>
+				<value>24</value>
+			</greater-than>
+		</condition>
+		<property>orientation/heading-deg</property>
+		<axis><x>1</x></axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>bearing-validity-flag</object-name>
+		<property>instrumentation/nav[1]/radials/selected-deg</property>
+		<axis><x>-1</x></axis>
+	</animation>
 
 <!--course-deviation-indicator ils off (CDI)-->
   <animation>
@@ -361,11 +326,6 @@
         <blue>0.26</blue>
       </emission>
   </animation>
-
-	<animation>
-		<object-name>hsi-2</object-name>
-		<type>noshadow</type>
-	</animation>
 
 
  <animation>
