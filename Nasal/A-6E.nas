@@ -18,17 +18,41 @@ var ac_hdg      = props.globals.getNode("/orientation/heading-deg", 1);
 var g_curr 	  	= props.globals.getNode("accelerations/pilot-g");
 var g_max	   	= props.globals.getNode("sim/model/A-6E/instrumentation/g-meter/g-max", 1);
 var g_min	   	= props.globals.getNode("sim/model/A-6E/instrumentation/g-meter/g-min", 1);
+var TrueHdg          = props.globals.getNode("orientation/heading-deg");
+var Hsd              = props.globals.getNode("sim/model/A-6E/instrumentation/hsd", 1);
+var MagHdg           = props.globals.getNode("orientation/heading-magnetic-deg");
+var MagDev           = props.globals.getNode("orientation/local-mag-dev", 1);
+var Tc               = props.globals.getNode("instrumentation/tacan");
+var Vtc              = props.globals.getNode("instrumentation/nav[1]");
+var TcFreqs          = Tc.getNode("frequencies");
+var TcTrueHdg        = Tc.getNode("indicated-bearing-true-deg");
+var TcMagHdg         = Tc.getNode("indicated-mag-bearing-deg", 1);
+var TcIdent          = Tc.getNode("ident");
+var TcServ           = Tc.getNode("serviceable");
+var TcXY             = Tc.getNode("frequencies/selected-channel[4]");
+
+var mag_dev = 0;
+var tc_mode = 0;
 
 
-# loop ####################
+# Main loop ###############
+var cnt = 0;
 
 update_loop = func {
 	A6Echronograph.update_chrono();
+	tacan_update();
 	inc_ticker();
 	g_min_max();
 	auto_trim();
 	vdi_vel_marker();
 	vdi_drift_angle();
+	if ( cnt == 10 ) {
+		# done each 1 sec.
+		local_mag_deviation();
+		cnt = 0;
+	} else {
+		cnt += 1;
+	}
 	settimer(update_loop, UPDATE_PERIOD);
 }
 
@@ -69,6 +93,67 @@ auto_trim = func {
 	fwd_ballast.setDoubleValue(new_fwd);
 }
 
+
+# Compute local magnetic deviation.
+var local_mag_deviation = func {
+	var true = TrueHdg.getValue();
+	var mag = MagHdg.getValue();
+	mag_dev = geo.normdeg( mag - true );
+	if ( mag_dev > 180 ) mag_dev -= 360;
+	MagDev.setValue(mag_dev); 
+}
+
+
+var tacan_update = func {
+	#var tc_mode = TcModeSwitch.getValue();
+	var tc_mode = 1;
+	if ( tc_mode != 0 and tc_mode != 4 ) {
+
+		# Get magnetic tacan bearing.
+		var true_bearing = TcTrueHdg.getValue();
+		var mag_bearing = geo.normdeg( true_bearing + mag_dev );
+		if ( true_bearing != 0 ) {
+			TcMagHdg.setDoubleValue( mag_bearing );
+		} else {
+			TcMagHdg.setDoubleValue(0);
+		}
+
+		# Get TACAN radials on HSD's Course Deviation Indicator.
+		# CDI works with ils OR tacan OR vortac (which freq is tuned from the tacan panel).
+		#var tcnid = TcIdent.getValue();
+		#var vtcid = VtcIdent.getValue();
+		#if ( tcnid == vtcid ) {
+			# We have a VORTAC.
+			#HsdFromFlag.setBoolValue(VtcFromFlag.getBoolValue());
+			#HsdToFlag.setBoolValue(VtcToFlag.getBoolValue());
+			#HsdCdiDeflection.setValue(VtcHdgDeflection.getValue());
+		#} else {
+			# We have a legacy TACAN.
+			#var tcn_toflag = 1;
+			#var tcn_fromflag = 0;
+			#var tcn_bearing = TcMagHdg.getValue();
+			#var radial = VtcRadialDeg.getValue();
+			#var d = tcn_bearing - radial;
+			#if ( d > 180 ) { d -= 360 } elsif ( d < -180 ) { d += 360 }
+			#if ( d > 90 ) {
+				#d -= 180;
+				#tcn_toflag = 0;
+				#tcn_fromflag = 1;
+			#} elsif ( d < - 90 ) {
+				#d += 180;
+				#tcn_toflag = 0;
+				#tcn_fromflag = 1;
+			#}
+			#if ( d > 10 ) d = 10 ;
+			#if ( d < -10 ) d = -10 ;
+			#HsdFromFlag.setBoolValue(tcn_fromflag);
+			#HsdToFlag.setBoolValue(tcn_toflag);
+			#HsdCdiDeflection.setValue(d);
+		#}
+	} else {
+		TcMagHdg.setDoubleValue(0);
+	}
+}
 
 vdi_vel_marker = func {
 	# displays impact point on the VDI display
