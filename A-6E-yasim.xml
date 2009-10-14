@@ -45,7 +45,7 @@ and filled by a nasal script depending of the speed of the A/C. -->
     <control-input axis="/controls/flight/flaps" control="SLAT"/>
     <control-input axis="/controls/flight/aileron" control="FLAP1" split="true" square="true"/>
     <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
-    <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
+    <control-input axis="/controls/flight/speedbrake" control="SPOILER"/>
 
     <control-output control="FLAP0" side="left"
                     prop="/surface-positions/left-flap-pos-norm"/>
@@ -60,10 +60,10 @@ and filled by a nasal script depending of the speed of the A/C. -->
     <control-output control="FLAP1" prop="/surface-positions/aileron-pos-norm"/>
 
     <control-output control="SPOILER" side="left"
-                    prop="/surface-positions/left-spoiler-pos-norm"/>
+                    prop="/surface-positions/speedbrake-pos-norm"/>
     <control-output control="SPOILER" side="right"
-                    prop="/surface-positions/right-spoiler-pos-norm"/>
-    <control-output control="SPOILER" prop="/surface-positions/spoiler-pos-norm"/>
+                    prop="/surface-positions/speedbrake-pos-norm"/>
+    <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>
 
     <control-speed control="FLAP0" transition-time="10"/>
     <control-speed control="SLAT" transition-time="10"/>

@@ -1340,7 +1340,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>W-L-Upper-airbrake</object-name>
-		<property>surface-positions/left-spoiler-pos-norm</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>60</factor>
 		<center>
 			<x-m>9.1307</x-m>
@@ -1356,7 +1356,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>W-L-Lower-airbrake</object-name>
-		<property>surface-positions/left-spoiler-pos-norm</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>60</factor>
 		<center>
 			<x-m>9.1307</x-m>
@@ -1374,7 +1374,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>W-R-Upper-airbrake</object-name>
-		<property>surface-positions/right-spoiler-pos-norm</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>60</factor>
 		<center>
 			<x-m>9.1307</x-m>
@@ -1391,7 +1391,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>W-R-Lower-airbrake</object-name>
-		<property>surface-positions/right-spoiler-pos-norm</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>60</factor>
 		<center>
 			<x-m>9.1307</x-m>

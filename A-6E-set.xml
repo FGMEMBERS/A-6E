@@ -336,7 +336,7 @@ Grumman A-6E simulation config.
 			</key>
 			<key>
 				<name>k/j</name>
-				<desc>Air Brakes open/close</desc>
+				<desc>Speed Brakes open/close</desc>
 			</key>
 			<key>
 				<name>L</name>

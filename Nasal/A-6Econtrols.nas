@@ -57,18 +57,16 @@ controls.flapsDown = func {
 
 # A-6 spoilers can be full open or closed:
 # ----------------------------------------
-controls.stepSpoilers = func {
-	if(props.globals.getNode("/sim/spoilers") != nil) {
-		stepProps("/controls/flight/spoilers", "/sim/spoilers", arg[0]);
-		return;
-	}
-	if (arg[0] == 1) {
-		setprop("/controls/flight/spoilers", 1);
-	} elsif (arg[0] == -1) {
-		setprop("/controls/flight/spoilers", 0);
+var SpeedBrake = props.globals.getNode("controls/flight/speedbrake", 1);
+
+controls.stepSpoilers = func(s) {
+	#var s = arg[0];
+	if ( s == 1 ) {
+		SpeedBrake.setValue(1);
+	} elsif ( s == -1 ) {
+		SpeedBrake.setValue(0);
 	}
 }
-
 
 # Canopy switch animation and canopy move
 # ---------------------------------------
