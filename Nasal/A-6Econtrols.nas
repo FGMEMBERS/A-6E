@@ -60,7 +60,6 @@ controls.flapsDown = func {
 var SpeedBrake = props.globals.getNode("controls/flight/speedbrake", 1);
 
 controls.stepSpoilers = func(s) {
-	#var s = arg[0];
 	if ( s == 1 ) {
 		SpeedBrake.setValue(1);
 	} elsif ( s == -1 ) {
@@ -71,9 +70,9 @@ controls.stepSpoilers = func(s) {
 # Canopy switch animation and canopy move
 # ---------------------------------------
 # Toggle keystroke and 2 positions switch.
-var cnpy = aircraft.door.new("sim/model/A-6E/canopy", 10);
+var cnpy = aircraft.door.new("canopy", 7);
 var cswitch = props.globals.getNode("sim/model/A-6E/controls/canopy/canopy-switch", 1);
-var pos = props.globals.getNode("sim/model/A-6E/canopy/position-norm", 1);
+var pos = props.globals.getNode("canopy/position-norm", 1);
 
 var canopyswitch = func(v) {
 	var p = pos.getValue();
@@ -135,7 +134,10 @@ var wf_hdl		= props.globals.getNode("sim/model/A-6E/controls/wing-fold/handle-po
 var wf_btn		= props.globals.getNode("sim/model/A-6E/controls/wing-fold/button-position");
 var wf_sw		= props.globals.getNode("sim/model/A-6E/controls/wing-fold/switch-position");
 var wf_hdl_dir	= 0;
-var wf_wing_pos = aircraft.door.new("surface-positions/wing-pos-norm", 7);
+var WingFold    = aircraft.door.new("sim/model/A-6E/controls/wing-fold", 7);
+
+var mp_wing_pos = props.globals.getNode("surface-positions/wing-fold-pos-norm", 1);
+mp_wing_pos.alias(props.globals.getNode("sim/model/A-6E/controls/wing-fold/position-norm"));
 
 var wf_push_button = func {
 	var hdl_pos = wf_hdl.getValue();
@@ -198,12 +200,29 @@ var wf_hdl_anim = func {
 
 var wf_fold = func(n) {
 	if ( n == 1 ) {
-		settimer( func { wf_wing_pos.open() }, 2 );
+		settimer( func { WingFold.open() }, 2 );
 	} else {
-		settimer( func { wf_wing_pos.close() }, 2 );
+		settimer( func { WingFold.close() }, 2 );
 	}
 }
 
+# Override standard controls.wingsDown() so the regular keybindings trigger the
+# whole sequence.
+controls.wingsDown = func(n) {
+	if ( n == -1 ) {
+		wf_btn.setValue(1);
+		wf_hdl.setValue(0.3);
+		wf_sw.setValue(1);
+		wf_hdl.setValue(1);
+		WingFold.open();
+	} elsif ( n == 1 ) {
+		wf_hdl.setValue(0);
+		wf_sw.setValue(-1);
+		wf_btn.setValue(0);
+		wf_hdl.setValue(0);
+		WingFold.close();
+	} 
+}
 
 # General 3 positions switch (2 - 1 - 0)
 # --------------------------------------

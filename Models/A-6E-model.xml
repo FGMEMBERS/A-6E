@@ -826,44 +826,26 @@
 		<type>translate</type>
 		<object-name>CPT-canopy-back</object-name>
 		<object-name>CPT-canopy-int-frame</object-name>
-		<property>sim/model/A-6E/canopy/position-norm</property>
+		<property>canopy/position-norm</property>
 		<factor>0.7</factor>
-		<center>
-			<x-m>0.0000</x-m>
-			<y-m>0.0000</y-m>
-			<z-m>0.0000</z-m>
-		</center>
 		<axis>
-			<x>1.0000</x>
-			<y>0.0000</y>
+			<x>1</x>
+			<y>0</y>
 			<z>0.3443</z>
 		</axis>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>canopy-main-glass</object-name>
-		<property>sim/model/A-6E/canopy/position-norm</property>
+		<property>canopy/position-norm</property>
 		<factor>0.7</factor>
-		<center>
-			<x-m>0.0000</x-m>
-			<y-m>0.0000</y-m>
-			<z-m>0.0000</z-m>
-		</center>
 		<axis>
-			<x>1.0000</x>
-			<y>0.0000</y>
+			<x>1</x>
+			<y>0</y>
 			<z>0.3443</z>
 		</axis>
 	</animation>
 
-	<animation>
-		<object-name>canopy-main-glass</object-name>
-		<type>noshadow</type>
-	</animation>
-	<!--<animation>
-		<object-name>CPT-canopy-int-frame</object-name>
-		<type>noshadow</type>
-	</animation>-->
 
 
     <!-- ########## Rudder ########### -->
@@ -902,7 +884,7 @@
 		<type>rotate</type>
 		<object-name>W-L-Int-Flap</object-name>
 		<object-name>W-L-Ext-Flap</object-name>
-		<property>surface-positions/left-flap-pos-norm</property>
+		<property>surface-positions/flap-pos-norm</property>
 		<factor>2.5</factor>
 		<axis>
 			<x1-m>9.324</x1-m>
@@ -917,7 +899,7 @@
 		<type>translate</type>
 		<object-name>W-L-Int-Flap</object-name>
 		<object-name>W-L-Ext-Flap</object-name>
-		<property>surface-positions/left-flap-pos-norm</property>
+		<property>surface-positions/flap-pos-norm</property>
 		<factor>0.208</factor>
 		<center>
 			<x-m>9.1168</x-m>
@@ -934,7 +916,7 @@
 		<type>rotate</type>
 		<object-name>W-L-Int-Flap</object-name>
 		<object-name>W-L-Ext-Flap</object-name>
-		<property>surface-positions/left-flap-pos-norm</property>
+		<property>surface-positions/flap-pos-norm</property>
 		<factor>35</factor>
 		<axis>
 			<x1-m>9.1665</x1-m>
@@ -950,7 +932,7 @@
 		<type>rotate</type>
 		<object-name>W-R-Int-Flap</object-name>
 		<object-name>W-R-Ext-Flap</object-name>
-		<property>surface-positions/left-flap-pos-norm</property>
+		<property>surface-positions/flap-pos-norm</property>
 		<factor>2.5</factor>
 		<axis>
 			<x1-m>9.3202</x1-m>
@@ -965,7 +947,7 @@
 		<type>translate</type>
 		<object-name>W-R-Int-Flap</object-name>
 		<object-name>W-R-Ext-Flap</object-name>
-		<property>surface-positions/left-flap-pos-norm</property>
+		<property>surface-positions/flap-pos-norm</property>
 		<factor>0.208</factor>
 		<center>
 			<x-m>9.1168</x-m>
@@ -982,7 +964,7 @@
 		<type>rotate</type>
 		<object-name>W-R-Int-Flap</object-name>
 		<object-name>W-R-Ext-Flap</object-name>
-		<property>surface-positions/left-flap-pos-norm</property>
+		<property>surface-positions/flap-pos-norm</property>
 		<factor>35</factor>
 		<axis>
 			<x1-m>7.8738</x1-m>
@@ -994,269 +976,72 @@
 		</axis>
 	</animation>
 	
-    <!-- ########## Wing Fold ########### -->
+	<!-- ########## Slats ########### -->
+	<!-- Left Slats -->
 	<animation>
 		<type>rotate</type>
-		<object-name>W-R-inner-axis-fairing-shutter</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.2</ind><dep>160</dep></entry>
-			<entry><ind>1</ind><dep>160</dep></entry>
-		</interpolation>
+		<object-name>W-L-Ext-slat</object-name>
+		<object-name>W-L-Int-slat</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>25</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>3.6339</y1-m>
-			<z1-m>0.4643</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>3.6339</y2-m>
-			<z2-m>0.2320</z2-m>
+			<x1-m>4.9910</x1-m>
+			<y1-m>-1.6652</y1-m>
+			<z1-m>0.4141</z1-m>
+			<x2-m>8.4040</x2-m>
+			<y2-m>-8.3966</y2-m>
+			<z2-m>0.0105</z2-m>
 		</axis>
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>W-R-outer-axis-fairing-shutter</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.2</ind><dep>-160</dep></entry>
-			<entry><ind>1</ind><dep>-160</dep></entry>
-		</interpolation>
+		<object-name>W-L-Ext-slat</object-name>
+		<object-name>W-L-Int-slat</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>-1</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>3.8323</y1-m>
-			<z1-m>0.4643</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>3.8323</y2-m>
-			<z2-m>0.2320</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>W-R-bridge</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>88</factor>
-		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>3.7335</y1-m>
-			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>3.7335</y2-m>
-			<z2-m>0.2082</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>wing-R-outer</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>141</factor>
-		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>3.7335</y1-m>
-			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>3.7335</y2-m>
-			<z2-m>0.2082</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>W-R-inner-jack</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>88</factor>
-		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>3.7335</y1-m>
-			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>3.7335</y2-m>
-			<z2-m>0.2082</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>W-R-inner-jack</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>-84</factor>
-		<axis>
-			<x1-m>6.5162</x1-m>
-			<y1-m>3.6260</y1-m>
-			<z1-m>0.3170</z1-m>
-			<x2-m>8.2232</x2-m>
-			<y2-m>3.6260</y2-m>
-			<z2-m>0.0923</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>W-R-outer-jack</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>88</factor>
-		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>3.7335</y1-m>
-			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>3.7335</y2-m>
-			<z2-m>0.2082</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>W-R-outer-jack</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>58</factor>
-		<axis>
-			<x1-m>6.5162</x1-m>
-			<y1-m>3.8414</y1-m>
-			<z1-m>0.3170</z1-m>
-			<x2-m>8.2232</x2-m>
-			<y2-m>3.8414</y2-m>
-			<z2-m>0.0923</z2-m>
+			<x1-m>9.7970</x1-m>
+			<y1-m>-13.5505</y1-m>
+			<z1-m>3.2153</z1-m>
+			<x2-m>11.7772</x2-m>
+			<y2-m>-12.5061</y2-m>
+			<z2-m>-3.1456</z2-m>
 		</axis>
 	</animation>
 
+	<!-- Right Slats -->
 	<animation>
 		<type>rotate</type>
-		<object-name>W-L-inner-axis-fairing-shutter</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.2</ind><dep>-160</dep></entry>
-			<entry><ind>1</ind><dep>-160</dep></entry>
-		</interpolation>
+		<object-name>W-R-Ext-slat</object-name>
+		<object-name>W-R-Int-slat</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>25</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>-3.6339</y1-m>
-			<z1-m>0.4643</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>-3.6339</y2-m>
-			<z2-m>0.2320</z2-m>
+			<x1-m>8.4040</x1-m>
+			<y1-m>8.3966</y1-m>
+			<z1-m>0.0105</z1-m>
+			<x2-m>4.9910</x2-m>
+			<y2-m>1.6652</y2-m>
+			<z2-m>0.4141</z2-m>
 		</axis>
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>W-L-outer-axis-fairing-shutter</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.2</ind><dep>160</dep></entry>
-			<entry><ind>1</ind><dep>160</dep></entry>
-		</interpolation>
+		<object-name>W-R-Ext-slat</object-name>
+		<object-name>W-R-Int-slat</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>-1</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>-3.8323</y1-m>
-			<z1-m>0.4643</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>-3.8323</y2-m>
-			<z2-m>0.2320</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>W-L-bridge</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>-88</factor>
-		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>-3.7335</y1-m>
-			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>-3.7335</y2-m>
-			<z2-m>0.2082</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>wing-L-outer</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>-141</factor>
-		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>-3.7335</y1-m>
-			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>-3.7335</y2-m>
-			<z2-m>0.2082</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>W-L-inner-jack</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>-88</factor>
-		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>-3.7335</y1-m>
-			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>-3.7335</y2-m>
-			<z2-m>0.2082</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>W-L-inner-jack</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>84</factor>
-		<axis>
-			<x1-m>6.5162</x1-m>
-			<y1-m>-3.6260</y1-m>
-			<z1-m>0.3170</z1-m>
-			<x2-m>8.2232</x2-m>
-			<y2-m>-3.6260</y2-m>
-			<z2-m>0.0923</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>W-L-outer-jack</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>-88</factor>
-		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>-3.7335</y1-m>
-			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>-3.7335</y2-m>
-			<z2-m>0.2082</z2-m>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>W-L-outer-jack</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>-58</factor>
-		<axis>
-			<x1-m>6.5162</x1-m>
-			<y1-m>-3.8414</y1-m>
-			<z1-m>0.3170</z1-m>
-			<x2-m>8.2232</x2-m>
-			<y2-m>-3.8414</y2-m>
-			<z2-m>0.0923</z2-m>
+			<x1-m>11.7772</x1-m>
+			<y1-m>12.5061</y1-m>
+			<z1-m>-3.1456</z1-m>
+			<x2-m>9.7970</x2-m>
+			<y2-m>13.5505</y2-m>
+			<z2-m>3.2153</z2-m>
 		</axis>
 	</animation>
 
 
-    <!-- ########## Elevator ########### -->
-    <!-- Left Flaps -->	
-	<animation>
-		<type>rotate</type>
-		<object-name>elevator</object-name>
-		<property>surface-positions/elevator-pos-norm</property>
-		<factor>10</factor>
-		<center>
-			<x-m>14.057</x-m>
-			<y-m>0</y-m>
-			<z-m>0.138</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
     <!-- ########## Flaperons ########### -->
     <!-- Left Flaperons -->
 	<animation>
@@ -1387,7 +1172,6 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
 	<animation>
 		<type>rotate</type>
 		<object-name>W-R-Lower-airbrake</object-name>
@@ -1404,71 +1188,273 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
-	<!-- ########## Slats ########### -->
-	<!-- Left Slats -->
+
+
+    <!-- ########## Wing Fold ########### -->
 	<animation>
 		<type>rotate</type>
-		<object-name>W-L-Ext-slat</object-name>
-		<object-name>W-L-Int-slat</object-name>
-		<property>surface-positions/left-flap-pos-norm</property>
-		<factor>25</factor>
+		<object-name>W-R-inner-axis-fairing-shutter</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.2</ind><dep>160</dep></entry>
+			<entry><ind>1</ind><dep>160</dep></entry>
+		</interpolation>
 		<axis>
-			<x1-m>4.9910</x1-m>
-			<y1-m>-1.6652</y1-m>
-			<z1-m>0.4141</z1-m>
-			<x2-m>8.4040</x2-m>
-			<y2-m>-8.3966</y2-m>
-			<z2-m>0.0105</z2-m>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.6339</y1-m>
+			<z1-m>0.4643</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.6339</y2-m>
+			<z2-m>0.2320</z2-m>
 		</axis>
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>W-L-Ext-slat</object-name>
-		<object-name>W-L-Int-slat</object-name>
-		<property>surface-positions/left-flap-pos-norm</property>
-		<factor>-1</factor>
+		<object-name>W-R-outer-axis-fairing-shutter</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.2</ind><dep>-160</dep></entry>
+			<entry><ind>1</ind><dep>-160</dep></entry>
+		</interpolation>
 		<axis>
-			<x1-m>9.7970</x1-m>
-			<y1-m>-13.5505</y1-m>
-			<z1-m>3.2153</z1-m>
-			<x2-m>11.7772</x2-m>
-			<y2-m>-12.5061</y2-m>
-			<z2-m>-3.1456</z2-m>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.8323</y1-m>
+			<z1-m>0.4643</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.8323</y2-m>
+			<z2-m>0.2320</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-bridge</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>wing-R-outer</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>141</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-inner-jack</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-inner-jack</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>-84</factor>
+		<axis>
+			<x1-m>6.5162</x1-m>
+			<y1-m>3.6260</y1-m>
+			<z1-m>0.3170</z1-m>
+			<x2-m>8.2232</x2-m>
+			<y2-m>3.6260</y2-m>
+			<z2-m>0.0923</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-outer-jack</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-R-outer-jack</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>58</factor>
+		<axis>
+			<x1-m>6.5162</x1-m>
+			<y1-m>3.8414</y1-m>
+			<z1-m>0.3170</z1-m>
+			<x2-m>8.2232</x2-m>
+			<y2-m>3.8414</y2-m>
+			<z2-m>0.0923</z2-m>
 		</axis>
 	</animation>
 
-	<!-- Rights -->
 	<animation>
 		<type>rotate</type>
-		<object-name>W-R-Ext-slat</object-name>
-		<object-name>W-R-Int-slat</object-name>
-		<property>surface-positions/left-flap-pos-norm</property>
-		<factor>25</factor>
+		<object-name>W-L-inner-axis-fairing-shutter</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.2</ind><dep>-160</dep></entry>
+			<entry><ind>1</ind><dep>-160</dep></entry>
+		</interpolation>
 		<axis>
-			<x1-m>8.4040</x1-m>
-			<y1-m>8.3966</y1-m>
-			<z1-m>0.0105</z1-m>
-			<x2-m>4.9910</x2-m>
-			<y2-m>1.6652</y2-m>
-			<z2-m>0.4141</z2-m>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.6339</y1-m>
+			<z1-m>0.4643</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.6339</y2-m>
+			<z2-m>0.2320</z2-m>
 		</axis>
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>W-R-Ext-slat</object-name>
-		<object-name>W-R-Int-slat</object-name>
-		<property>surface-positions/left-flap-pos-norm</property>
-		<factor>-1</factor>
+		<object-name>W-L-outer-axis-fairing-shutter</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.2</ind><dep>160</dep></entry>
+			<entry><ind>1</ind><dep>160</dep></entry>
+		</interpolation>
 		<axis>
-			<x1-m>11.7772</x1-m>
-			<y1-m>12.5061</y1-m>
-			<z1-m>-3.1456</z1-m>
-			<x2-m>9.7970</x2-m>
-			<y2-m>13.5505</y2-m>
-			<z2-m>3.2153</z2-m>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.8323</y1-m>
+			<z1-m>0.4643</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.8323</y2-m>
+			<z2-m>0.2320</z2-m>
 		</axis>
 	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-bridge</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>-88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>wing-L-outer</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>-141</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-inner-jack</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>-88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-inner-jack</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>84</factor>
+		<axis>
+			<x1-m>6.5162</x1-m>
+			<y1-m>-3.6260</y1-m>
+			<z1-m>0.3170</z1-m>
+			<x2-m>8.2232</x2-m>
+			<y2-m>-3.6260</y2-m>
+			<z2-m>0.0923</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-outer-jack</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>-88</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>W-L-outer-jack</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>-58</factor>
+		<axis>
+			<x1-m>6.5162</x1-m>
+			<y1-m>-3.8414</y1-m>
+			<z1-m>0.3170</z1-m>
+			<x2-m>8.2232</x2-m>
+			<y2-m>-3.8414</y2-m>
+			<z2-m>0.0923</z2-m>
+		</axis>
+	</animation>
+
+
+    <!-- ########## Elevator ########### -->	
+	<animation>
+		<type>rotate</type>
+		<object-name>elevator</object-name>
+		<property>surface-positions/elevator-pos-norm</property>
+		<factor>10</factor>
+		<center>
+			<x-m>14.057</x-m>
+			<y-m>0</y-m>
+			<z-m>0.138</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+
+	
+
 
 	
 	
@@ -2341,6 +2327,22 @@
 			<z>0</z>
 		</axis>
 	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>UC-N-CatapultStrop</object-name>
+		<property>gear/launchbar/position-norm</property>
+		<factor> -120.0 </factor>
+		<center>
+			<x-m>1.9427</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-2.1163</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
 
 
 
@@ -2760,7 +2762,7 @@
 				<value>2</value>
 			</equals>
 			<equals>
-				<property>surface-positions/wing-pos-norm/position-norm</property>
+				<property>surface-positions/wing-fold-pos-norm</property>
 				<value>0</value>
 			</equals>
 			<not>
@@ -2815,7 +2817,7 @@
 				<value>0</value>
 			</equals>
 			<equals>
-				<property>surface-positions/wing-pos-norm/position-norm</property>
+				<property>surface-positions/wing-fold-pos-norm</property>
 				<value>0</value>
 			</equals>
 			<not>
@@ -2872,7 +2874,7 @@
 				<value>2</value>
 			</equals>
 			<equals>
-				<property>surface-positions/wing-pos-norm/position-norm</property>
+				<property>surface-positions/wing-fold-pos-norm</property>
 				<value>0</value>
 			</equals>
 			<not>
@@ -2888,20 +2890,6 @@
 			<x>8.1670</x>
 			<y>7.9102</y>
 			<z>0.0682</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>noshadow.nav_halo_WR</object-name>
-		<property>surface-positions/wing-pos-norm/position-norm</property>
-		<factor>145</factor>
-		<axis>
-			<x1-m>6.5172</x1-m>
-			<y1-m>3.7335</y1-m>
-			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
-			<y2-m>3.7335</y2-m>
-			<z2-m>0.2082</z2-m>
 		</axis>
 	</animation>
 	<animation>
@@ -2941,7 +2929,7 @@
 				<value>0</value>
 			</equals>
 			<equals>
-				<property>surface-positions/wing-pos-norm/position-norm</property>
+				<property>surface-positions/wing-fold-pos-norm</property>
 				<value>0</value>
 			</equals>
 			<not>

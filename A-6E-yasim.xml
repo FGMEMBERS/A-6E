@@ -47,22 +47,16 @@ and filled by a nasal script depending of the speed of the A/C. -->
     <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
     <control-input axis="/controls/flight/speedbrake" control="SPOILER"/>
 
-    <control-output control="FLAP0" side="left"
-                    prop="/surface-positions/left-flap-pos-norm"/>
-    <control-output control="FLAP0" side="right"
-                    prop="/surface-positions/right-flap-pos-norm"/>
+    <control-output control="FLAP0" side="left" prop="/surface-positions/left-flap-pos-norm"/>
+    <control-output control="FLAP0" side="right" prop="/surface-positions/right-flap-pos-norm"/>
     <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
 
-    <control-output control="FLAP1" side="left"
-                    prop="/surface-positions/left-aileron-pos-norm"/>
-    <control-output control="FLAP1" side="right"
-                    prop="/surface-positions/right-aileron-pos-norm"/>
+    <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+    <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
     <control-output control="FLAP1" prop="/surface-positions/aileron-pos-norm"/>
 
-    <control-output control="SPOILER" side="left"
-                    prop="/surface-positions/speedbrake-pos-norm"/>
-    <control-output control="SPOILER" side="right"
-                    prop="/surface-positions/speedbrake-pos-norm"/>
+    <control-output control="SPOILER" side="left" prop="/surface-positions/speedbrake-pos-norm"/>
+    <control-output control="SPOILER" side="right" prop="/surface-positions/speedbrake-pos-norm"/>
     <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>
 
     <control-speed control="FLAP0" transition-time="10"/>
@@ -168,7 +162,7 @@ and filled by a nasal script depending of the speed of the A/C. -->
     </hook>
     
     <!-- Launch-bar --> 
-    <launchbar x="1.48" y="0.0" z="-2.30" length="0.6">
+    <launchbar x="1.48" y="0.0" z="-2.41" length="0.6">
         <control-input axis="/controls/gear/launchbar" control="LEXTEND"/>
         <control-speed control="LEXTEND" transition-time="1"/>
     </launchbar>

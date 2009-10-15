@@ -186,9 +186,6 @@ Grumman A-6E simulation config.
 		<model>
 			<path>Aircraft/A-6E/Models/A-6E-model.xml</path>
 			<A-6E>
-				<canopy>
-					<position-norm type="double">1</position-norm>
-				</canopy>
 				<controls>
 					<canopy>
 						<canopy-switch type="int">-1</canopy-switch>
@@ -346,10 +343,17 @@ Grumman A-6E simulation config.
 				<name>o/O</name>
 				<desc>Hook up/down</desc>
 			</key>
+			<key>
+				<name>f/F</name>
+				<desc>Wing Fold up/down</desc>
+			</key>
 		</help>
 
 
 	</sim>
+	<canopy>
+		<position-norm type="double">1</position-norm>
+	</canopy>
 
 	<systems>
 		<refuel>
