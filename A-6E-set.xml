@@ -362,7 +362,7 @@ Grumman A-6E simulation config.
 	</systems>
 
 	<input>
-		<keyboard include="../../Input/Keyboard/carrier-bindings.xml">
+		<keyboard include="/Input/Keyboard/carrier-bindings.xml">
 			<key n="99">
 				<name>c</name>
 				<desc>Canopy open/close command</desc>
