@@ -3,6 +3,11 @@
 
 	<path>optical-sight.ac</path>
 
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>CPT-hud-screen</object-name>
+	</effect>
+
 	<animation>
 		<type>select</type>
 		<object-name>L-fire</object-name>
