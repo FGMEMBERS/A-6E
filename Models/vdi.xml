@@ -6,19 +6,52 @@
 	<path>vdi.ac</path>
 
 	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>ladder</object-name>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-51</inherits-from>
 		<object-name>ground</object-name>
-		<object-name>sky</object-name>
-		<object-name>afcs-roll</object-name>
-		<object-name>afcs-alt</object-name>
-		<object-name>impact-marker</object-name>
-		<object-name>target-marker</object-name>
-		<object-name>drift-marker</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-52</inherits-from>
 		<object-name>alt-curtain</object-name>
-		<object-name>bank-index</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-53</inherits-from>
+		<object-name>sky</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-54</inherits-from>
 		<object-name>horizon-line</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-55</inherits-from>
+		<object-name>drift-marker</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-56</inherits-from>
 		<object-name>vsi-marker</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-57</inherits-from>
+		<object-name>ladder</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-58</inherits-from>
+		<object-name>impact-marker</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-59</inherits-from>
+		<object-name>target-marker</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-60</inherits-from>
+		<object-name>bank-index</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-61</inherits-from>
+		<object-name>afcs-roll</object-name>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-62</inherits-from>
+		<object-name>afcs-alt</object-name>
 	</effect>
 
 
