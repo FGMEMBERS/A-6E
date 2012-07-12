@@ -181,8 +181,20 @@ ticker.setDoubleValue(0);
 vdi_vel_y.setDoubleValue(0);
 vdi_vel_z.setDoubleValue(0);
 
-# Radar Altimeter #########
-aircraft.data.add("sim/model/A-6E/instrumentation/radar-altimeter/limit-bug");
+# Remember Radar Altimeter and lighting settings.
+aircraft.data.add(
+	"sim/model/A-6E/instrumentation/radar-altimeter/limit-bug",
+	"controls/lighting/beacon",
+	"controls/lighting/taxi-light",
+	"sim/model/A-6E/controls/lighting/pylons-lts",
+	"controls/lighting/instruments-norm",
+	"controls/lighting/panel-norm",
+	"sim/model/A-6E/controls/lighting/index-norm",
+	"sim/model/A-6E/controls/lighting/tail-lt",
+	"sim/model/A-6E/controls/lighting/wings-lts",
+	"sim/model/A-6E/controls/lighting/formation-lts",
+	"sim/model/A-6E/controls/lighting/flood-lts"
+);
 
 #setlistener("/sim/signals/fdm-initialized", update_loop);
 settimer(update_loop, 10);
