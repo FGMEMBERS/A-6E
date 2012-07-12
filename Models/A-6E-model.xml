@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 
 <!-- A-6E model config file -->
-<!-- Alexis Bory 2007/03/07 -->
+<!-- Alexis Bory 2012/07/12 -->
 
 <PropertyList>
 
 	<path>A-6E.ac</path>
-	
-	
-<!-- ####### Select the external loads as appropriate ###### -->
+
+
+	<!-- ####### Select the external loads as appropriate ###### -->
 	<!-- Select extermal tanks -->
 	<animation>
 		<type>select</type>
 		<object-name>tank-1</object-name>
-		<condition>   
+		<condition>
 			<equals>
 				<property>sim/weight[0]/selected</property>
 				<value>300 Gallons Fuel Tank</value>
@@ -23,7 +23,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>tank-2</object-name>
-		<condition>   
+		<condition>
 			<equals>
 				<property>sim/weight[1]/selected</property>
 				<value>300 Gallons Fuel Tank</value>
@@ -33,7 +33,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>tank-3</object-name>
-		<condition>   
+		<condition>
 			<equals>
 				<property>sim/weight[2]/selected</property>
 				<value>300 Gallons Fuel Tank</value>
@@ -43,7 +43,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>tank-4</object-name>
-		<condition>   
+		<condition>
 			<equals>
 				<property>sim/weight[3]/selected</property>
 				<value>300 Gallons Fuel Tank</value>
@@ -53,14 +53,14 @@
 	<animation>
 		<type>select</type>
 		<object-name>tank-5</object-name>
-		<condition>   
+		<condition>
 			<equals>
 				<property>sim/weight[4]/selected</property>
 				<value>300 Gallons Fuel Tank</value>
 			</equals>
 		</condition>
 	</animation>
-	
+
 <!-- ###### De-select when in Cockpit View ###### -->
 	<animation>
 		<type>select</type>
@@ -112,11 +112,11 @@
 		<texture>Aircraft/A-6E/Models/glass_shader.png</texture>
 		<object-name>glass</object-name>
 	</animation>
-	
-<!-- ################### Cockpit Instruments ################### -->		
+
+<!-- ################### Cockpit Instruments ################### -->
 	<model>
 		<path>Aircraft/A-6E/Models/mag-compass.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.3847</x-m>
 			<y-m>0</y-m>
 			<z-m>1.3453</z-m>
@@ -126,20 +126,18 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/stick.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.8695</x-m>
 			<y-m>-0.3846</y-m>
 			<z-m>0.3629</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
-
-	<model> 
+	<model>
 		<path>Aircraft/A-6E/Models/pedals.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.3742</x-m>
 			<y-m>-0.3843</y-m>
 			<z-m>0.2540</z-m>
@@ -148,10 +146,11 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-	<!-- Main Panel -->		
+
+	<!-- Main Panel -->
 	<model>
 		<path>Aircraft/A-6E/Models/aoa-gauge.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.5985</x-m>
 			<y-m>-0.5513</y-m>
 			<z-m>1.0225</z-m>
@@ -161,10 +160,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/optical-sight.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6209</x-m>
 			<y-m>-0.3706</y-m>
 			<z-m>1.1842</z-m>
@@ -174,10 +172,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/master-caution-reset.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.5840</x-m>
 			<y-m>-0.5225</y-m>
 			<z-m>1.0912</z-m>
@@ -187,10 +184,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/radar-altimeter.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6193</x-m>
 			<y-m>-0.5529</y-m>
 			<z-m>0.9364</z-m>
@@ -200,10 +196,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/man-jettison.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6142</x-m>
 			<y-m>-0.6230</y-m>
 			<z-m>0.9724</z-m>
@@ -213,19 +208,17 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/ldg-controls.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6057</x-m>
 			<y-m>-0.6771</y-m>
 			<z-m>0.8116</z-m>
 		</offsets>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/engine-gauges.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6030</x-m>
 			<y-m>-0.5688</y-m>
 			<z-m>0.7888</z-m>
@@ -234,10 +227,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/flight-indicator.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6062</x-m>
 			<y-m>-0.6917</y-m>
 			<z-m>0.6370</z-m>
@@ -246,10 +238,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/vdi.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.60853</x-m>
 			<y-m>-0.3913</y-m>
 			<z-m>0.9815</z-m>
@@ -259,10 +250,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/phd.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6809</x-m>
 			<y-m>-0.3913</y-m>
 			<z-m>0.7675</z-m>
@@ -272,10 +262,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/elev-trim.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.7290</x-m>
 			<y-m>-0.4180</y-m>
 			<z-m>0.4320</z-m>
@@ -285,10 +274,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-
 	<model>
 		<path>Aircraft/A-6E/Models/asi.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.5870</x-m>
 			<y-m>-0.2295</y-m>
 			<z-m>1.0750</z-m>
@@ -298,10 +286,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-	
 	<model>
 		<path>Aircraft/A-6E/Models/accelerometer2.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.5876</x-m>
 			<y-m>-0.1712</y-m>
 			<z-m>1.0672</z-m>
@@ -311,10 +298,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-	
 	<model>
 		<path>Aircraft/A-6E/Models/buno-plate.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.5991</x-m>
 			<y-m>-0.2275</y-m>
 			<z-m>1.0216</z-m>
@@ -324,10 +310,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-	
 	<model>
 		<path>Aircraft/A-6E/Models/altimeter.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6098</x-m>
 			<y-m>-0.2297</y-m>
 			<z-m>0.9650</z-m>
@@ -337,10 +322,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-	
 	<model>
 		<path>Aircraft/A-6E/Models/hook-lift.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6139</x-m>
 			<y-m>-0.1705</y-m>
 			<z-m>0.9605</z-m>
@@ -350,10 +334,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-	
 	<model>
 		<path>Aircraft/A-6E/Models/ai.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.5882</x-m>
 			<y-m>-0.1089</y-m>
 			<z-m>1.0660</z-m>
@@ -363,10 +346,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-	
 	<model>
 		<path>Aircraft/A-6E/Models/chronograph.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.5820</x-m>
 			<y-m>-0.0158</y-m>
 			<z-m>1.0910</z-m>
@@ -376,10 +358,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-	
 	<model>
 		<path>Aircraft/A-6E/Models/hsi.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6121</x-m>
 			<y-m>-0.0995</y-m>
 			<z-m>0.9685</z-m>
@@ -389,10 +370,9 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-	
 	<model>
 		<path>Aircraft/A-6E/Models/hsi-2.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6121</x-m>
 			<y-m>-0.0995</y-m>
 			<z-m>0.9685</z-m>
@@ -404,7 +384,7 @@
 	</model>
 	<model>
 		<path>Aircraft/A-6E/Models/vsi.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.5996</x-m>
 			<y-m>-0.004</y-m>
 			<z-m>1.0176</z-m>
@@ -416,7 +396,7 @@
 	</model>
 	<model>
 		<path>Aircraft/A-6E/Models/canopy-controls.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6328</x-m>
 			<y-m>0.0618</y-m>
 			<z-m>0.9875</z-m>
@@ -428,7 +408,7 @@
 	</model>
 	<model>
 		<path>Aircraft/A-6E/Models/vdi-radar-pilots-control.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6830</x-m>
 			<y-m>0.0000</y-m>
 			<z-m>0.6790</z-m>
@@ -437,10 +417,10 @@
 		<animation>
 			<type>noshadow</type>
 		</animation>
-	</model>	
+	</model>
 	<model>
 		<path>Aircraft/A-6E/Models/accelerometer.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6046</x-m>
 			<y-m>-0.1261</y-m>
 			<z-m>0.8324</z-m>
@@ -448,10 +428,10 @@
 		<animation>
 			<type>noshadow</type>
 		</animation>
-	</model>	
+	</model>
 	<model>
 		<path>Aircraft/A-6E/Models/fuel-gauge.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>2.6046</x-m>
 			<y-m>-0.2178</y-m>
 			<z-m>0.8032</z-m>
@@ -459,7 +439,7 @@
 		<animation>
 			<type>noshadow</type>
 		</animation>
-	</model>	
+	</model>
 
 	<model>
 		<path>Aircraft/A-6E/Models/aoa-indexer.xml</path>
@@ -473,8 +453,8 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
-	
-	<!-- Pilot Left Console -->		
+
+	<!-- Pilot Left Console -->
 	<model>
 		<path>Aircraft/A-6E/Models/catapult-grip.xml</path>
 		<offsets> 
@@ -501,7 +481,7 @@
 		</animation>
 	</model>
 
-	<!-- Center Console -->		
+	<!-- Center Console -->
 	<model>
 		<path>Aircraft/A-6E/Models/afcs.xml</path>
 		<offsets> 
@@ -613,7 +593,7 @@
 		<axis><x>-1</x></axis>
 	</animation>
 
-	<!-- Navigator right Console -->		
+	<!-- Navigator right Console -->
 	<model>
 		<path>Aircraft/A-6E/Models/ext-air-temp-gauge.xml</path>
 		<offsets> 
@@ -640,7 +620,7 @@
 	</model>
 
 
-<!--  ################ 3D panels for hot-spots  ################ -->	
+<!--  ################ 3D panels for hot-spots  ################ -->
 	<!-- Hotspots-Console-Left-Aft -->
 	<panel>
 		<name>Hotspots-Console-Left-Aft</name>
@@ -661,7 +641,7 @@
 			<z-m>0.4433</z-m>
 		</bottom-right>
 	</panel>
-	
+
 	<!-- Hotspots-Pilot-Panel-Right -->
 	<panel>
 		<name>Hotspots-Pilot-Panel-Right</name>
@@ -750,8 +730,8 @@
 
 <!-- #################### Pilots Animations #################### -->
 <!-- ########################################################### -->
-	
-    <!-- ########## Left Pilot's right arm ########### -->
+
+	<!-- ########## Left Pilot's right arm ########### -->
 	<animation>
 		<type>rotate</type>
 		<object-name>LR-armA</object-name>
@@ -816,12 +796,12 @@
 			<z>-1</z>
 		</axis>
 	</animation>
-	
-	
+
+
 <!-- ################### External Animations ################### -->
 <!-- ########################################################### -->
-	
-    <!-- ########## canopy ########### -->
+
+	<!-- ########## canopy ########### -->
 	<animation>
 		<type>translate</type>
 		<object-name>CPT-canopy-back</object-name>
@@ -848,7 +828,7 @@
 
 
 
-    <!-- ########## Rudder ########### -->
+	<!-- ########## Rudder ########### -->
 	<animation>
 		<type>rotate</type>
 		<object-name>rudder</object-name>
@@ -878,8 +858,8 @@
 		</axis>
 	</animation>
 
-    <!-- ########## Flaps ########### -->
-    <!-- Left Flaps -->	
+	<!-- ########## Flaps ########### -->
+	<!-- Left Flaps -->
 	<animation>
 		<type>rotate</type>
 		<object-name>W-L-Int-Flap</object-name>
@@ -927,7 +907,7 @@
 			<z2-m>0.0752</z2-m>
 		</axis>
 	</animation>
-    <!-- Right Flaps -->	
+	<!-- Right Flaps -->
 	<animation>
 		<type>rotate</type>
 		<object-name>W-R-Int-Flap</object-name>
@@ -975,7 +955,7 @@
 			<z2-m>-0.0193</z2-m>
 		</axis>
 	</animation>
-	
+
 	<!-- ########## Slats ########### -->
 	<!-- Left Slats -->
 	<animation>
@@ -1042,8 +1022,8 @@
 	</animation>
 
 
-    <!-- ########## Flaperons ########### -->
-    <!-- Left Flaperons -->
+	<!-- ########## Flaperons ########### -->
+	<!-- Left Flaperons -->
 	<animation>
 		<type>rotate</type>
 		<object-name>W-L-Int-Flaperon</object-name>
@@ -1067,7 +1047,7 @@
 		<object-name>W-L-Ext-Flaperon</object-name>
 		<property>surface-positions/left-aileron-pos-norm</property>
 		<interpolation>
-		    <entry><ind>1</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>-1</ind><dep>51</dep></entry>
 		</interpolation>
@@ -1080,14 +1060,14 @@
 			<z2-m>0.0683</z2-m>
 		</axis>
 	</animation>
-	
-    <!-- Right Flaperons -->	
+
+	<!-- Right Flaperons -->
 	<animation>
 		<type>rotate</type>
 		<object-name>W-R-Int-Flaperon</object-name>
 		<property>surface-positions/right-aileron-pos-norm</property>
 		<interpolation>
-		    <entry><ind>1</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>-1</ind><dep>45</dep></entry>
 		</interpolation>
@@ -1100,13 +1080,13 @@
 			<z2-m>0.2179</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>W-R-Ext-Flaperon</object-name>
 		<property>surface-positions/right-aileron-pos-norm</property>
 		<interpolation>
-		    <entry><ind>1</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>-1</ind><dep>51</dep></entry>
 		</interpolation>
@@ -1119,9 +1099,9 @@
 			<z2-m>0.1692</z2-m>
 		</axis>
 	</animation>
-		
-    <!-- ########## Air-brakes ########### -->
-    <!-- Left Air-brake -->
+
+	<!-- ########## Air-brakes ########### -->
+	<!-- Left Air-brake -->
 	<animation>
 		<type>rotate</type>
 		<object-name>W-L-Upper-airbrake</object-name>
@@ -1154,8 +1134,8 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
-    <!-- Right Air-brake -->	
+
+	<!-- Right Air-brake -->
 	<animation>
 		<type>rotate</type>
 		<object-name>W-R-Upper-airbrake</object-name>
@@ -1190,7 +1170,7 @@
 	</animation>
 
 
-    <!-- ########## Wing Fold ########### -->
+	<!-- ########## Wing Fold ########### -->
 	<animation>
 		<type>rotate</type>
 		<object-name>W-R-inner-axis-fairing-shutter</object-name>
@@ -1434,7 +1414,7 @@
 	</animation>
 
 
-    <!-- ########## Elevator ########### -->	
+	<!-- ########## Elevator ########### -->
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator</object-name>
@@ -1451,16 +1431,9 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
-
-	
 
 
-	
-	
-	
-			
-    <!-- ########## Tail Hook ########### -->	
+	<!-- ########## Tail Hook ########### -->
 	<animation>
 		<type>rotate</type>
 		<object-name>tail-hook</object-name>
@@ -1477,9 +1450,9 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
-	
-		
+
+
+
 <!-- ####################### Landing Gear ###################### -->
 <!-- ########################################################### -->
 
@@ -1551,7 +1524,7 @@
 			<entry><ind>0</ind><dep>93.75</dep></entry>
 			<entry><ind>0.3</ind><dep>93.75</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
+		</interpolation>
 		<axis>
 			<x1-m>7.665</x1-m>
 			<y1-m>1.01</y1-m>
@@ -1561,7 +1534,7 @@
 			<z2-m>0.1</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-R-OpeningJackTop</object-name>
@@ -1573,7 +1546,7 @@
 			<entry><ind>0.485</ind><dep>58.5</dep></entry>
 			<entry><ind>0.67</ind><dep>40</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
+		</interpolation>
 		<axis>
 			<x1-m>7.92</x1-m>
 			<y1-m>0.93</y1-m>
@@ -1583,7 +1556,7 @@
 			<z2-m>-0.01</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-R-StrutShaft-cont</object-name>
@@ -1599,7 +1572,7 @@
 			<entry><ind>0.3</ind><dep>-86</dep></entry>
 			<entry><ind>0.50</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
+		</interpolation>
 		<axis>
 			<x1-m>7.65</x1-m>
 			<y1-m>1.26</y1-m>
@@ -1609,7 +1582,7 @@
 			<z2-m>-2.55</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-R-BottomArm</object-name>
@@ -1621,7 +1594,7 @@
 			<entry><ind>0.45</ind><dep>53</dep></entry>
 			<entry><ind>0.60</ind><dep>53</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
+		</interpolation>
 		<axis>
 			<x1-m>7.54</x1-m>
 			<y1-m>1.11</y1-m>
@@ -1631,7 +1604,7 @@
 			<z2-m>-1.12</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-R-TopArm</object-name>
@@ -1642,7 +1615,7 @@
 			<entry><ind>0.5</ind><dep>-143</dep></entry>
 			<entry><ind>0.60</ind><dep>-143</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
+		</interpolation>
 		<axis>
 			<x1-m>6.86</x1-m>
 			<y1-m>0.98</y1-m>
@@ -1652,7 +1625,7 @@
 			<z2-m>-0.61</z2-m>
 		</axis>
 	</animation>
-    <!-- Compression -->
+	<!-- Compression -->
 	<animation>
 		<type>translate</type>
 		<object-name>UC-R-Tyre</object-name>
@@ -1733,7 +1706,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-R-BottomDamper</object-name>
@@ -1790,8 +1763,8 @@
 			<z2-m>-2.1697</z2-m>
 		</axis>
 	</animation>
-	
-<!-- Front Door--> 
+
+<!-- Front Door-->
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-R-F-Door-a</object-name>
@@ -1810,7 +1783,7 @@
 			<y2-m>1.86</y2-m>
 			<z2-m>0.32</z2-m>
 		</axis>
-	</animation>	 
+	</animation>
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-R-F-Door-b</object-name>
@@ -1828,8 +1801,8 @@
 			<y2-m>1.10</y2-m>
 			<z2-m>0.06</z2-m>
 		</axis>
-	</animation>	
-			
+	</animation>
+
 <!-- Rear Door-->
 	<animation>
 		<type>rotate</type>
@@ -1849,8 +1822,8 @@
 			<y2-m>1.46</y2-m>
 			<z2-m>0.16</z2-m>
 		</axis>
-	</animation>	
-	
+	</animation>
+
 
 <!-- ########## Left Gear ########## -->
 <!-- Extend/Retract -->
@@ -1870,7 +1843,7 @@
 			<entry><ind>0</ind><dep>93.75</dep></entry>
 			<entry><ind>0.3</ind><dep>93.75</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
+		</interpolation>
 		<axis>
 			<x1-m>7.635</x1-m>
 			<y1-m>-1.54</y1-m>
@@ -1896,7 +1869,7 @@
 			<entry><ind>0.3</ind><dep>-86</dep></entry>
 			<entry><ind>0.50</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
+		</interpolation>
 		<axis>
 			<x1-m>7.69</x1-m>
 			<y1-m>-1.57</y1-m>
@@ -1917,7 +1890,7 @@
 			<entry><ind>0.45</ind><dep>53</dep></entry>
 			<entry><ind>0.60</ind><dep>53</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
+		</interpolation>
 		<axis>
 			<x1-m>7.45</x1-m>
 			<y1-m>-1.67</y1-m>
@@ -1937,7 +1910,7 @@
 			<entry><ind>0.5</ind><dep>-143</dep></entry>
 			<entry><ind>0.60</ind><dep>-143</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
+		</interpolation>
 		<axis>
 			<x1-m>6.77</x1-m>
 			<y1-m>-1.54</y1-m>
@@ -1958,7 +1931,7 @@
 			<entry><ind>0.485</ind><dep>58.5</dep></entry>
 			<entry><ind>0.67</ind><dep>40</dep></entry>
 			<entry><ind>1</ind><dep>0</dep></entry>
-		</interpolation>			
+		</interpolation>
 		<axis>
 			<x1-m>7.90</x1-m>
 			<y1-m>-1.46</y1-m>
@@ -1968,8 +1941,8 @@
 			<z2-m>-0.07</z2-m>
 		</axis>
 	</animation>
-	
-    <!-- Compression -->
+
+	<!-- Compression -->
 	<animation>
 		<type>translate</type>
 		<object-name>UC-L-StrutShaft</object-name>
@@ -2106,8 +2079,8 @@
 			<z2-m>-2.1186</z2-m>
 		</axis>
 	</animation>
-	
-    <!-- Front Door--> 
+
+	<!-- Front Door--> 
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-L-F-Door-a</object-name>
@@ -2126,7 +2099,7 @@
 			<y2-m>-1.86</y2-m>
 			<z2-m>0.26</z2-m>
 		</axis>
-	</animation>	 
+	</animation>
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-L-F-Door-b</object-name>
@@ -2144,7 +2117,7 @@
 			<y2-m>-1.16</y2-m>
 			<z2-m>-0.24</z2-m>
 		</axis>
-	</animation>	
+	</animation>
 	<!-- Rear Door-->
 	<animation>
 		<type>rotate</type>
@@ -2164,7 +2137,7 @@
 			<y2-m>-1.42</y2-m>
 			<z2-m>0.07</z2-m>
 		</axis>
-	</animation>	 
+	</animation>
 
 
 
@@ -2331,7 +2304,7 @@
 		<type>rotate</type>
 		<object-name>UC-N-CatapultStrop</object-name>
 		<property>gear/launchbar/position-norm</property>
-		<factor> -120.0 </factor>
+		<factor>-120.0 </factor>
 		<center>
 			<x-m>1.9427</x-m>
 			<y-m>0.0</y-m>
@@ -2384,7 +2357,6 @@
 <!-- Compression -->
 	<animation>
 		<type>translate</type>
-
 		<object-name>UC-N-StrutStear</object-name>
 		<object-name>UC-N-Tyre</object-name>
 		<object-name>UC-N-Hub</object-name>
@@ -2556,8 +2528,8 @@
 			<z>0.0</z>
 		</axis>
 	</animation>
-	
-    <!-- Front Door--> 
+
+	<!-- Front Door--> 
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-N-F-Door</object-name>
@@ -2578,7 +2550,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-    <!-- Rear Doors --> 
+	<!-- Rear Doors --> 
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-N-L-Door</object-name>
@@ -2618,7 +2590,7 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
-	</animation>		
+	</animation>
 
 	<!-- ############## Position External Lighting ############## -->
 	<light-params>
@@ -2751,7 +2723,7 @@
 		</interpolation>
 	</animation>
 
-	
+
 	<!-- position-wing-left -->
 	<animation>
 		<type>select</type>
@@ -2863,7 +2835,7 @@
 		</interpolation>
 	</animation>
 
-	
+
 	<!-- position-wing-right -->
 	<animation>
 		<type>select</type>
@@ -2990,8 +2962,8 @@
 				</equals>
 			</not>
 		</condition>
+	</animation>
 
-	</animation> 
 	<animation>
 		<type>translate</type>
 		<object-name>noshadow.coll_halo_FR</object-name>
@@ -3300,14 +3272,6 @@
 	</animation>
 
 	<animation>
-		<object-name>seat-R</object-name>
-		<type>noshadow</type>
-	</animation>
-	<animation>
-		<object-name>seat-L</object-name>
-		<type>noshadow</type>
-	</animation>
-	<animation>
 		<object-name>Collision-lights</object-name>
 		<type>noshadow</type>
 	</animation>
@@ -3315,18 +3279,6 @@
 		<object-name>Nav-Lights</object-name>
 		<type>noshadow</type>
 	</animation>
-	<animation>
-		<object-name>L-Pilot</object-name>
-		<type>noshadow</type>
-	</animation>
-	<animation>
-		<object-name>R-Pilot</object-name>
-		<type>noshadow</type>
-	</animation>
-	<!--<animation>
-		<object-name>CPT-structures</object-name>
-		<type>noshadow</type>
-	</animation>-->
 	<animation>
 		<object-name>CPT-panels</object-name>
 		<type>noshadow</type>
