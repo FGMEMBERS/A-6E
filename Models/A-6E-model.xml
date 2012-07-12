@@ -470,7 +470,7 @@
 
 	<model>
 		<path>Aircraft/A-6E/Models/light-left-panel.xml</path>
-		<offsets> 
+		<offsets>
 			<x-m>3.3819</x-m>
 			<y-m>-0.7158</y-m>
 			<z-m>0.4587</z-m>
@@ -2592,16 +2592,36 @@
 		</axis>
 	</animation>
 
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>nav_halo_WR</object-name>
+		<object-name>nav_halo_Tail_Dim</object-name>
+		<object-name>nav_halo_WL_Dim</object-name>
+		<object-name>nav_halo_WR_Dim</object-name>
+		<object-name>nav_halo_Tail</object-name>
+		<object-name>nav_halo_WL</object-name>
+		<object-name>coll_halo_WL</object-name>
+		<object-name>coll_halo_WR</object-name>
+		<object-name>coll_halo_FR</object-name>
+		<object-name>coll_halo_FL</object-name>
+		<object-name>coll_halo_TL</object-name>
+		<object-name>coll_halo_TR</object-name>
+		<!--<object-name>nav_halo_PR</object-name>
+		<object-name>nav_halo_PL</object-name> Pylon signal lights in StdBy -->
+	</effect>
+
+
 	<!-- ############## Position External Lighting ############## -->
 	<light-params>
 		<position-factor>4</position-factor>
 		<position-factor-dim>2</position-factor-dim>
 		<colision-factor>8</colision-factor>
 	</light-params>
+
 	<!-- position-tail -->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.nav_halo_Tail</object-name>
+		<object-name>nav_halo_Tail</object-name>
 		<condition>
 				<equals>
 					<property>sim/model/A-6E/controls/lighting/tail-lt</property>
@@ -2611,21 +2631,17 @@
 	</animation> 
 	<animation>
 		<type>rotate</type>
-		<object-name>noshadow.nav_halo_Tail</object-name>
+		<object-name>nav_halo_Tail</object-name>
 		<property>surface-positions/rudder-pos-norm</property>
 		<factor>-20</factor>
 		<axis>
-			<x1-m>15.5</x1-m>
-			<y1-m>0</y1-m>
-			<z1-m>-0.31</z1-m>
-			<x2-m>15.98</x2-m>
-			<y2-m>0</y2-m>
-			<z2-m>2.03</z2-m>
+			<x1-m>15.5</x1-m><y1-m>0</y1-m><z1-m>-0.31</z1-m>
+			<x2-m>15.98</x2-m><y2-m>0</y2-m><z2-m>2.03</z2-m>
 		</axis>
-	</animation>	
+	</animation>
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.nav_halo_Tail</object-name>
+		<object-name>nav_halo_Tail</object-name>
 		<offset-m>16.7172</offset-m>
 		<axis>
 			<x>16.7152</x>
@@ -2635,35 +2651,32 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.nav_halo_Tail</object-name>
+		<object-name>nav_halo_Tail</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.nav_halo_Tail</object-name>
+		<object-name>nav_halo_Tail</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/position-factor"/>
 		<y-factor alias="../../light-params/position-factor"/>
 		<z-factor alias="../../light-params/position-factor"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.nav_halo_Tail</object-name>
+		<object-name>nav_halo_Tail</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2.5</dep></entry>
 			<entry><ind>16000</ind><dep>7</dep></entry>
 		</interpolation>
 	</animation>
+
 	<!-- position-tail Dimmed-->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.nav_halo_Tail_Dim</object-name>
+		<object-name>nav_halo_Tail_Dim</object-name>
 		<condition>
 				<equals>
 					<property>sim/model/A-6E/controls/lighting/tail-lt</property>
@@ -2673,21 +2686,17 @@
 	</animation> 
 	<animation>
 		<type>rotate</type>
-		<object-name>noshadow.nav_halo_Tail_Dim</object-name>
+		<object-name>nav_halo_Tail_Dim</object-name>
 		<property>surface-positions/rudder-pos-norm</property>
 		<factor>-20</factor>
 		<axis>
-			<x1-m>15.5</x1-m>
-			<y1-m>0</y1-m>
-			<z1-m>-0.31</z1-m>
-			<x2-m>15.98</x2-m>
-			<y2-m>0</y2-m>
-			<z2-m>2.03</z2-m>
+			<x1-m>15.5</x1-m><y1-m>0</y1-m><z1-m>-0.31</z1-m>
+			<x2-m>15.98</x2-m><y2-m>0</y2-m><z2-m>2.03</z2-m>
 		</axis>
-	</animation>	
+	</animation>
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.nav_halo_Tail_Dim</object-name>
+		<object-name>nav_halo_Tail_Dim</object-name>
 		<offset-m>16.7172</offset-m>
 		<axis>
 			<x>16.7152</x>
@@ -2697,25 +2706,21 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.nav_halo_Tail_Dim</object-name>
+		<object-name>nav_halo_Tail_Dim</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.nav_halo_Tail_Dim</object-name>
+		<object-name>nav_halo_Tail_Dim</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/position-factor-dim"/>
 		<y-factor alias="../../light-params/position-factor-dim"/>
 		<z-factor alias="../../light-params/position-factor-dim"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.nav_halo_Tail_Dim</object-name>
+		<object-name>nav_halo_Tail_Dim</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2.5</dep></entry>
@@ -2727,7 +2732,7 @@
 	<!-- position-wing-left -->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.nav_halo_WL</object-name>
+		<object-name>nav_halo_WL</object-name>
 		<condition>
 			<equals>
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
@@ -2744,7 +2749,7 @@
 	</animation>
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.nav_halo_WL</object-name>
+		<object-name>nav_halo_WL</object-name>
 		<offset-m>11.37</offset-m>
 		<axis>
 			<x>8.1670</x>
@@ -2754,35 +2759,32 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.nav_halo_WL</object-name>
+		<object-name>nav_halo_WL</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.nav_halo_WL</object-name>
+		<object-name>nav_halo_WL</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/position-factor"/>
 		<y-factor alias="../../light-params/position-factor"/>
 		<z-factor alias="../../light-params/position-factor"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.nav_halo_WL</object-name>
+		<object-name>nav_halo_WL</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2.5</dep></entry>
 			<entry><ind>16000</ind><dep>7</dep></entry>
 		</interpolation>
 	</animation>
+
 	<!-- position-wing-left Dimmed-->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.nav_halo_WL_Dim</object-name>
+		<object-name>nav_halo_WL_Dim</object-name>
 		<condition>
 			<equals>
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
@@ -2799,7 +2801,7 @@
 	</animation>
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.nav_halo_WL_Dim</object-name>
+		<object-name>nav_halo_WL_Dim</object-name>
 		<offset-m>11.37</offset-m>
 		<axis>
 			<x>8.1670</x>
@@ -2809,37 +2811,32 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.nav_halo_WL_Dim</object-name>
+		<object-name>nav_halo_WL_Dim</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.nav_halo_WL_Dim</object-name>
+		<object-name>nav_halo_WL_Dim</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/position-factor-dim"/>
 		<y-factor alias="../../light-params/position-factor-dim"/>
 		<z-factor alias="../../light-params/position-factor-dim"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.nav_halo_WL_Dim</object-name>
+		<object-name>nav_halo_WL_Dim</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2.5</dep></entry>
 			<entry><ind>16000</ind><dep>7</dep></entry>
 		</interpolation>
 	</animation>
-
 
 	<!-- position-wing-right -->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.nav_halo_WR</object-name>
+		<object-name>nav_halo_WR</object-name>
 		<condition>
 			<equals>
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
@@ -2856,7 +2853,7 @@
 	</animation>
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.nav_halo_WR</object-name>
+		<object-name>nav_halo_WR</object-name>
 		<offset-m>11.37</offset-m>
 		<axis>
 			<x>8.1670</x>
@@ -2866,35 +2863,32 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.nav_halo_WR</object-name>
+		<object-name>nav_halo_WR</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.nav_halo_WR</object-name>
+		<object-name>nav_halo_WR</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/position-factor"/>
 		<y-factor alias="../../light-params/position-factor"/>
 		<z-factor alias="../../light-params/position-factor"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.nav_halo_WR</object-name>
+		<object-name>nav_halo_WR</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2.5</dep></entry>
 			<entry><ind>16000</ind><dep>7</dep></entry>
 		</interpolation>
 	</animation>
+
 	<!-- position-wing-right Dimmed -->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.nav_halo_WR_Dim</object-name>
+		<object-name>nav_halo_WR_Dim</object-name>
 		<condition>
 			<equals>
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
@@ -2911,7 +2905,7 @@
 	</animation>
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.nav_halo_WR_Dim</object-name>
+		<object-name>nav_halo_WR_Dim</object-name>
 		<offset-m>11.37</offset-m>
 		<axis>
 			<x>8.1670</x>
@@ -2921,25 +2915,21 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.nav_halo_WR_Dim</object-name>
+		<object-name>nav_halo_WR_Dim</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.nav_halo_WR_Dim</object-name>
+		<object-name>nav_halo_WR_Dim</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/position-factor-dim"/>
 		<y-factor alias="../../light-params/position-factor-dim"/>
 		<z-factor alias="../../light-params/position-factor-dim"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.nav_halo_WR_Dim</object-name>
+		<object-name>nav_halo_WR_Dim</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2.5</dep></entry>
@@ -2952,21 +2942,19 @@
 	<!-- collision-fuselage-right -->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.coll_halo_FR</object-name>
+		<object-name>coll_halo_FR</object-name>
 		<condition>
 			<property>sim/model/A-6E/lighting/beacon_state/state</property>
-			<not>
-				<equals>
+			<not><equals>
 					<property>sim/current-view/view-number</property>
 					<value>0</value>
-				</equals>
-			</not>
+			</equals></not>
 		</condition>
 	</animation>
 
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.coll_halo_FR</object-name>
+		<object-name>coll_halo_FR</object-name>
 		<offset-m>3.9489</offset-m>
 		<axis>
 			<x>3.75</x>
@@ -2976,48 +2964,43 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.coll_halo_FR</object-name>
+		<object-name>coll_halo_FR</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.coll_halo_FR</object-name>
+		<object-name>coll_halo_FR</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/colision-factor"/>
 		<y-factor alias="../../light-params/colision-factor"/>
 		<z-factor alias="../../light-params/colision-factor"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.coll_halo_FR</object-name>
+		<object-name>coll_halo_FR</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2</dep></entry>
 			<entry><ind>50000</ind><dep>300</dep></entry>
 		</interpolation>
 	</animation>
+
 	<!-- collision-fuselage-left -->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.coll_halo_FL</object-name>
+		<object-name>coll_halo_FL</object-name>
 		<condition>
 			<property>sim/model/A-6E/lighting/beacon_state/state</property>
-			<not>
-				<equals>
+			<not><equals>
 					<property>sim/current-view/view-number</property>
 					<value>0</value>
-				</equals>
-			</not>
+			</equals></not>
 		</condition>
 	</animation> 
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.coll_halo_FL</object-name>
+		<object-name>coll_halo_FL</object-name>
 		<offset-m>3.9489</offset-m>
 		<axis>
 			<x>3.75</x>
@@ -3027,25 +3010,21 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.coll_halo_FL</object-name>
+		<object-name>coll_halo_FL</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.coll_halo_FL</object-name>
+		<object-name>coll_halo_FL</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/colision-factor"/>
 		<y-factor alias="../../light-params/colision-factor"/>
 		<z-factor alias="../../light-params/colision-factor"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.coll_halo_FL</object-name>
+		<object-name>coll_halo_FL</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2</dep></entry>
@@ -3056,14 +3035,14 @@
 	<!-- collision-wing-left -->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.coll_halo_WL</object-name>
+		<object-name>coll_halo_WL</object-name>
 		<condition>
 			<property>sim/model/A-6E/lighting/beacon_state/state</property>
 		</condition>
 	</animation> 
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.coll_halo_WL</object-name>
+		<object-name>coll_halo_WL</object-name>
 		<offset-m>11.37</offset-m>
 		<axis>
 			<x>8.1670</x>
@@ -3073,42 +3052,39 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.coll_halo_WL</object-name>
+		<object-name>coll_halo_WL</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.coll_halo_WL</object-name>
+		<object-name>coll_halo_WL</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/colision-factor"/>
 		<y-factor alias="../../light-params/colision-factor"/>
 		<z-factor alias="../../light-params/colision-factor"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.coll_halo_WL</object-name>
+		<object-name>coll_halo_WL</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2</dep></entry>
 			<entry><ind>50000</ind><dep>300</dep></entry>
 		</interpolation>
 	</animation>
+
 	<!-- collision-wing-right -->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.coll_halo_WR</object-name>
+		<object-name>coll_halo_WR</object-name>
 		<condition>
 			<property>sim/model/A-6E/lighting/beacon_state/state</property>
 		</condition>
 	</animation> 
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.coll_halo_WR</object-name>
+		<object-name>coll_halo_WR</object-name>
 		<offset-m>11.37</offset-m>
 		<axis>
 			<x>8.1670</x>
@@ -3118,25 +3094,21 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.coll_halo_WR</object-name>
+		<object-name>coll_halo_WR</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.coll_halo_WR</object-name>
+		<object-name>coll_halo_WR</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/colision-factor"/>
 		<y-factor alias="../../light-params/colision-factor"/>
 		<z-factor alias="../../light-params/colision-factor"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.coll_halo_WR</object-name>
+		<object-name>coll_halo_WR</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2</dep></entry>
@@ -3147,14 +3119,14 @@
 	<!-- collision-tail-right -->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.coll_halo_TR</object-name>
+		<object-name>coll_halo_TR</object-name>
 		<condition>
 			<property>sim/model/A-6E/lighting/beacon_state/state</property>
 		</condition>
 	</animation> 
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.coll_halo_TR</object-name>
+		<object-name>coll_halo_TR</object-name>
 		<offset-m>14.4105</offset-m>
 		<axis>
 			<x>14.2587</x>
@@ -3164,42 +3136,39 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.coll_halo_TR</object-name>
+		<object-name>coll_halo_TR</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.coll_halo_TR</object-name>
+		<object-name>coll_halo_TR</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/colision-factor"/>
 		<y-factor alias="../../light-params/colision-factor"/>
 		<z-factor alias="../../light-params/colision-factor"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.coll_halo_TR</object-name>
+		<object-name>coll_halo_TR</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2</dep></entry>
 			<entry><ind>50000</ind><dep>300</dep></entry>
 		</interpolation>
 	</animation>
+
 	<!-- collision-tail-left -->
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.coll_halo_TL</object-name>
+		<object-name>coll_halo_TL</object-name>
 		<condition>
 			<property>sim/model/A-6E/lighting/beacon_state/state</property>
 		</condition>
 	</animation> 
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.coll_halo_TL</object-name>
+		<object-name>coll_halo_TL</object-name>
 		<offset-m>14.4105</offset-m>
 		<axis>
 			<x>14.2587</x>
@@ -3209,25 +3178,21 @@
 	</animation>
 	<animation>
 		<type>billboard</type>
-		<object-name>noshadow.coll_halo_TL</object-name>
+		<object-name>coll_halo_TL</object-name>
 	</animation>
 	<animation>
 		<type>scale</type>
-		<object-name>noshadow.coll_halo_TL</object-name>
+		<object-name>coll_halo_TL</object-name>
 		<property>sim/time/sun-angle-rad</property>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
+		<x-min>1</x-min><y-min>1</y-min><z-min>1</z-min>
 		<x-factor alias="../../light-params/colision-factor"/>
 		<y-factor alias="../../light-params/colision-factor"/>
 		<z-factor alias="../../light-params/colision-factor"/>
-		<x-offset>1</x-offset>
-		<y-offset>1</y-offset>
-		<z-offset>1</z-offset>
+		<x-offset>1</x-offset><y-offset>1</y-offset><z-offset>1</z-offset>
 	</animation>
 	<animation>
 		<type>dist-scale</type>
-		<object-name>noshadow.coll_halo_TL</object-name>
+		<object-name>coll_halo_TL</object-name>
 		<interpolation>
 			<entry><ind>0</ind><dep>1</dep></entry>
 			<entry><ind>500</ind><dep>2</dep></entry>
@@ -3239,8 +3204,8 @@
 	<!-- formation lights-->
 	<animation>
 		<type>material</type>
-		<object-name>noshadow.formation_lt_F</object-name>
-		<object-name>noshadow.formation_lt_W</object-name>
+		<object-name>formation_lt_F</object-name>
+		<object-name>formation_lt_W</object-name>
 		<emission>
 			<factor-prop>sim/model/A-6E/controls/lighting/formation-lts</factor-prop>
 			<red>0.455</red>
@@ -3285,7 +3250,4 @@
 	</animation>
 
 
-
-
-	
 </PropertyList>
