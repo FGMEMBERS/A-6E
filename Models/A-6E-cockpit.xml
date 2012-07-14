@@ -399,92 +399,11 @@
 			<type>noshadow</type>
 		</animation>
 	</model>
+	<model>
+		<path>Aircraft/A-6E/Models/wing-fold-panel.xml</path>
+	</model>
 
-	<!-- Wing Fold Panel -->
-	<animation>
-		<name>wing-fold-push-button</name>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>wing-fold-push-button</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>nasal</command>
-				<script>A6Econtrols.wf_push_button()</script>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<type>translate</type>
-		<object-name>wing-fold-push-button</object-name>
-		<property>sim/model/A-6E/controls/wing-fold/button-position</property>
-		<factor>0.005</factor>
-		<axis><z>-1</z></axis>
-	</animation>
-	<animation>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>wing-fold-handle</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>nasal</command>
-				<script>A6Econtrols.wf_handle()</script>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>wing-fold-handle</object-name>
-		<property>sim/model/A-6E/controls/wing-fold/handle-position</property>
-		<factor>35</factor>
-		<center>
-			<x-m>3.1351</x-m>
-			<y-m>0</y-m>
-			<z-m>0.3536</z-m>
-		</center>
-		<axis><y>-1</y></axis>
-	</animation>
-	<animation>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>wing-fold-lock</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>nasal</command>
-				<script>A6Econtrols.wf_switch(1)</script>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>wing-fold-unlock</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>nasal</command>
-				<script>A6Econtrols.wf_switch(-1)</script>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>wing-fold-lock-switch</object-name>
-		<property>sim/model/A-6E/controls/wing-fold/switch-position</property>
-		<factor>30</factor>
-		<center>
-			<x-m>3.3012</x-m>
-			<y-m>0.0345</y-m>
-			<z-m>0.4033</z-m>
-		</center>
-		<axis><x>-1</x></axis>
-	</animation>
+
 
 	<!-- Navigator right Console -->
 	<model>
