@@ -13,16 +13,8 @@
 			<entry><ind>0</ind><dep>-10</dep></entry>
 			<entry><ind>1</ind><dep>25</dep></entry>
 		</interpolation>
-		<center>
-			<x-m>-0.0549</x-m>
-			<y-m>-0.0429</y-m>
-			<z-m>-0.0047</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>-0.0549</x-m><y-m>-0.0429</y-m><z-m>-0.0047</z-m></center>
+		<axis><y>-1</y></axis>
 	</animation>
 
 	<!-- taxi/probe-switch -->
@@ -34,16 +26,8 @@
 			<entry><ind>0</ind><dep>-10</dep></entry>
 			<entry><ind>1</ind><dep>25</dep></entry>
 		</interpolation>
-		<center>
-			<x-m>-0.0146</x-m>
-			<y-m>-0.0423</y-m>
-			<z-m>-0.0010</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>-0.0146</x-m><y-m>-0.0423</y-m><z-m>-0.0010</z-m></center>
+		<axis><y>-1</y></axis>
 	</animation>
 
 	<!-- pylon-switch -->
@@ -56,19 +40,11 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 			<entry><ind>2</ind><dep>30</dep></entry>
 		</interpolation>
-		<center>
-			<x-m>0.0552</x-m>
-			<y-m>-0.0423</y-m>
-			<z-m>-0.0010</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>0.0552</x-m><y-m>-0.0423</y-m><z-m>-0.0010</z-m></center>
+		<axis><y>-1</y></axis>
 	</animation>
 
-	<!-- instrument-wheel -->
+	<!-- wheels -->
 	<animation>
 		<type>rotate</type>
 		<object-name>instrument-wheel</object-name>
@@ -77,16 +53,8 @@
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>336</dep></entry>
 		</interpolation>
-		<center>
-			<x-m>-0.0256</x-m>
-			<y-m>0.0002</y-m>
-			<z-m>-0.0147</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>-0.0256</x-m><y-m>0.0002</y-m><z-m>-0.0147</z-m></center>
+		<axis><x>1</x></axis>
 	</animation>
 
 	<animation>
@@ -97,16 +65,8 @@
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>336</dep></entry>
 		</interpolation>
-		<center>
-			<x-m>-0.0159</x-m>
-			<y-m>0.0002</y-m>
-			<z-m>-0.0147</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>-0.0159</x-m><y-m>0.0002</y-m><z-m>-0.0147</z-m></center>
+		<axis><x>1</x></axis>
 	</animation>
 
 	<animation>
@@ -117,16 +77,8 @@
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>336</dep></entry>
 		</interpolation>
-		<center>
-			<x-m>-0.0573</x-m>
-			<y-m>0.0002</y-m>
-			<z-m>-0.0147</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>-0.0573</x-m><y-m>0.0002</y-m><z-m>-0.0147</z-m></center>
+		<axis><x>1</x></axis>
 	</animation>
 
 	<!-- tail-switch -->
@@ -139,16 +91,8 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 			<entry><ind>2</ind><dep>30</dep></entry>
 		</interpolation>
-		<center>
-			<x-m>-0.0540</x-m>
-			<y-m>0.0373</y-m>
-			<z-m>-0.0011</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>-0.0540</x-m><y-m>0.0373</y-m><z-m>-0.0011</z-m></center>
+		<axis><y>-1</y></axis>
 	</animation>
 
 	<!-- wing-switch -->
@@ -161,16 +105,8 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 			<entry><ind>2</ind><dep>30</dep></entry>
 		</interpolation>
-		<center>
-			<x-m>-0.0188</x-m>
-			<y-m>0.0373</y-m>
-			<z-m>-0.0011</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>-0.0188</x-m><y-m>0.0373</y-m><z-m>-0.0011</z-m></center>
+		<axis><y>-1</y></axis>
 	</animation>
 
 	<!-- formation-switch -->
@@ -183,16 +119,8 @@
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>2</ind><dep>30</dep></entry>
 		</interpolation>
-		<center>
-			<x-m>0.0194</x-m>
-			<y-m>0.0373</y-m>
-			<z-m>-0.0011</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>0.0194</x-m><y-m>0.0373</y-m><z-m>-0.0011</z-m></center>
+		<axis><y>-1</y></axis>
 	</animation>
 
 	<!-- flood-switch -->
@@ -205,15 +133,8 @@
 			<entry><ind>0.5</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>30</dep></entry>
 		</interpolation>
-		<center>
-			<x-m>0.0549</x-m>
-			<y-m>0.0373</y-m>
-			<z-m>-0.0011</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
+		<center><x-m>0.0549</x-m><y-m>0.0373</y-m><z-m>-0.0011</z-m></center>
+		<axis><y>-1</y><z>0</z>
 		</axis>
 	</animation>
 
@@ -228,107 +149,17 @@
 			<blue>0.18</blue>
 		</emission>
 	</animation>
+	<animation>
+		<object-name>switches-and-knobs</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.50</red>
+			<green>0.25</green>
+			<blue>0.18</blue>
+		</emission>
+	</animation>
 
-	<animation>
-		<object-name>collision-switch</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.50</red>
-			<green>0.25</green>
-			<blue>0.18</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>taxi-probe-switch</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.50</red>
-			<green>0.25</green>
-			<blue>0.18</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>pylon-switch</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.50</red>
-			<green>0.25</green>
-			<blue>0.18</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>instrument-wheel</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.50</red>
-			<green>0.25</green>
-			<blue>0.18</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>console-wheel</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.50</red>
-			<green>0.25</green>
-			<blue>0.18</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>approach-index-wheel</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.50</red>
-			<green>0.25</green>
-			<blue>0.18</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>tail-switch</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.50</red>
-			<green>0.25</green>
-			<blue>0.18</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>wing-switch</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.50</red>
-			<green>0.25</green>
-			<blue>0.18</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>formation-switch</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.50</red>
-			<green>0.25</green>
-			<blue>0.18</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>flood-switch</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.50</red>
-			<green>0.25</green>
-			<blue>0.18</blue>
-		</emission>
-	</animation>
 
 	<animation>
 		<object-name>light-left-panel</object-name>

@@ -1997,6 +1997,8 @@
 		<object-name>coll_halo_FL</object-name>
 		<object-name>coll_halo_TL</object-name>
 		<object-name>coll_halo_TR</object-name>
+		<object-name>formation_lt_F</object-name>
+		<object-name>formation_lt_W</object-name>
 		<!--<object-name>nav_halo_PR</object-name>
 		<object-name>nav_halo_PL</object-name> Pylon signal lights in StdBy -->
 	</effect>
