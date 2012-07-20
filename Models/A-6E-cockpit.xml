@@ -433,26 +433,6 @@
 
 
 <!--  ################ 3D panels for hot-spots  ################ -->
-	<!-- Hotspots-Console-Left-Aft -->
-	<panel>
-		<name>Hotspots-Console-Left-Aft</name>
-		<path>Aircraft/A-6E/Models/p-console-left-aft.xml</path>
-		<top-left>
-			<x-m>3.0397</x-m>
-			<y-m>-0.8501</y-m>
-			<z-m>0.4869</z-m>
-		</top-left>
-		<bottom-left>
-			<x-m>3.5445</x-m>
-			<y-m>-0.8501</y-m>
-			<z-m>0.4869</z-m>
-		</bottom-left>
-		<bottom-right>
-			<x-m>3.5445</x-m>
-			<y-m>-0.6260</y-m>
-			<z-m>0.4433</z-m>
-		</bottom-right>
-	</panel>
 
 	<!-- Hotspots-Pilot-Panel-Right -->
 	<panel>
