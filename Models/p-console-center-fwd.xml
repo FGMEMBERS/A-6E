@@ -151,7 +151,7 @@
 
 				<!-- ######### Tacan-Panel ######### -->
 
-				<!-- Chan Knob -->
+				<!-- Chan Knob 
 				<action>
 					<name>chan-knob-left</name>
 					<button>0</button>
@@ -179,9 +179,9 @@
 						<step>1</step>
 						<max>126</max>
 					</binding>
-				</action>
+				</action>-->
 
-				<!-- Mode Knob -->
+				<!-- Mode Knob 
 				<action>
 					<name>mode-knob-left</name>
 					<button>0</button>
@@ -211,10 +211,10 @@
 						<step>1</step>
 						<max>4</max>
 					</binding>
-				</action>
+				</action>-->
 
 
-				<!-- XY switch -->
+				<!-- XY switch 
 				<action>
 					<name>xy-switch-toggle</name>
 					<button>0</button>
@@ -226,7 +226,7 @@
 						<command>nasal</command>
 						<script>A6Econtrols.tacan_XYtoggle()</script>
 					</binding>
-				</action>
+				</action>-->
 
 			</actions>
 		</instrument>

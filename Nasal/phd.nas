@@ -166,8 +166,8 @@ var TCsettings = func {
 }
 
 
-# init #################
-init = func {
+# PHD init #################
+PHD_init = func {
 	print("Initializing Terrain Clearance E-scan");
 	setlistener("/sim/model/A-6E/instrumentation/PHD/TCrange", TCsettings);
 	for (var i = 0; i < 100; i += 1) { append(elevs_list, 0) }
@@ -175,5 +175,5 @@ init = func {
 	update_loop();
 }
 
-setlistener("/sim/signals/fdm-initialized", init);
+#setlistener("/sim/signals/fdm-initialized", init);
 

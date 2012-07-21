@@ -38,7 +38,7 @@ var tc_mode = 0;
 # Main loop ###############
 var cnt = 0;
 
-update_loop = func {
+var update_loop = func {
 	A6Echronograph.update_chrono();
 	tacan_update();
 	inc_ticker();
@@ -60,14 +60,14 @@ update_loop = func {
 
 # functions ###############
 
-inc_ticker = func {
+var inc_ticker = func {
 	# used for VDI background continuous translation animation
 	var tick = ticker.getValue();
 	tick += 1 ;
 	ticker.setDoubleValue(tick);
 }
 
-g_min_max = func {
+var g_min_max = func {
 	# records g min and max values
 	var curr = g_curr.getValue();
 	var max = g_max.getValue();
@@ -80,7 +80,7 @@ g_min_max = func {
 }
 
 
-auto_trim = func {
+var auto_trim = func {
 	# Move a ballast from one Yasim weight point to another
 	# depending on the airspeed of the a/c. 
 	var kts = ikts.getValue();
@@ -155,7 +155,7 @@ var tacan_update = func {
 	}
 }
 
-vdi_vel_marker = func {
+var vdi_vel_marker = func {
 	# displays impact point on the VDI display
 	var vx = Vx.getValue();
 	var vy = Vy.getValue();
@@ -168,18 +168,32 @@ vdi_vel_marker = func {
 	}
 }
 
-vdi_drift_angle = func {
+var vdi_drift_angle = func {
 	#var wdeg = wind-deg.getValue();
 	#var wkt = wind_kt.getValue();
 	var achdg = ac_hdg.getValue();
 }
 
-# init #################
+# main_init #################
+var main_init = func {
+	print("Initializing A-6E Intruder systems");
+	ticker.setDoubleValue(0);
+	vdi_vel_y.setDoubleValue(0);
+	vdi_vel_z.setDoubleValue(0);
+	aircraft.data.load();
+	foreach (var f_tc; TcFreqs.getChildren()) {
+		aircraft.data.add(f_tc);
+	}
+	A6Econtrols.tacan_switch_init();
+	phd.PHD_init();
+	settimer(func { update_loop() }, 0.5);
+}
 
-print("Initializing A-6 Intruder systems");
-ticker.setDoubleValue(0);
-vdi_vel_y.setDoubleValue(0);
-vdi_vel_z.setDoubleValue(0);
+var main_init_listener = setlistener("sim/signals/fdm-initialized", func {
+	main_init();
+	removelistener(main_init_listener);
+ }, 0, 0);
+
 
 # Remember Radar Altimeter and lighting settings.
 aircraft.data.add(
@@ -196,5 +210,4 @@ aircraft.data.add(
 	"sim/model/A-6E/controls/lighting/flood-lts"
 );
 
-#setlistener("/sim/signals/fdm-initialized", update_loop);
-settimer(update_loop, 10);
+

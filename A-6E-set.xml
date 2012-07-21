@@ -225,9 +225,6 @@ Grumman A-6E simulation config.
 						<vdi-alt-marker type="bool">0</vdi-alt-marker>
 						<vdi-roll-marker type="bool">0</vdi-roll-marker>
 					</autopilot>
-					<tacan>
-						<xy-switch type="bool">0</xy-switch>
-					</tacan>
 					<VDI>
 						<display>
 							<contanalog type="bool">false</contanalog>
@@ -414,6 +411,9 @@ Grumman A-6E simulation config.
 		<A6Echronograph>
 			<file>Aircraft/A-6E/Nasal/chronograph.nas</file>
 		</A6Echronograph>
+		<A6E>
+			<file>Aircraft/A-6E/Nasal/A-6E.nas</file>
+		</A6E>
 	</nasal>
 
 

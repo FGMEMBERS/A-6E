@@ -298,20 +298,25 @@ var radio_bt_sel = func(group, which) {
 }
 
 
-# TACAN XY Switch
+# TACAN XY switch
 # ---------------
+
+var TcXYSwitch       = props.globals.getNode("sim/model/A-6E/controls/instrumentation/tacan/xy-switch", 1);
+
+var tacan_switch_init = func {
+	if (A6E.TcXY.getValue() == "X") { TcXYSwitch.setValue( 0 ) } else { TcXYSwitch.setValue( 1 ) }
+}
+
 var tacan_XYtoggle = func {
-	var xy_sign = props.globals.getNode("instrumentation/tacan/frequencies/selected-channel[4]");
-	var xy_switch = props.globals.getNode("sim/model/A-6E/controls/instrumentation/tacan/xy-switch");
-	var s = xy_sign.getValue();
-	if ( s == "X" ) {
-		xy_sign.setValue( "Y" );
-		xy_switch.setValue( 1 );
+	if ( A6E.TcXY.getValue() == "X" ) {
+		A6E.TcXY.setValue( "Y" );
+		TcXYSwitch.setValue( 1 );
 	} else {
-		xy_sign.setValue( "X" );
-		xy_switch.setValue( 0 );
+		A6E.TcXY.setValue( "X" );
+		TcXYSwitch.setValue( 0 );
 	}
 }
+
 
 
 # AFCS (Auto Flight Control System) Panel
