@@ -10,16 +10,21 @@
 		<object-name>on-off-switch</object-name>
 		<property>sim/model/A-6E/controls/autopilot/on-off-switch</property>
 		<factor>44</factor>
-		<center>
-			<x-m>-0.0208</x-m>
-			<y-m>0.0000</y-m>
-			<z-m>-0.0003</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>-0.0198</x-m><z-m>0.0041</z-m></center>
+		<axis><y>-1</y></axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>on-off-switch</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.afcs_power()</script>
+			</binding>
+		</action>
 	</animation>
 
 	<animation>
@@ -27,16 +32,21 @@
 		<object-name>auto-stab-augm-switch</object-name>
 		<property>sim/model/A-6E/controls/autopilot/auto-stab-augm-switch</property>
 		<factor>44</factor>
-		<center>
-			<x-m>0.0181</x-m>
-			<y-m>0.0000</y-m>
-			<z-m>-0.0003</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>0.0186</x-m><z-m>0.0041</z-m></center>
+		<axis><y>-1</y></axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>auto-stab-augm-switch</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.afcs_engage_toggle()</script>
+			</binding>
+		</action>
 	</animation>
 
 	<animation>
@@ -44,40 +54,64 @@
 		<object-name>cmd-switch</object-name>
 		<property>sim/model/A-6E/controls/autopilot/cmd-switch</property>
 		<factor>44</factor>
-		<center>
-			<x-m>0.0080</x-m>
-			<y-m>0.0000</y-m>
-			<z-m>-0.0003</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
+		<center><y-m>0.0078</y-m><z-m>0.0041</z-m></center>
+		<axis><y>-1</y>
+			<z>0</z></axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>cmd-switch</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.afcs_cmd()</script>
+			</binding>
+		</action>
 	</animation>
 
 	<animation>
 		<type>translate</type>
 		<object-name>alt-push-button</object-name>
 		<property>sim/model/A-6E/controls/autopilot/alt-button</property>
-		<factor>0.01</factor>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>-1</z>
-		</axis>
+		<factor>0.007</factor>
+		<axis><z>-1</z></axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>alt-push-button</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.afcs_alt()</script>
+			</binding>
+		</action>
 	</animation>
 
 	<animation>
 		<type>translate</type>
 		<object-name>mach-push-button</object-name>
 		<property>sim/model/A-6E/controls/autopilot/mach-button</property>
-		<factor>0.01</factor>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>-1</z>
-		</axis>
+		<factor>0.007</factor>
+		<axis><z>-1</z></axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>mach-push-button</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>A6Econtrols.afcs_mach()</script>
+			</binding>
+		</action>
 	</animation>
 
 

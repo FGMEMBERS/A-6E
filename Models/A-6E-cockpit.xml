@@ -477,7 +477,7 @@
 	</panel>
 
 
-	<!-- Hotspots-Console-Left-Aft -->
+	<!-- Hotspots-Console-Left-Aft 
 	<panel>
 		<name>Hotspots-Console-Center-Fwd</name>
 		<path>Aircraft/A-6E/Models/p-console-center-fwd.xml</path>
@@ -496,7 +496,7 @@
 			<y-m>0.0795</y-m>
 			<z-m>0.4550</z-m>
 		</bottom-right>
-	</panel>
+	</panel>-->
 
 	<!-- Hotspots-Console-Right (Navigator) -->
 	<panel>

@@ -334,8 +334,10 @@ var ap_alt_lock = props.globals.getNode("autopilot/locks/altitude");
 var ap_hdg_lock = props.globals.getNode("autopilot/locks/heading");
 var roll_deg = props.globals.getNode("orientation/roll-deg");
 var target_roll_deg = props.globals.getNode("autopilot/internal/target-roll-deg");
-var afcs_power = func(n) {
-	if ( n ){
+
+var afcs_power = func() {
+	var on = afcs_on_off.getBoolValue();
+	if ( ! on ){
 		afcs_on_off.setBoolValue( 1 );
 	} else {
 		afcs_on_off.setBoolValue( 0 );
@@ -343,6 +345,7 @@ var afcs_power = func(n) {
 		afcs_disengage();
 	}
 }
+
 var afcs_alt = func {
 	var alt = alt_button.getValue();
 	var engage = afcs_auto.getValue();
@@ -358,8 +361,9 @@ var afcs_alt = func {
 		if ( engage ) {
 			afcs_engage();
 		}
-	}	
+	}
 }
+
 var afcs_mach = func {
 	var mach = mach_button.getValue();
 	var engage = afcs_auto.getValue();
@@ -375,9 +379,11 @@ var afcs_mach = func {
 		}
 	}
 }
-var afcs_cmd = func(c) {
+
+var afcs_cmd = func() {
 	var engage = afcs_auto.getValue();
-	if ( c ) {
+	var on = cmd_switch.getBoolValue();
+	if ( ! on ) {
 		cmd_switch.setBoolValue( 1 );
 		if ( engage ) {
 			afcs_engage();
@@ -388,6 +394,16 @@ var afcs_cmd = func(c) {
 		vdi_hdg_marker.setBoolValue( 0 );
 	}
 }
+
+var afcs_engage_toggle = func() {
+	var on = afcs_auto.getBoolValue();
+	if ( ! on ){
+		afcs_engage();
+	} else {
+		afcs_disengage();
+	}
+}
+
 var afcs_engage = func() {
 	var power = afcs_on_off.getValue();
 	afcs_auto.setBoolValue(1);
