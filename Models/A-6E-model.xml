@@ -2004,6 +2004,7 @@
 	</effect>
 
 
+
 	<!-- ############## Position External Lighting ############## -->
 	<light-params>
 		<position-factor>4</position-factor>
@@ -2131,14 +2132,21 @@
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
 				<value>2</value>
 			</equals>
-			<equals>
-				<property>surface-positions/wing-fold-pos-norm</property>
-				<value>0</value>
-			</equals>
-			<not>
-				<property>sim/model/A-6E/lighting/beacon_state/state</property>
-			</not>
 		</condition>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>nav_halo_WL</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>-141</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
 	</animation>
 	<animation>
 		<type>translate</type>
@@ -2183,14 +2191,21 @@
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
 				<value>0</value>
 			</equals>
-			<equals>
-				<property>surface-positions/wing-fold-pos-norm</property>
-				<value>0</value>
-			</equals>
-			<not>
-				<property>sim/model/A-6E/lighting/beacon_state/state</property>
-			</not>
 		</condition>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>nav_halo_WL_Dim</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>-141</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
 	</animation>
 	<animation>
 		<type>translate</type>
@@ -2235,14 +2250,21 @@
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
 				<value>2</value>
 			</equals>
-			<equals>
-				<property>surface-positions/wing-fold-pos-norm</property>
-				<value>0</value>
-			</equals>
-			<not>
-				<property>sim/model/A-6E/lighting/beacon_state/state</property>
-			</not>
 		</condition>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>nav_halo_WR</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>141</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
 	</animation>
 	<animation>
 		<type>translate</type>
@@ -2287,14 +2309,21 @@
 				<property>sim/model/A-6E/controls/lighting/wings-lts</property>
 				<value>0</value>
 			</equals>
-			<equals>
-				<property>surface-positions/wing-fold-pos-norm</property>
-				<value>0</value>
-			</equals>
-			<not>
-				<property>sim/model/A-6E/lighting/beacon_state/state</property>
-			</not>
 		</condition>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>nav_halo_WR_Dim</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>141</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
 	</animation>
 	<animation>
 		<type>translate</type>
@@ -2434,6 +2463,20 @@
 		</condition>
 	</animation> 
 	<animation>
+		<type>rotate</type>
+		<object-name>coll_halo_WL</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>-141</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>-3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>-3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
+	<animation>
 		<type>translate</type>
 		<object-name>coll_halo_WL</object-name>
 		<offset-m>11.37</offset-m>
@@ -2475,6 +2518,20 @@
 			<property>sim/model/A-6E/lighting/beacon_state/state</property>
 		</condition>
 	</animation> 
+	<animation>
+		<type>rotate</type>
+		<object-name>coll_halo_WR</object-name>
+		<property>surface-positions/wing-fold-pos-norm</property>
+		<factor>141</factor>
+		<axis>
+			<x1-m>6.5172</x1-m>
+			<y1-m>3.7335</y1-m>
+			<z1-m>0.4329</z1-m>
+			<x2-m>8.2242</x2-m>
+			<y2-m>3.7335</y2-m>
+			<z2-m>0.2082</z2-m>
+		</axis>
+	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>coll_halo_WR</object-name>
