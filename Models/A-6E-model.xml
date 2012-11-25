@@ -129,7 +129,7 @@
 		<property>controls/flight/elevator</property>
 		<factor>22</factor>
 		<center>
-			<x-m>3.4968</x-m>
+			<x-m>-1.5032</x-m>
 			<y-m>0</y-m>
 			<z-m>1.0521</z-m>
 		</center>
@@ -145,7 +145,7 @@
 		<property>controls/flight/elevator</property>
 		<factor>32</factor>
 		<center>
-			<x-m>3.3120</x-m>
+			<x-m>-1.688</x-m>
 			<y-m>0</y-m>
 			<z-m>0.7445</z-m>
 		</center>
@@ -161,7 +161,7 @@
 		<property>controls/flight/elevator</property>
 		<factor>6</factor>
 		<center>
-			<x-m>3.0000</x-m>
+			<x-m>-2</x-m>
 			<y-m>0</y-m>
 			<z-m>0.7390</z-m>
 		</center>
@@ -177,7 +177,7 @@
 		<property>controls/flight/aileron</property>
 		<factor>10</factor>
 		<center>
-			<x-m>3.3074</x-m>
+			<x-m>-1.6926</x-m>
 			<y-m>-0.1889</y-m>
 			<z-m>0</z-m>
 		</center>
@@ -226,10 +226,10 @@
 		<property>surface-positions/rudder-pos-norm</property>
 		<factor>-20</factor>
 		<axis>
-			<x1-m>15.5</x1-m>
+			<x1-m>10.5</x1-m>
 			<y1-m>0</y1-m>
 			<z1-m>-0.31</z1-m>
-			<x2-m>15.98</x2-m>
+			<x2-m>10.98</x2-m>
 			<y2-m>0</y2-m>
 			<z2-m>2.03</z2-m>
 		</axis>
@@ -240,10 +240,10 @@
 		<property>surface-positions/rudder-pos-norm</property>
 		<factor>-20</factor>
 		<axis>
-			<x1-m>15.5</x1-m>
+			<x1-m>10.5</x1-m>
 			<y1-m>0</y1-m>
 			<z1-m>-0.31</z1-m>
-			<x2-m>15.98</x2-m>
+			<x2-m>10.98</x2-m>
 			<y2-m>0</y2-m>
 			<z2-m>2.03</z2-m>
 		</axis>
@@ -258,10 +258,10 @@
 		<property>surface-positions/flap-pos-norm</property>
 		<factor>2.5</factor>
 		<axis>
-			<x1-m>9.324</x1-m>
+			<x1-m>4.324</x1-m>
 			<y1-m>-6.9506</y1-m>
 			<z1-m>-0.0879</z1-m>
-			<x2-m>9.3202</x2-m>
+			<x2-m>4.3202</x2-m>
 			<y2-m>-6.9506</y2-m>
 			<z2-m>-0.1015</z2-m>
 		</axis>
@@ -273,7 +273,7 @@
 		<property>surface-positions/flap-pos-norm</property>
 		<factor>0.208</factor>
 		<center>
-			<x-m>9.1168</x-m>
+			<x-m>4.1168</x-m>
 			<y-m>-6.9901</y-m>
 			<z-m>-0.0270</z-m>
 		</center>
@@ -290,10 +290,10 @@
 		<property>surface-positions/flap-pos-norm</property>
 		<factor>35</factor>
 		<axis>
-			<x1-m>9.1665</x1-m>
+			<x1-m>4.1665</x1-m>
 			<y1-m>-7.0295</y1-m>
 			<z1-m>-0.0193</z1-m>
-			<x2-m>7.8738</x2-m>
+			<x2-m>2.8738</x2-m>
 			<y2-m>-1.3690</y2-m>
 			<z2-m>0.0752</z2-m>
 		</axis>
@@ -306,10 +306,10 @@
 		<property>surface-positions/flap-pos-norm</property>
 		<factor>2.5</factor>
 		<axis>
-			<x1-m>9.3202</x1-m>
+			<x1-m>4.3202</x1-m>
 			<y1-m>6.9506</y1-m>
 			<z1-m>-0.1015</z1-m>
-			<x2-m>9.324</x2-m>
+			<x2-m>4.324</x2-m>
 			<y2-m>6.9506</y2-m>
 			<z2-m>-0.0879</z2-m>
 		</axis>
@@ -321,7 +321,7 @@
 		<property>surface-positions/flap-pos-norm</property>
 		<factor>0.208</factor>
 		<center>
-			<x-m>9.1168</x-m>
+			<x-m>4.1168</x-m>
 			<y-m>6.9901</y-m>
 			<z-m>-0.0270</z-m>
 		</center>
@@ -338,10 +338,10 @@
 		<property>surface-positions/flap-pos-norm</property>
 		<factor>35</factor>
 		<axis>
-			<x1-m>7.8738</x1-m>
+			<x1-m>2.8738</x1-m>
 			<y1-m>1.3690</y1-m>
 			<z1-m>0.0752</z1-m>
-			<x2-m>9.1665</x2-m>
+			<x2-m>4.1665</x2-m>
 			<y2-m>7.0295</y2-m>
 			<z2-m>-0.0193</z2-m>
 		</axis>
@@ -356,10 +356,10 @@
 		<property>surface-positions/flap-pos-norm</property>
 		<factor>25</factor>
 		<axis>
-			<x1-m>4.9910</x1-m>
+			<x1-m>-0.00900000000000034</x1-m>
 			<y1-m>-1.6652</y1-m>
 			<z1-m>0.4141</z1-m>
-			<x2-m>8.4040</x2-m>
+			<x2-m>3.404</x2-m>
 			<y2-m>-8.3966</y2-m>
 			<z2-m>0.0105</z2-m>
 		</axis>
@@ -371,10 +371,10 @@
 		<property>surface-positions/flap-pos-norm</property>
 		<factor>-1</factor>
 		<axis>
-			<x1-m>9.7970</x1-m>
+			<x1-m>4.797</x1-m>
 			<y1-m>-13.5505</y1-m>
 			<z1-m>3.2153</z1-m>
-			<x2-m>11.7772</x2-m>
+			<x2-m>6.7772</x2-m>
 			<y2-m>-12.5061</y2-m>
 			<z2-m>-3.1456</z2-m>
 		</axis>
@@ -388,10 +388,10 @@
 		<property>surface-positions/flap-pos-norm</property>
 		<factor>25</factor>
 		<axis>
-			<x1-m>8.4040</x1-m>
+			<x1-m>3.404</x1-m>
 			<y1-m>8.3966</y1-m>
 			<z1-m>0.0105</z1-m>
-			<x2-m>4.9910</x2-m>
+			<x2-m>-0.00900000000000034</x2-m>
 			<y2-m>1.6652</y2-m>
 			<z2-m>0.4141</z2-m>
 		</axis>
@@ -403,10 +403,10 @@
 		<property>surface-positions/flap-pos-norm</property>
 		<factor>-1</factor>
 		<axis>
-			<x1-m>11.7772</x1-m>
+			<x1-m>6.7772</x1-m>
 			<y1-m>12.5061</y1-m>
 			<z1-m>-3.1456</z1-m>
-			<x2-m>9.7970</x2-m>
+			<x2-m>4.797</x2-m>
 			<y2-m>13.5505</y2-m>
 			<z2-m>3.2153</z2-m>
 		</axis>
@@ -425,10 +425,10 @@
 			<entry><ind>-1</ind><dep>45</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>7.8303</x1-m>
+			<x1-m>2.8303</x1-m>
 			<y1-m>-1.4527</y1-m>
 			<z1-m>0.2179</z1-m>
-			<x2-m>8.3421</x2-m>
+			<x2-m>3.3421</x2-m>
 			<y2-m>-3.7321</y2-m>
 			<z2-m>0.1692</z2-m>
 		</axis>
@@ -443,10 +443,10 @@
 			<entry><ind>-1</ind><dep>51</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>8.3421</x1-m>
+			<x1-m>3.3421</x1-m>
 			<y1-m>-3.7321</y1-m>
 			<z1-m>0.1692</z1-m>
-			<x2-m>9.0984</x2-m>
+			<x2-m>4.0984</x2-m>
 			<y2-m>-6.9923</y2-m>
 			<z2-m>0.0683</z2-m>
 		</axis>
@@ -463,10 +463,10 @@
 			<entry><ind>-1</ind><dep>45</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>8.3421</x1-m>
+			<x1-m>3.3421</x1-m>
 			<y1-m>3.7321</y1-m>
 			<z1-m>0.1692</z1-m>
-			<x2-m>7.8303</x2-m>
+			<x2-m>2.8303</x2-m>
 			<y2-m>1.4527</y2-m>
 			<z2-m>0.2179</z2-m>
 		</axis>
@@ -482,10 +482,10 @@
 			<entry><ind>-1</ind><dep>51</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>9.0984</x1-m>
+			<x1-m>4.0984</x1-m>
 			<y1-m>6.9923</y1-m>
 			<z1-m>0.0683</z1-m>
-			<x2-m>8.3421</x2-m>
+			<x2-m>3.3421</x2-m>
 			<y2-m>3.7321</y2-m>
 			<z2-m>0.1692</z2-m>
 		</axis>
@@ -499,7 +499,7 @@
 		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>60</factor>
 		<center>
-			<x-m>9.1307</x-m>
+			<x-m>4.1307</x-m>
 			<y-m>-7.4995</y-m>
 			<z-m>0.0716</z-m>
 		</center>
@@ -515,7 +515,7 @@
 		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>60</factor>
 		<center>
-			<x-m>9.1307</x-m>
+			<x-m>4.1307</x-m>
 			<y-m>-7.4995</y-m>
 			<z-m>-0.0780</z-m>
 		</center>
@@ -533,7 +533,7 @@
 		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>60</factor>
 		<center>
-			<x-m>9.1307</x-m>
+			<x-m>4.1307</x-m>
 			<y-m>7.4995</y-m>
 			<z-m>0.0716</z-m>
 		</center>
@@ -549,7 +549,7 @@
 		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>60</factor>
 		<center>
-			<x-m>9.1307</x-m>
+			<x-m>4.1307</x-m>
 			<y-m>7.4995</y-m>
 			<z-m>-0.0780</z-m>
 		</center>
@@ -572,10 +572,10 @@
 			<entry><ind>1</ind><dep>160</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>3.6339</y1-m>
 			<z1-m>0.4643</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>3.6339</y2-m>
 			<z2-m>0.2320</z2-m>
 		</axis>
@@ -590,10 +590,10 @@
 			<entry><ind>1</ind><dep>-160</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>3.8323</y1-m>
 			<z1-m>0.4643</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>3.8323</y2-m>
 			<z2-m>0.2320</z2-m>
 		</axis>
@@ -604,10 +604,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>88</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -618,10 +618,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>141</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -632,10 +632,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>88</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -646,10 +646,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>-84</factor>
 		<axis>
-			<x1-m>6.5162</x1-m>
+			<x1-m>1.5162</x1-m>
 			<y1-m>3.6260</y1-m>
 			<z1-m>0.3170</z1-m>
-			<x2-m>8.2232</x2-m>
+			<x2-m>3.2232</x2-m>
 			<y2-m>3.6260</y2-m>
 			<z2-m>0.0923</z2-m>
 		</axis>
@@ -660,10 +660,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>88</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -674,10 +674,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>58</factor>
 		<axis>
-			<x1-m>6.5162</x1-m>
+			<x1-m>1.5162</x1-m>
 			<y1-m>3.8414</y1-m>
 			<z1-m>0.3170</z1-m>
-			<x2-m>8.2232</x2-m>
+			<x2-m>3.2232</x2-m>
 			<y2-m>3.8414</y2-m>
 			<z2-m>0.0923</z2-m>
 		</axis>
@@ -693,10 +693,10 @@
 			<entry><ind>1</ind><dep>-160</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>-3.6339</y1-m>
 			<z1-m>0.4643</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>-3.6339</y2-m>
 			<z2-m>0.2320</z2-m>
 		</axis>
@@ -711,10 +711,10 @@
 			<entry><ind>1</ind><dep>160</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>-3.8323</y1-m>
 			<z1-m>0.4643</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>-3.8323</y2-m>
 			<z2-m>0.2320</z2-m>
 		</axis>
@@ -725,10 +725,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>-88</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>-3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>-3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -739,10 +739,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>-141</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>-3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>-3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -753,10 +753,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>-88</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>-3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>-3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -767,10 +767,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>84</factor>
 		<axis>
-			<x1-m>6.5162</x1-m>
+			<x1-m>1.5162</x1-m>
 			<y1-m>-3.6260</y1-m>
 			<z1-m>0.3170</z1-m>
-			<x2-m>8.2232</x2-m>
+			<x2-m>3.2232</x2-m>
 			<y2-m>-3.6260</y2-m>
 			<z2-m>0.0923</z2-m>
 		</axis>
@@ -781,10 +781,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>-88</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>-3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>-3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -795,10 +795,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>-58</factor>
 		<axis>
-			<x1-m>6.5162</x1-m>
+			<x1-m>1.5162</x1-m>
 			<y1-m>-3.8414</y1-m>
 			<z1-m>0.3170</z1-m>
-			<x2-m>8.2232</x2-m>
+			<x2-m>3.2232</x2-m>
 			<y2-m>-3.8414</y2-m>
 			<z2-m>0.0923</z2-m>
 		</axis>
@@ -812,7 +812,7 @@
 		<property>surface-positions/elevator-pos-norm</property>
 		<factor>10</factor>
 		<center>
-			<x-m>14.057</x-m>
+			<x-m>9.057</x-m>
 			<y-m>0</y-m>
 			<z-m>0.138</z-m>
 		</center>
@@ -831,7 +831,7 @@
 		<property>gear/tailhook/position-norm</property>
 		<factor>70</factor>
 		<center>
-			<x-m>11.59</x-m>
+			<x-m>6.59</x-m>
 			<y-m>0</y-m>
 			<z-m>-0.41</z-m>
 		</center>
@@ -917,10 +917,10 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>7.665</x1-m>
+			<x1-m>2.665</x1-m>
 			<y1-m>1.01</y1-m>
 			<z1-m>0.04</z1-m>
-			<x2-m>7.635</x2-m>
+			<x2-m>2.635</x2-m>
 			<y2-m>1.54</y2-m>
 			<z2-m>0.1</z2-m>
 		</axis>
@@ -939,10 +939,10 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>7.92</x1-m>
+			<x1-m>2.92</x1-m>
 			<y1-m>0.93</y1-m>
 			<z1-m>-0.07</z1-m>
-			<x2-m>7.90</x2-m>
+			<x2-m>2.9</x2-m>
 			<y2-m>1.46</y2-m>
 			<z2-m>-0.01</z2-m>
 		</axis>
@@ -965,10 +965,10 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>7.65</x1-m>
+			<x1-m>2.65</x1-m>
 			<y1-m>1.26</y1-m>
 			<z1-m>0.07</z1-m>
-			<x2-m>7.69</x2-m>
+			<x2-m>2.69</x2-m>
 			<y2-m>1.57</y2-m>
 			<z2-m>-2.55</z2-m>
 		</axis>
@@ -987,10 +987,10 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>7.54</x1-m>
+			<x1-m>2.54</x1-m>
 			<y1-m>1.11</y1-m>
 			<z1-m>-1.10</z1-m>
-			<x2-m>7.45</x2-m>
+			<x2-m>2.45</x2-m>
 			<y2-m>1.67</y2-m>
 			<z2-m>-1.12</z2-m>
 		</axis>
@@ -1008,10 +1008,10 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>6.86</x1-m>
+			<x1-m>1.86</x1-m>
 			<y1-m>0.98</y1-m>
 			<z1-m>-0.60</z1-m>
-			<x2-m>6.77</x2-m>
+			<x2-m>1.77</x2-m>
 			<y2-m>1.54</y2-m>
 			<z2-m>-0.61</z2-m>
 		</axis>
@@ -1023,7 +1023,7 @@
 		<property>gear/gear[2]/compression-norm</property>
 		<factor>0.74</factor>
 		<center>
-			<x-m>7.686</x-m>
+			<x-m>2.686</x-m>
 			<y-m>-1.526</y-m>
 			<z-m>-2.139</z-m>
 		</center>
@@ -1039,7 +1039,7 @@
 		<property>gear/gear[2]/compression-norm</property>
 		<factor>0.74</factor>
 		<center>
-			<x-m>7.686</x-m>
+			<x-m>2.686</x-m>
 			<y-m>-1.526</y-m>
 			<z-m>-2.139</z-m>
 		</center>
@@ -1055,7 +1055,7 @@
 		<property>gear/gear[2]/compression-norm</property>
 		<factor>0.74</factor>
 		<center>
-			<x-m>7.686</x-m>
+			<x-m>2.686</x-m>
 			<y-m>-1.526</y-m>
 			<z-m>-2.139</z-m>
 		</center>
@@ -1071,7 +1071,7 @@
 		<property>gear/gear[2]/compression-norm</property>
 		<factor>0.74</factor>
 		<center>
-			<x-m>7.686</x-m>
+			<x-m>2.686</x-m>
 			<y-m>-1.526</y-m>
 			<z-m>-2.139</z-m>
 		</center>
@@ -1087,7 +1087,7 @@
 		<property>gear/gear[2]/compression-norm</property>
 		<factor>0.74</factor>
 		<center>
-			<x-m>7.686</x-m>
+			<x-m>2.686</x-m>
 			<y-m>-1.526</y-m>
 			<z-m>-2.139</z-m>
 		</center>
@@ -1108,7 +1108,7 @@
 			<entry><ind>1</ind><dep>64</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>7.56</x-m>
+			<x-m>2.56</x-m>
 			<y-m>1.54</y-m>
 			<z-m>-1.98</z-m>
 		</center>
@@ -1128,7 +1128,7 @@
 			<entry><ind>1</ind><dep>-64</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>7.50</x-m>
+			<x-m>2.5</x-m>
 			<y-m>1.40</y-m>
 			<z-m>-1.18</z-m>
 		</center>
@@ -1146,10 +1146,10 @@
 		<property>gear/gear/rollspeed-ms</property>
 		<factor>13</factor>
 		<axis>
-			<x1-m>7.6914</x1-m>
+			<x1-m>2.6914</x1-m>
 			<y1-m>2.0862</y1-m>
 			<z1-m>-2.1186</z1-m>
-			<x2-m>7.6914</x2-m>
+			<x2-m>2.6914</x2-m>
 			<y2-m>1.5294</y2-m>
 			<z2-m>-2.1697</z2-m>
 		</axis>
@@ -1167,10 +1167,10 @@
 			<entry><ind>1</ind><dep>-85</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>5.59</x1-m>
+			<x1-m>0.59</x1-m>
 			<y1-m>1.86</y1-m>
 			<z1-m>0.26</z1-m>
-			<x2-m>4.97</x2-m>
+			<x2-m>-0.0300000000000002</x2-m>
 			<y2-m>1.86</y2-m>
 			<z2-m>0.32</z2-m>
 		</axis>
@@ -1185,10 +1185,10 @@
 			<entry><ind>1</ind><dep>100</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>5.93</x1-m>
+			<x1-m>0.93</x1-m>
 			<y1-m>1.16</y1-m>
 			<z1-m>-0.24</z1-m>
-			<x2-m>4.68</x2-m>
+			<x2-m>-0.32</x2-m>
 			<y2-m>1.10</y2-m>
 			<z2-m>0.06</z2-m>
 		</axis>
@@ -1206,10 +1206,10 @@
 			<entry><ind>1</ind><dep>-40</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>7.69</x1-m>
+			<x1-m>2.69</x1-m>
 			<y1-m>1.42</y1-m>
 			<z1-m>0.07</z1-m>
-			<x2-m>6.47</x2-m>
+			<x2-m>1.47</x2-m>
 			<y2-m>1.46</y2-m>
 			<z2-m>0.16</z2-m>
 		</axis>
@@ -1236,10 +1236,10 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>7.635</x1-m>
+			<x1-m>2.635</x1-m>
 			<y1-m>-1.54</y1-m>
 			<z1-m>0.1</z1-m>
-			<x2-m>7.665</x2-m>
+			<x2-m>2.665</x2-m>
 			<y2-m>-1.01</y2-m>
 			<z2-m>0.04</z2-m>
 		</axis>
@@ -1262,10 +1262,10 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>7.69</x1-m>
+			<x1-m>2.69</x1-m>
 			<y1-m>-1.57</y1-m>
 			<z1-m>-2.55</z1-m>
-			<x2-m>7.65</x2-m>
+			<x2-m>2.65</x2-m>
 			<y2-m>-1.26</y2-m>
 			<z2-m>0.07</z2-m>
 		</axis>
@@ -1283,10 +1283,10 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>7.45</x1-m>
+			<x1-m>2.45</x1-m>
 			<y1-m>-1.67</y1-m>
 			<z1-m>-1.12</z1-m>
-			<x2-m>7.54</x2-m>
+			<x2-m>2.54</x2-m>
 			<y2-m>-1.11</y2-m>
 			<z2-m>-1.10</z2-m>
 		</axis>
@@ -1303,10 +1303,10 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>6.77</x1-m>
+			<x1-m>1.77</x1-m>
 			<y1-m>-1.54</y1-m>
 			<z1-m>-0.61</z1-m>
-			<x2-m>6.86</x2-m>
+			<x2-m>1.86</x2-m>
 			<y2-m>-0.98</y2-m>
 			<z2-m>-0.60</z2-m>
 		</axis>
@@ -1324,10 +1324,10 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>7.90</x1-m>
+			<x1-m>2.9</x1-m>
 			<y1-m>-1.46</y1-m>
 			<z1-m>-0.01</z1-m>
-			<x2-m>7.92</x2-m>
+			<x2-m>2.92</x2-m>
 			<y2-m>-0.93</y2-m>
 			<z2-m>-0.07</z2-m>
 		</axis>
@@ -1340,7 +1340,7 @@
 		<property>gear/gear[1]/compression-norm</property>
 		<factor>0.74</factor>
 		<center>
-			<x-m>7.686</x-m>
+			<x-m>2.686</x-m>
 			<y-m>-1.526</y-m>
 			<z-m>-2.139</z-m>
 		</center>
@@ -1356,7 +1356,7 @@
 		<property>gear/gear[1]/compression-norm</property>
 		<factor>0.74</factor>
 		<center>
-			<x-m>7.686</x-m>
+			<x-m>2.686</x-m>
 			<y-m>-1.526</y-m>
 			<z-m>-2.139</z-m>
 		</center>
@@ -1372,7 +1372,7 @@
 		<property>gear/gear[1]/compression-norm</property>
 		<factor>0.74</factor>
 		<center>
-			<x-m>7.686</x-m>
+			<x-m>2.686</x-m>
 			<y-m>-1.526</y-m>
 			<z-m>-2.139</z-m>
 		</center>
@@ -1388,7 +1388,7 @@
 		<property>gear/gear[1]/compression-norm</property>
 		<factor>0.74</factor>
 		<center>
-			<x-m>7.686</x-m>
+			<x-m>2.686</x-m>
 			<y-m>-1.526</y-m>
 			<z-m>-2.139</z-m>
 		</center>
@@ -1404,7 +1404,7 @@
 		<property>gear/gear[1]/compression-norm</property>
 		<factor>0.74</factor>
 		<center>
-			<x-m>7.686</x-m>
+			<x-m>2.686</x-m>
 			<y-m>-1.526</y-m>
 			<z-m>-2.139</z-m>
 		</center>
@@ -1424,7 +1424,7 @@
 			<entry><ind>1</ind><dep>64</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>7.56</x-m>
+			<x-m>2.56</x-m>
 			<y-m>-1.54</y-m>
 			<z-m>-1.98</z-m>
 		</center>
@@ -1444,7 +1444,7 @@
 			<entry><ind>1</ind><dep>-64</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>7.50</x-m>
+			<x-m>2.5</x-m>
 			<y-m>-1.40</y-m>
 			<z-m>-1.18</z-m>
 		</center>
@@ -1462,10 +1462,10 @@
 		<property>gear/gear/rollspeed-ms</property>
 		<factor>13</factor>
 		<axis>
-			<x1-m>7.6914</x1-m>
+			<x1-m>2.6914</x1-m>
 			<y1-m>-1.5294</y1-m>
 			<z1-m>-2.1697</z1-m>
-			<x2-m>7.6914</x2-m>
+			<x2-m>2.6914</x2-m>
 			<y2-m>-2.0862</y2-m>
 			<z2-m>-2.1186</z2-m>
 		</axis>
@@ -1483,10 +1483,10 @@
 			<entry><ind>1</ind><dep>-85</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>4.97</x1-m>
+			<x1-m>-0.0300000000000002</x1-m>
 			<y1-m>-1.86</y1-m>
 			<z1-m>0.32</z1-m>
-			<x2-m>5.59</x2-m>
+			<x2-m>0.59</x2-m>
 			<y2-m>-1.86</y2-m>
 			<z2-m>0.26</z2-m>
 		</axis>
@@ -1501,10 +1501,10 @@
 			<entry><ind>1</ind><dep>100</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>4.68</x1-m>
+			<x1-m>-0.32</x1-m>
 			<y1-m>-1.10</y1-m>
 			<z1-m>0.06</z1-m>
-			<x2-m>5.93</x2-m>
+			<x2-m>0.93</x2-m>
 			<y2-m>-1.16</y2-m>
 			<z2-m>-0.24</z2-m>
 		</axis>
@@ -1521,10 +1521,10 @@
 			<entry><ind>1</ind><dep>-40</dep></entry>
 		</interpolation>
 		<axis>
-			<x1-m>6.47</x1-m>
+			<x1-m>1.47</x1-m>
 			<y1-m>-1.46</y1-m>
 			<z1-m>0.16</z1-m>
-			<x2-m>7.69</x2-m>
+			<x2-m>2.69</x2-m>
 			<y2-m>-1.42</y2-m>
 			<z2-m>0.07</z2-m>
 		</axis>
@@ -1554,7 +1554,7 @@
 			<entry><ind>1</ind><dep>0.0</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>1.95</x-m>
+			<x-m>-3.05</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-0.53</z-m>
 		</center>
@@ -1574,7 +1574,7 @@
 			<entry><ind>1</ind><dep>0.0</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>1.95</x-m>
+			<x-m>-3.05</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-0.53</z-m>
 		</center>
@@ -1594,7 +1594,7 @@
 			<entry><ind>1</ind><dep>0.0</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>1.91</x-m>
+			<x-m>-3.09</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-2.11</z-m>
 		</center>
@@ -1623,7 +1623,7 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>2.40</x-m>
+			<x-m>-2.6</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-1.68</z-m>
 		</center>
@@ -1652,7 +1652,7 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>2.40</x-m>
+			<x-m>-2.6</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-1.68</z-m>
 		</center>
@@ -1681,7 +1681,7 @@
 			<entry><ind>1</ind><dep>0</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>3.10</x-m>
+			<x-m>-1.9</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-1.21</z-m>
 		</center>
@@ -1689,22 +1689,6 @@
 			<x>0</x>
 			<y>1</y>
 			<z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>UC-N-CatapultStrop</object-name>
-		<property>gear/launchbar/position-norm</property>
-		<factor>-120.0 </factor>
-		<center>
-			<x-m>1.9427</x-m>
-			<y-m>0.0</y-m>
-			<z-m>-2.1163</z-m>
-		</center>
-		<axis>
-			<x>0.0</x>
-			<y>1.0</y>
-			<z>0.0</z>
 		</axis>
 	</animation>
 
@@ -1719,7 +1703,7 @@
 		<property>surface-positions/rudder-pos-norm</property>
 		<factor>-30</factor>
 		<center>
-			<x-m>2.06</x-m>
+			<x-m>-2.94</x-m>
 			<y-m>0</y-m>
 			<z-m>-2.12</z-m>
 		</center>
@@ -1732,9 +1716,10 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-N-CatapultStrop</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
 		<factor>-30</factor>
 		<center>
-			<x-m>2.06</x-m>
+			<x-m>-2.94</x-m>
 			<y-m>0</y-m>
 			<z-m>-2.12</z-m>
 		</center>
@@ -1754,7 +1739,23 @@
 		<property>gear/gear[0]/compression-norm</property>
 		<factor>0.80</factor>
 		<center>
-			<x-m>2.06</x-m>
+			<x-m>-2.94</x-m>
+			<y-m>0</y-m>
+			<z-m>-2.12</z-m>
+		</center>
+		<axis>
+			<x>-0.07</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>UC-N-CatapultStrop</object-name>
+		<property>gear/gear[0]/compression-norm</property>
+		<factor>0.80</factor>
+		<center>
+			<x-m>-2.94</x-m>
 			<y-m>0</y-m>
 			<z-m>-2.12</z-m>
 		</center>
@@ -1771,7 +1772,7 @@
 		<property>gear/gear[0]/compression-norm</property>
 		<factor>0.80</factor>
 		<center>
-			<x-m>2.06</x-m>
+			<x-m>-2.94</x-m>
 			<y-m>0</y-m>
 			<z-m>-2.12</z-m>
 		</center>
@@ -1787,7 +1788,7 @@
 		<property>gear/gear[0]/compression-norm</property>
 		<factor>0.80</factor>
 		<center>
-			<x-m>2.06</x-m>
+			<x-m>-2.94</x-m>
 			<y-m>0</y-m>
 			<z-m>-2.12</z-m>
 		</center>
@@ -1803,23 +1804,7 @@
 		<property>gear/gear[0]/compression-norm</property>
 		<factor>0.80</factor>
 		<center>
-			<x-m>2.06</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.12</z-m>
-		</center>
-		<axis>
-			<x>-0.07</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>translate</type>
-		<object-name>UC-N-CatapultStrop</object-name>
-		<property>gear/gear[0]/compression-norm</property>
-		<factor>0.80</factor>
-		<center>
-			<x-m>2.06</x-m>
+			<x-m>-2.94</x-m>
 			<y-m>0</y-m>
 			<z-m>-2.12</z-m>
 		</center>
@@ -1835,7 +1820,7 @@
 		<property>gear/gear[0]/compression-norm</property>
 		<factor>25</factor>
 		<center>
-			<x-m>2.40</x-m>
+			<x-m>-2.6</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-1.68</z-m>
 		</center>
@@ -1851,7 +1836,7 @@
 		<property>gear/gear[0]/compression-norm</property>
 		<factor>25</factor>
 		<center>
-			<x-m>2.40</x-m>
+			<x-m>-2.6</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-1.68</z-m>
 		</center>
@@ -1871,7 +1856,7 @@
 			<entry><ind>1</ind><dep>80</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>2.11</x-m>
+			<x-m>-2.89</x-m>
 			<y-m>0</y-m>
 			<z-m>-1.4</z-m>
 		</center>
@@ -1891,7 +1876,7 @@
 			<entry><ind>1</ind><dep>-80</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>2.07</x-m>
+			<x-m>-2.93</x-m>
 			<y-m>0</y-m>
 			<z-m>-0.83</z-m>
 		</center>
@@ -1909,13 +1894,31 @@
 		<property>gear/gear/rollspeed-ms</property>
 		<factor>13</factor>
 		<center>
-			<x-m>2.1638</x-m>
+			<x-m>-2.8362</x-m>
 			<y-m>0</y-m>
 			<z-m>-2.1558</z-m>
 		</center>
 		<axis>
 			<x>0.0</x>
 			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<!-- Launch bar engaged -->
+	<animation>
+		<type>rotate</type>
+		<object-name>UC-N-CatapultStrop</object-name>
+		<property>gear/launchbar/position-norm</property>
+		<factor>-90.0 </factor>
+		<center>
+			<x-m>-3.0573</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-2.1196</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
 			<z>0.0</z>
 		</axis>
 	</animation>
@@ -1931,7 +1934,7 @@
 			<entry><ind>1</ind><dep>-90</dep></entry>
 		</interpolation>
 		<center>
-			<x-m>1.79</x-m>
+			<x-m>-3.21</x-m>
 			<y-m>0</y-m>
 			<z-m>-0.82</z-m>
 		</center>
@@ -2029,16 +2032,16 @@
 		<property>surface-positions/rudder-pos-norm</property>
 		<factor>-20</factor>
 		<axis>
-			<x1-m>15.5</x1-m><y1-m>0</y1-m><z1-m>-0.31</z1-m>
-			<x2-m>15.98</x2-m><y2-m>0</y2-m><z2-m>2.03</z2-m>
+			<x1-m>10.5</x1-m><y1-m>0</y1-m><z1-m>-0.31</z1-m>
+			<x2-m>10.98</x2-m><y2-m>0</y2-m><z2-m>2.03</z2-m>
 		</axis>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>nav_halo_Tail</object-name>
-		<offset-m>16.7172</offset-m>
+		<offset-m>11.7829</offset-m>
 		<axis>
-			<x>16.7152</x>
+			<x>11.7152</x>
 			<y>0</y>
 			<z>0.2614</z>
 		</axis>
@@ -2084,16 +2087,16 @@
 		<property>surface-positions/rudder-pos-norm</property>
 		<factor>-20</factor>
 		<axis>
-			<x1-m>15.5</x1-m><y1-m>0</y1-m><z1-m>-0.31</z1-m>
-			<x2-m>15.98</x2-m><y2-m>0</y2-m><z2-m>2.03</z2-m>
+			<x1-m>10.5</x1-m><y1-m>0</y1-m><z1-m>-0.31</z1-m>
+			<x2-m>10.98</x2-m><y2-m>0</y2-m><z2-m>2.03</z2-m>
 		</axis>
 	</animation>
 	<animation>
 		<type>translate</type>
 		<object-name>nav_halo_Tail_Dim</object-name>
-		<offset-m>16.7172</offset-m>
+		<offset-m>11.7829</offset-m>
 		<axis>
-			<x>16.7152</x>
+			<x>11.7152</x>
 			<y>0</y>
 			<z>0.2614</z>
 		</axis>
@@ -2140,10 +2143,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>-141</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>-3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>-3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -2151,9 +2154,9 @@
 	<animation>
 		<type>translate</type>
 		<object-name>nav_halo_WL</object-name>
-		<offset-m>11.37</offset-m>
+		<offset-m>8.5209</offset-m>
 		<axis>
-			<x>8.1670</x>
+			<x>3.1670</x>
 			<y>-7.9102</y>
 			<z>0.0682</z>
 		</axis>
@@ -2199,10 +2202,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>-141</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>-3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>-3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -2210,9 +2213,9 @@
 	<animation>
 		<type>translate</type>
 		<object-name>nav_halo_WL_Dim</object-name>
-		<offset-m>11.37</offset-m>
+		<offset-m>8.5209</offset-m>
 		<axis>
-			<x>8.1670</x>
+			<x>3.1670</x>
 			<y>-7.9102</y>
 			<z>0.0682</z>
 		</axis>
@@ -2258,10 +2261,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>141</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -2269,9 +2272,9 @@
 	<animation>
 		<type>translate</type>
 		<object-name>nav_halo_WR</object-name>
-		<offset-m>11.37</offset-m>
+		<offset-m>8.5209</offset-m>
 		<axis>
-			<x>8.1670</x>
+			<x>3.1670</x>
 			<y>7.9102</y>
 			<z>0.0682</z>
 		</axis>
@@ -2317,10 +2320,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>141</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -2328,9 +2331,9 @@
 	<animation>
 		<type>translate</type>
 		<object-name>nav_halo_WR_Dim</object-name>
-		<offset-m>11.37</offset-m>
+		<offset-m>8.5209</offset-m>
 		<axis>
-			<x>8.1670</x>
+			<x>3.1670</x>
 			<y>7.9102</y>
 			<z>0.0682</z>
 		</axis>
@@ -2377,9 +2380,9 @@
 	<animation>
 		<type>translate</type>
 		<object-name>coll_halo_FR</object-name>
-		<offset-m>3.9489</offset-m>
+		<offset-m>1.7589</offset-m>
 		<axis>
-			<x>3.75</x>
+			<x>-1.25</x>
 			<y>-0.6149</y>
 			<z>-1.0738</z>
 		</axis>
@@ -2423,9 +2426,9 @@
 	<animation>
 		<type>translate</type>
 		<object-name>coll_halo_FL</object-name>
-		<offset-m>3.9489</offset-m>
+		<offset-m>1.7589</offset-m>
 		<axis>
-			<x>3.75</x>
+			<x>-1.25</x>
 			<y>0.6149</y>
 			<z>-1.0738</z>
 		</axis>
@@ -2468,10 +2471,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>-141</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>-3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>-3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -2479,9 +2482,9 @@
 	<animation>
 		<type>translate</type>
 		<object-name>coll_halo_WL</object-name>
-		<offset-m>11.37</offset-m>
+		<offset-m>8.5209</offset-m>
 		<axis>
-			<x>8.1670</x>
+			<x>3.1670</x>
 			<y>-7.9102</y>
 			<z>0.0682</z>
 		</axis>
@@ -2524,10 +2527,10 @@
 		<property>surface-positions/wing-fold-pos-norm</property>
 		<factor>141</factor>
 		<axis>
-			<x1-m>6.5172</x1-m>
+			<x1-m>1.5172</x1-m>
 			<y1-m>3.7335</y1-m>
 			<z1-m>0.4329</z1-m>
-			<x2-m>8.2242</x2-m>
+			<x2-m>3.2242</x2-m>
 			<y2-m>3.7335</y2-m>
 			<z2-m>0.2082</z2-m>
 		</axis>
@@ -2535,9 +2538,9 @@
 	<animation>
 		<type>translate</type>
 		<object-name>coll_halo_WR</object-name>
-		<offset-m>11.37</offset-m>
+		<offset-m>8.5209</offset-m>
 		<axis>
-			<x>8.1670</x>
+			<x>3.1670</x>
 			<y>7.9102</y>
 			<z>0.0682</z>
 		</axis>
@@ -2577,9 +2580,9 @@
 	<animation>
 		<type>translate</type>
 		<object-name>coll_halo_TR</object-name>
-		<offset-m>14.4105</offset-m>
+		<offset-m>9.4908</offset-m>
 		<axis>
-			<x>14.2587</x>
+			<x>9.2587</x>
 			<y>0.1100</y>
 			<z>2.0832</z>
 		</axis>
@@ -2619,9 +2622,9 @@
 	<animation>
 		<type>translate</type>
 		<object-name>coll_halo_TL</object-name>
-		<offset-m>14.4105</offset-m>
+		<offset-m>9.4908</offset-m>
 		<axis>
-			<x>14.2587</x>
+			<x>9.2587</x>
 			<y>-0.1100</y>
 			<z>2.0832</z>
 		</axis>

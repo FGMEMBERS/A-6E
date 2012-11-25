@@ -10,7 +10,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/mag-compass.xml</path>
 		<offsets>
-			<x-m>2.3847</x-m>
+			<x-m>-2.6153</x-m>
 			<y-m>0</y-m>
 			<z-m>1.3453</z-m>
 			<pitch-deg>0</pitch-deg>
@@ -22,7 +22,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/stick.xml</path>
 		<offsets>
-			<x-m>2.8695</x-m>
+			<x-m>-2.1305</x-m>
 			<y-m>-0.3846</y-m>
 			<z-m>0.3629</z-m>
 			<pitch-deg>0</pitch-deg>
@@ -31,7 +31,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/pedals.xml</path>
 		<offsets>
-			<x-m>2.3742</x-m>
+			<x-m>-2.6258</x-m>
 			<y-m>-0.3843</y-m>
 			<z-m>0.2540</z-m>
 		</offsets>
@@ -44,7 +44,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/aoa-gauge.xml</path>
 		<offsets>
-			<x-m>2.5985</x-m>
+			<x-m>-2.4015</x-m>
 			<y-m>-0.5513</y-m>
 			<z-m>1.0225</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -56,7 +56,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/optical-sight.xml</path>
 		<offsets>
-			<x-m>2.6209</x-m>
+			<x-m>-2.3791</x-m>
 			<y-m>-0.3706</y-m>
 			<z-m>1.1842</z-m>
 			<pitch-deg>-19</pitch-deg>
@@ -68,7 +68,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/master-caution-reset.xml</path>
 		<offsets>
-			<x-m>2.5840</x-m>
+			<x-m>-2.416</x-m>
 			<y-m>-0.5225</y-m>
 			<z-m>1.0912</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -80,7 +80,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/radar-altimeter.xml</path>
 		<offsets>
-			<x-m>2.6193</x-m>
+			<x-m>-2.3807</x-m>
 			<y-m>-0.5529</y-m>
 			<z-m>0.9364</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -92,7 +92,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/man-jettison.xml</path>
 		<offsets>
-			<x-m>2.6142</x-m>
+			<x-m>-2.3858</x-m>
 			<y-m>-0.6230</y-m>
 			<z-m>0.9724</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -104,7 +104,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/ldg-controls.xml</path>
 		<offsets>
-			<x-m>2.6057</x-m>
+			<x-m>-2.3943</x-m>
 			<y-m>-0.6771</y-m>
 			<z-m>0.8116</z-m>
 		</offsets>
@@ -112,7 +112,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/engine-gauges.xml</path>
 		<offsets>
-			<x-m>2.6030</x-m>
+			<x-m>-2.397</x-m>
 			<y-m>-0.5688</y-m>
 			<z-m>0.7888</z-m>
 		</offsets>
@@ -123,7 +123,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/flight-indicator.xml</path>
 		<offsets>
-			<x-m>2.6062</x-m>
+			<x-m>-2.3938</x-m>
 			<y-m>-0.6917</y-m>
 			<z-m>0.6370</z-m>
 		</offsets>
@@ -134,7 +134,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/vdi.xml</path>
 		<offsets>
-			<x-m>2.60853</x-m>
+			<x-m>-2.39147</x-m>
 			<y-m>-0.3913</y-m>
 			<z-m>0.9815</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -146,7 +146,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/phd.xml</path>
 		<offsets>
-			<x-m>2.6809</x-m>
+			<x-m>-2.3191</x-m>
 			<y-m>-0.3913</y-m>
 			<z-m>0.7675</z-m>
 			<pitch-deg>-20</pitch-deg>
@@ -158,7 +158,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/elev-trim.xml</path>
 		<offsets>
-			<x-m>2.7290</x-m>
+			<x-m>-2.271</x-m>
 			<y-m>-0.4180</y-m>
 			<z-m>0.4320</z-m>
 			<pitch-deg>-45</pitch-deg>
@@ -170,7 +170,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/asi.xml</path>
 		<offsets>
-			<x-m>2.5870</x-m>
+			<x-m>-2.413</x-m>
 			<y-m>-0.2295</y-m>
 			<z-m>1.0750</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -182,7 +182,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/accelerometer2.xml</path>
 		<offsets>
-			<x-m>2.5876</x-m>
+			<x-m>-2.4124</x-m>
 			<y-m>-0.1712</y-m>
 			<z-m>1.0672</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -194,7 +194,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/buno-plate.xml</path>
 		<offsets>
-			<x-m>2.5991</x-m>
+			<x-m>-2.4009</x-m>
 			<y-m>-0.2275</y-m>
 			<z-m>1.0216</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -206,7 +206,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/altimeter.xml</path>
 		<offsets>
-			<x-m>2.6098</x-m>
+			<x-m>-2.3902</x-m>
 			<y-m>-0.2297</y-m>
 			<z-m>0.9650</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -218,7 +218,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/hook-lift.xml</path>
 		<offsets>
-			<x-m>2.6139</x-m>
+			<x-m>-2.3861</x-m>
 			<y-m>-0.1705</y-m>
 			<z-m>0.9605</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -230,7 +230,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/ai.xml</path>
 		<offsets>
-			<x-m>2.5882</x-m>
+			<x-m>-2.4118</x-m>
 			<y-m>-0.1089</y-m>
 			<z-m>1.0660</z-m>
 			<pitch-deg>-6</pitch-deg>
@@ -242,7 +242,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/chronograph.xml</path>
 		<offsets>
-			<x-m>2.5820</x-m>
+			<x-m>-2.418</x-m>
 			<y-m>-0.0158</y-m>
 			<z-m>1.0910</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -254,7 +254,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/hsi.xml</path>
 		<offsets>
-			<x-m>2.6121</x-m>
+			<x-m>-2.3879</x-m>
 			<y-m>-0.0995</y-m>
 			<z-m>0.9685</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -266,7 +266,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/hsi-2.xml</path>
 		<offsets>
-			<x-m>2.6121</x-m>
+			<x-m>-2.3879</x-m>
 			<y-m>-0.0995</y-m>
 			<z-m>0.9685</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -278,7 +278,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/vsi.xml</path>
 		<offsets>
-			<x-m>2.5996</x-m>
+			<x-m>-2.4004</x-m>
 			<y-m>-0.004</y-m>
 			<z-m>1.0176</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -290,7 +290,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/canopy-controls.xml</path>
 		<offsets>
-			<x-m>2.6328</x-m>
+			<x-m>-2.3672</x-m>
 			<y-m>0.0618</y-m>
 			<z-m>0.9875</z-m>
 			<pitch-deg>-6</pitch-deg>
@@ -302,7 +302,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/vdi-radar-pilots-control.xml</path>
 		<offsets>
-			<x-m>2.6830</x-m>
+			<x-m>-2.317</x-m>
 			<y-m>0.0000</y-m>
 			<z-m>0.6790</z-m>
 			<pitch-deg>-14</pitch-deg>
@@ -314,7 +314,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/accelerometer.xml</path>
 		<offsets>
-			<x-m>2.6046</x-m>
+			<x-m>-2.3954</x-m>
 			<y-m>-0.1261</y-m>
 			<z-m>0.8324</z-m>
 		</offsets>
@@ -325,7 +325,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/fuel-gauge.xml</path>
 		<offsets>
-			<x-m>2.6046</x-m>
+			<x-m>-2.3954</x-m>
 			<y-m>-0.2178</y-m>
 			<z-m>0.8032</z-m>
 		</offsets>
@@ -337,7 +337,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/aoa-indexer.xml</path>
 		<offsets> 
-			<x-m>0</x-m>
+			<x-m>-5</x-m>
 			<y-m>0</y-m>
 			<z-m>0</z-m>
 			<pitch-deg>0</pitch-deg>
@@ -351,7 +351,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/catapult-grip.xml</path>
 		<offsets> 
-			<x-m>2.8098</x-m>
+			<x-m>-2.1902</x-m>
 			<y-m>-0.7752</y-m>
 			<z-m>0.4620</z-m>
 			<pitch-deg>16</pitch-deg>
@@ -364,7 +364,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/light-left-panel.xml</path>
 		<offsets>
-			<x-m>3.3819</x-m>
+			<x-m>-1.6181</x-m>
 			<y-m>-0.7158</y-m>
 			<z-m>0.4587</z-m>
 			<roll-deg>-11</roll-deg>
@@ -378,7 +378,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/afcs.xml</path>
 		<offsets> 
-			<x-m>2.8200</x-m>
+			<x-m>-2.18</x-m>
 			<y-m>-0.0015</y-m>
 			<z-m>0.5200</z-m>
 			<pitch-deg>14</pitch-deg>
@@ -390,7 +390,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/tacan.xml</path>
 		<offsets> 
-			<x-m>3.0540</x-m>
+			<x-m>-1.946</x-m>
 			<y-m>-0.0015</y-m>
 			<z-m>0.4630</z-m>
 			<pitch-deg>14</pitch-deg>
@@ -409,7 +409,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/ext-air-temp-gauge.xml</path>
 		<offsets> 
-			<x-m>2.6927</x-m>
+			<x-m>-2.3073</x-m>
 			<y-m>0.6868</y-m>
 			<z-m>0.5000</z-m>
 		</offsets>
@@ -421,7 +421,7 @@
 	<model>
 		<path>Aircraft/A-6E/Models/doppler.xml</path>
 		<offsets> 
-			<x-m>3.0443</x-m>
+			<x-m>-1.9557</x-m>
 			<y-m>0.7213</y-m>
 			<z-m>0.4622</z-m>
 			<roll-deg>12</roll-deg>
@@ -439,17 +439,17 @@
 		<name>Hotspots-Pilot-Panel-Right</name>
 		<path>Aircraft/A-6E/Models/p-panel-right.xml</path>
 		<top-left>
-			<x-m>2.5827</x-m>
+			<x-m>-2.4173</x-m>
 			<y-m>-0.2728</y-m>
 			<z-m>1.1238</z-m>
 		</top-left>
 		<bottom-left>
-			<x-m>2.7302</x-m>
+			<x-m>-2.2698</x-m>
 			<y-m>-0.2728</y-m>
 			<z-m>0.5394</z-m>
 		</bottom-left>
 		<bottom-right>
-			<x-m>2.7302</x-m>
+			<x-m>-2.2698</x-m>
 			<y-m>0.0903</y-m>
 			<z-m>0.5394</z-m>
 		</bottom-right>
@@ -460,17 +460,17 @@
 		<name>Hotspots-Pilot-Panel-Right</name>
 		<path>Aircraft/A-6E/Models/p-panel-bottom-right.xml</path>
 		<top-left>
-			<x-m>2.6058</x-m>
+			<x-m>-2.3942</x-m>
 			<y-m>-0.2823</y-m>
 			<z-m>0.8788</z-m>
 		</top-left>
 		<bottom-left>
-			<x-m>2.6058</x-m>
+			<x-m>-2.3942</x-m>
 			<y-m>-0.2823</y-m>
 			<z-m>0.6959</z-m>
 		</bottom-left>
 		<bottom-right>
-			<x-m>2.6058</x-m>
+			<x-m>-2.3942</x-m>
 			<y-m>0.0904</y-m>
 			<z-m>0.6959</z-m>
 		</bottom-right>
@@ -482,17 +482,17 @@
 		<name>Hotspots-Console-Center-Fwd</name>
 		<path>Aircraft/A-6E/Models/p-console-center-fwd.xml</path>
 		<top-left>
-			<x-m>2.7217</x-m>
+			<x-m>-2.2783</x-m>
 			<y-m>-0.0786</y-m>
 			<z-m>0.5494</z-m>
 		</top-left>
 		<bottom-left>
-			<x-m>3.0955</x-m>
+			<x-m>-1.9045</x-m>
 			<y-m>-0.0786</y-m>
 			<z-m>0.4550</z-m>
 		</bottom-left>
 		<bottom-right>
-			<x-m>3.0955</x-m>
+			<x-m>-1.9045</x-m>
 			<y-m>0.0795</y-m>
 			<z-m>0.4550</z-m>
 		</bottom-right>
@@ -503,17 +503,17 @@
 		<name>Hotspots-Console-Right</name>
 		<path>Aircraft/A-6E/Models/p-console-right.xml</path>
 		<top-left>
-			<x-m>2.6944</x-m>
+			<x-m>-2.3056</x-m>
 			<y-m>0.6434</y-m>
 			<z-m>0.4499</z-m>
 		</top-left>
 		<bottom-left>
-			<x-m>3.5342</x-m>
+			<x-m>-1.4658</x-m>
 			<y-m>0.6434</y-m>
 			<z-m>0.4478</z-m>
 		</bottom-left>
 		<bottom-right>
-			<x-m>3.5342</x-m>
+			<x-m>-1.4658</x-m>
 			<y-m>0.8554</y-m>
 			<z-m>0.4872</z-m>
 		</bottom-right>
