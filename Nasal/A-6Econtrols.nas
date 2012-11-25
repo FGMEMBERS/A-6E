@@ -448,6 +448,32 @@ var afcs_disengage = func() {
 
 
 
+# Launch bar animation 
+# -----------------------------
+var listen_launchbar = nil;
+var launchbarpos = nil;
+listen_launchbar = setlistener( "gear/launchbar/state", func { settimer(update_launchbar, 0.1) },0 ,0 );
+
+var update_launchbar = func() {
+	launchbarpos = getprop("gear/launchbar/position-norm");
+	if ( getprop("gear/launchbar/position-norm") == 1) {
+		if ( ! getprop ("/gear/gear[0]/wow") ) {
+			removelistener( listen_launchbar );
+			setprop("controls/gear/launchbar", "true");
+			settimer(reset_launchbar_listener, 1);
+		} else {
+			settimer(update_launchbar, 0.1);
+		}
+	}
+}
+
+var reset_launchbar_listener = func() {
+	setprop("controls/gear/launchbar", "false");
+	listen_launchbar = setlistener( "gear/launchbar/state", func { settimer(update_launchbar, 0.05) },0 ,0 );
+}
+
+
+
 # collision lights flasher
 # ------------------------
 var beacon = props.globals.getNode("controls/lighting/beacon", 1);
