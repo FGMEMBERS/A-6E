@@ -53,6 +53,11 @@
 		<inherits-from>Aircraft/A-6E/Effects/mfd-62</inherits-from>
 		<object-name>afcs-alt</object-name>
 	</effect>
+	<effect>
+		<inherits-from>Aircraft/A-6E/Effects/mfd-62</inherits-from>
+		<object-name>ra-lts</object-name>
+		<object-name>tc-lts</object-name>
+	</effect>
 
 
 	<!-- vdi on-off -->
