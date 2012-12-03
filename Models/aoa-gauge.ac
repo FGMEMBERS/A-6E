@@ -1,14 +1,32 @@
 AC3Db
-MATERIAL "ac3dmat5" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+MATERIAL "ac3dmat5" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 MATERIAL "ac3dmat5" rgb 1 0.827 0  amb 1 0.827 0  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 OBJECT world
-kids 1
+kids 2
+OBJECT poly
+name "bkg"
+loc -0.000921491 -0.00016472 -0.0113422
+crease 45.000000
+numvert 4
+0.0040374 -0.00821003 -0.00556126
+0.0040374 -0.00821003 0.00267478
+0.0040374 0.00814443 0.00267478
+0.0040374 0.00814443 -0.00556126
+numsurf 1
+SURF 0x10
+mat 1
+refs 4
+3 1 1
+2 0 1
+1 0 0
+0 1 0
+kids 0
 OBJECT group
 name "aoa-gauge"
 loc -0.000361704 0.0015357 -0.00444887
-kids 5
+kids 4
 OBJECT poly
 name "needle"
 loc 0.00513206 0.0074242 0.00444887
@@ -672,77 +690,59 @@ numvert 16
 0.0040374 -0.0311402 -0.0312316
 numsurf 8
 SURF 0x10
-mat 1
+mat 0
 refs 4
 10 0.751412 0.403641
 14 0.751412 0
 15 1 0
 11 1 0.403641
 SURF 0x10
-mat 1
+mat 0
 refs 4
 9 0.672316 0.403641
 13 0.672316 0
 14 0.751412 0
 10 0.751412 0.403641
 SURF 0x10
-mat 1
+mat 0
 refs 4
 8 0 0.403641
 12 0 0
 13 0.672316 0
 9 0.672316 0.403641
 SURF 0x10
-mat 1
+mat 0
 refs 4
 6 0.751412 0.581293
 10 0.751412 0.403641
 11 1 0.403641
 7 1 0.581293
 SURF 0x10
-mat 1
+mat 0
 refs 4
 4 0 0.581293
 8 0 0.403641
 9 0.672316 0.403641
 5 0.672316 0.581293
 SURF 0x10
-mat 1
+mat 0
 refs 4
 2 0.751412 0.996234
 6 0.751412 0.581293
 7 1 0.581293
 3 1 0.996234
 SURF 0x10
-mat 1
+mat 0
 refs 4
 1 0.672316 0.996234
 5 0.672316 0.581293
 6 0.751412 0.581293
 2 0.751412 0.996234
 SURF 0x10
-mat 1
+mat 0
 refs 4
 0 0 0.996234
 4 0 0.581293
 5 0.672316 0.581293
 1 0.672316 0.996234
-kids 0
-OBJECT poly
-name "bkg"
-loc -0.000559787 -0.00170042 -0.00689333
-crease 45.000000
-numvert 4
-0.0040374 -0.00821003 -0.00556126
-0.0040374 -0.00821003 0.00267478
-0.0040374 0.00814443 0.00267478
-0.0040374 0.00814443 -0.00556126
-numsurf 1
-SURF 0x10
-mat 0
-refs 4
-3 1 1
-2 0 1
-1 0 0
-0 1 0
 kids 0

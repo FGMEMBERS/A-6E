@@ -1,14 +1,13 @@
 <?xml version="1.0"?>
+
+
 <PropertyList>
+  <path>hook-handle.ac</path>
 
- <path>man-jettison.ac</path>
 
-
- 
-<!-- lighting -->
-
+  <!-- lighting -->
   <animation>
-    <object-name>man-jettison</object-name>
+    <object-name>hook-handle</object-name>
     <type>material</type>
     <condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
     <emission>

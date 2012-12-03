@@ -6,7 +6,7 @@ OBJECT world
 kids 1
 OBJECT group
 name "wing-fold-panel"
-loc 3.26494 0.443748 -0.023823
+loc -1.73506 0.443748 -0.023823
 kids 6
 OBJECT poly
 name "wing-fold-handle"

@@ -2,10 +2,14 @@ AC3Db
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 20  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 OBJECT world
+kids 1
+OBJECT group
+name "man-jettison"
+loc -0.00251892 0.00697949 0.0171873
 kids 2
 OBJECT poly
 name "button"
-loc -0.00347269 0.0139622 0.0343747
+loc -0.000953775 0.00698271 0.0171874
 texture "master-caution-reset.png"
 crease 45.000000
 numvert 48
@@ -304,7 +308,7 @@ refs 4
 kids 0
 OBJECT poly
 name "mount"
-loc -0.00156514 -3.21865e-06 -1.86265e-09
+loc 0.000953775 -0.00698271 -0.0171873
 texture "man-jettison.png"
 crease 45.000000
 numvert 179

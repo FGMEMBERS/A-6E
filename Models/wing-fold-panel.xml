@@ -46,7 +46,7 @@
 		<property>sim/model/A-6E/controls/wing-fold/handle-position</property>
 		<factor>35</factor>
 		<center>
-			<x-m>3.1351</x-m>
+			<x-m>-1.8649</x-m>
 			<y-m>0</y-m>
 			<z-m>0.3536</z-m>
 		</center>
@@ -84,7 +84,7 @@
 		<property>sim/model/A-6E/controls/wing-fold/switch-position</property>
 		<factor>30</factor>
 		<center>
-			<x-m>3.3012</x-m>
+			<x-m>-1,6988</x-m>
 			<y-m>0.0345</y-m>
 			<z-m>0.4033</z-m>
 		</center>

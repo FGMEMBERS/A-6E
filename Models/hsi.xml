@@ -1,52 +1,52 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-	<!-- horizontal situation indicator -->
-	<name>HSI</name>
-	<path>hsi.ac</path>
+  <!-- horizontal situation indicator -->
+  <name>HSI</name>
+  <path>hsi.ac</path>
 
-	<animation>
-		<type>rotate</type>
-		<object-name>HSI-compass-card</object-name>
-		<property>orientation/heading-magnetic-deg</property>
-		<axis><x>1</x></axis>
-	</animation>
- 
-	<animation>
-		<type>select</type>
-		<object-name>bearing-tcn-needle-on</object-name>
-		<condition>
-			<property>instrumentation/tacan/in-range</property>
-		</condition>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>bearing-tcn-needle-on</object-name>
-		<property>orientation/heading-magnetic-deg</property>
-		<axis><x>1</x></axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>bearing-tcn-needle-on</object-name>
-		<property>instrumentation/tacan/indicated-mag-bearing-deg</property>
-		<axis><x>-1</x></axis>
-	</animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>HSI-compass-card</object-name>
+    <property>orientation/heading-magnetic-deg</property>
+    <axis><x>1</x></axis>
+  </animation>
 
-	<animation>
-		<type>select</type>
-		<object-name>bearing-needle-off</object-name>
-		<condition>
-			<not>
-				<property>instrumentation/tacan/in-range</property>
-			</not>
-		</condition>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>bearing-needle-off</object-name>
-		<property>orientation/heading-magnetic-deg</property>
-		<axis><x>1</x></axis>
-	</animation>
+  <animation>
+    <type>select</type>
+    <object-name>bearing-tcn-needle-on</object-name>
+    <condition>
+      <property>instrumentation/tacan/in-range</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>bearing-tcn-needle-on</object-name>
+    <property>orientation/heading-magnetic-deg</property>
+    <axis><x>1</x></axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>bearing-tcn-needle-on</object-name>
+    <property>instrumentation/tacan/indicated-mag-bearing-deg</property>
+    <axis><x>-1</x></axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>bearing-needle-off</object-name>
+    <condition>
+      <not>
+        <property>instrumentation/tacan/in-range</property>
+      </not>
+    </condition>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>bearing-needle-off</object-name>
+    <property>orientation/heading-magnetic-deg</property>
+    <axis><x>1</x></axis>
+  </animation>
 
   <animation>
     <type>select</type>
@@ -225,165 +225,22 @@
 <!-- lighting -->
 
   <animation>
-   <object-name>HSI-bkg</object-name>
-   <object-name>heading-set-knob</object-name>
-   <type>material</type>
-     <emission> 
-      <factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-      </emission>
-  </animation>
-  
-  <animation>
-   <object-name>lubber-line</object-name>
-   <type>material</type>
-     <emission> 
-      <factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-      </emission>
-  </animation>
-  
-  <animation>
-   <object-name>course-knob</object-name>
-   <type>material</type>
-     <emission> 
-      <factor-prop>controls/lighting/panel-norm</factor-prop>
-        <red>0.44</red>
-        <green>0.27</green>
-        <blue>0.15</blue>
-      </emission>
-  </animation>
-
-  <animation>
-    <object-name>HSI-compass-card</object-name>
+    <object-name>hsi</object-name>
+    <object-name>heading-set-knob</object-name>
     <type>material</type>
-    <emission> 
+    <condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
+    <emission>
       <factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
+      <red>0.55</red>
+      <green>0.24</green>
+      <blue>0.10</blue>
     </emission>
   </animation>
-
-  <animation>
-    <object-name>bearing-tcn-needle-on</object-name>
-    <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-    </emission>
-  </animation>
-  <animation>
-    <object-name>bearing-needle-off</object-name>
-    <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-    </emission>
-  </animation>
-
-  <animation>
-    <object-name>off-flag</object-name>
-    <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-    </emission>
-  </animation>
-
-  <animation>
-    <object-name>miles-flag</object-name>
-    <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-    </emission>
-  </animation>
-
-  <animation>
-    <object-name>miles-drum-1</object-name>
-    <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-    </emission>
-  </animation>
-  <animation>
-    <object-name>miles-drum-2</object-name>
-    <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-    </emission>
-  </animation>
-  <animation>
-    <object-name>miles-drum-3</object-name>
-    <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-    </emission>
-  </animation>
-
-  <animation>
-    <object-name>course-drum-1</object-name>
-    <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-    </emission>
-  </animation>
-  <animation>
-    <object-name>course-drum-2</object-name>
-    <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-    </emission>
-  </animation>
-  <animation>
-    <object-name>course-drum-3</object-name>
-    <type>material</type>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-    </emission>
-  </animation>
-
-	<animation>
-		<object-name>hsi</object-name>
-		<type>noshadow</type>
-	</animation>
-
 
   <animation>
     <type>range</type>
     <min-m>0</min-m>
-    <max-m>35</max-m>
+    <max-m>15</max-m>
   </animation>
 
 </PropertyList>
